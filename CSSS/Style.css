@@ -298,7 +298,7 @@ footer {
 }
 .page {
     display: none;
-    animation: fadeIn 0.4s ease;
+    animation: fadeIn 0.7s ease;
 }
 
     .page.active {
@@ -315,4 +315,18 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(255, 0, 100, 0.25);
+  transition: transform 0.3s ease;
 }
