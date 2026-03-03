@@ -1,121 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YKΛDΛ_</title>
-  <link rel="icon" type="image/x-icon" href="Images/downloads (1).ico">
-  <link rel="stylesheet" href="CSSS/Style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YKΛDΛ_</title>
+    <link rel="icon" type="image/x-icon" href="Images/downloads (1).ico">
+    <link rel="stylesheet" href="CSSS/Style.css">
 </head>
+
 <body>
-  <header class="navbar">
-      <nav class="nav-links">
-          <a href="#" onclick="showPage('projects')">Projects</a>
-          <a href="#" onclick="showPage('profile')">Profile</a>
-          <a href="#" onclick="showPage('contact')">Contact</a>
-      </nav>
-  </header>
 
-  <main>
+    <header class="navbar">
+        <div class="logo">
+            <img src="Images/Cat.png" alt="Logo" width="30" height="30">
+            <span>YKΛDΛ_</span>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="#" onclick="showPage('projects')">Projects</a>
+            <a href="#" onclick="showPage('profile')">Profile</a>
+            <a href="#" onclick="showPage('contact')">Contact</a>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="projects" class="page active">
+
+            <section class="card">
+                <h1>Project Information</h1>
+
+                <div class="project-row">
+
+                    <div class="project-item">
+                        <span>☢ RE:CLEAN — <a href="#">InDEV</a></span>
+                        <img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif">
+                    </div>
+
+                    <div class="project-item">
+                        <span>ARC - 82 — <a href="#">InDEV</a></span>
+                        <img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png">
+                    </div>
+
+                    <div class="project-item">
+                        <span>The Hunt — <a href="#">Roblox Experience</a></span>
+                        <img src="Images/THEHUNT.png">
+                    </div>
+
+                    <div class="project-item">
+                        <span>TORTEX — <a href="#">InDEV</a></span>
+                        <img src="Images/OPERATIONSTORM.png">
+                        <img src="Images/OPERATIONSTORM2.png">
+                    </div>
+
+                    <div class="project-item">
+                        <span>Tower Defence Simulator — <a href="#">Unity Project</a></span>
+                        <img src="Images/TDS.png">
+                    </div>
+
+                    <div class="project-item">
+                        <span>Hel End Strife — <a href="#">Unity School Project</a></span>
+                        <img src="Images/HSL1.png">
+                        <img src="Images/HSL2.png">
+                        <img src="Images/HSL3.png">
+                        <img src="Images/HSL4.png">
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
+        <section id="profile" class="page">
+
+            <div class="profile-row">
+
+                <section class="card profile-card">
+                    <h1>Bo Bolweg</h1>
+                    <p>
+                        17 year old student at Media College Amsterdam.
+                        Currently focused on multiplayer game development.
+                    </p>
+                    <p>
+                        4 years Lua experience, 1.5 years C#, Unity, .NET beginner,
+                        Python intermediate, 3 years of 3D game development.
+                    </p>
+                </section>
+
+                <div class="profile-side-image">
+                    <img src="Images/Placeholder.png" alt="Profile Image">
+                </div>
 
 
-<section class="card">
-  <h1>Project Information</h1>
-
-  <div class="project-row">
-
-    <div class="project-item">
-      <span>☢ RE:CLEAN — <a href="https://38703.hosts2.ma-cloud.nl/MainPortal/PageUnknown.html">InDEV</a></span>
-      <img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif">
-    </div>
-
-    <div class="project-item">
-      <span>ARC - 82 — <a href="https://38703.hosts2.ma-cloud.nl/MainPortal/PageUnknown.html">InDEV</a></span>
-      <img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png">
-    </div>
-
-    <div class="project-item">
-      <span>The Hunt — <a href="https://www.roblox.com/games/8833099801/The-Hunt">Roblox Experience</a></span>
-      <img src="Images/THEHUNT.png">
-    </div>
-
-    <div class="project-item">
-      <span>TORTEX — <a href="https://github.com/Ykada/OPERATION-STORMCHASE">InDEV</a></span>
-      <img src="Images/OPERATIONSTORM.png">
-      <img src="Images/OPERATIONSTORM2.png">
-    </div>
-
-    <div class="project-item">
-      <span>TOWER DEFENCE SIMULATOR — <a href="https://github.com/Ykada/TowerDefencegame">Unity School Experience</a></span>
-      <img src="Images/TDS.png">
-    </div>
-
-    <div class="project-item">
-      <span>Hel End Strife - <a href="https://github.com/ghostbusterbob/GA-GD-Project">Unity School Project</a></span>
-      <img src="Images/HSL1.png">
-      <img src="Images/HSL2.png">
-      <img src="Images/HSL3.png">
-      <img src="Images/HSL4.png">
-    </div>
-
-  </div>
-</section>
+            </div>
+            <br />
+            <section class="card">
+                <h1>Contact</h1>
+                <p>Email: bo.bolweg@gmail.com</p>
+                <p>GitHub: github.com/Ykada</p>
+                <p>Discord: ykada_</p>
+            </section>
+        </section>
+        <section id="contact" class="page">
+            <div class="flex-grid">
+                <section class="card">
+                    <h1>Experience</h1>
+                    <p>
+                        4 Year Lua Experience, together with 1,5 year C# Experience, .Net beginner, Python Intermediate, 3 Years of 3D Gamedevelpment in both Roblox and Unity.
+                    </p>
+                    <p>
+                        My work Experience is usualy paired with working in a group with lots of Experience in smaller and bigger teams.
 
 
-<div class="profile-row">
+                    </p>
+                </section>
 
-    <section class="card profile-card">
-        <h1>Bo Bolweg</h1>
-        <p> 18 Year old student at Media College Amsterdam, currently working on multiplayer projects. </p>
-        <p> </p>
-        <p> On a daly bassis i like to play all difrent types of games ranging from fallout to simple roblox games</p>
-        <p> I have 2 dogs and 2 parrets that are really cute!</p>
-        </p>
-    </section>
+                <section class="card">
+                    <h1></h1>
+                    <a href="https://38703.hosts2.ma-cloud.nl/MainPortal/PageUnknown.html" class="primary-btn">☢ RE:CLEAN</a>
+                </section>
+            </div>
+            <br />
+            <section class="intro card">
+                <h3>GameDev</h3>
+                <div class="icon-row">
+                    <img src="Images/image-removebg-preview.png" alt="Tool 1" />
+                    <img src="Images/unity_icon_136074.webp" alt="Unity" />
+                    <img src="Images/godot-icon-2048x1931-53hetpyv.png" alt="Godot" />
+                </div>
+            </section>
 
-      <div class="profile-side-image">
-        <img src="Images/Placeholder.png" alt="Profile Image">
-      </div>
+        </section>
 
-</div>
+    </main>
 
-    <div class="flex-grid">
-      <section class="card">
-        <h1>Experience</h1>
-        <p>4 Year Lua Experience, together with 1,5 year C# Experience, .Net beginner, Python Intermediate, 3 Years of 3D Gamedevelpment in both Roblox and Unity. 
-        </p>
-        <p>
-            My work Experience is usualy paired with working in a group with lots of Experience in smaller and bigger teams.
+    <footer>
+        <p>ykad_x</p>
+    </footer>
 
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
 
-        </p>
-      </section>
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
 
-      <section class="card">
-        <h1></h1>
-        <a href="https://38703.hosts2.ma-cloud.nl/MainPortal/PageUnknown.html" class="primary-btn">☢ RE:CLEAN</a>
-      </section>
-    </div>
-
-    <section class="intro card">
-      <h3>GameDev</h3>
-      <div class="icon-row">
-        <img src="Images/image-removebg-preview.png" alt="Tool 1" />
-        <img src="Images/unity_icon_136074.webp" alt="Unity" />
-        <img src="Images/godot-icon-2048x1931-53hetpyv.png" alt="Godot" />
-      </div>
-    </section>
-    
-  </main>
-
-  <footer>
-    <p>ykad_x</p>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('show');
-    }
-  </script>
 </body>
 </html>
