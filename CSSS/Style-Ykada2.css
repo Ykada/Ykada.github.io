@@ -1,0 +1,22 @@
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(1, 0, 16) 0%, rgb(31, 0, 25) 35%, rgb(32, 0, 7) 100%);
+    padding: 20px;
+}
+header {
+    background-color: transparent;
+}
+
+button {
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border-color: black;
+    border: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+}
+p,a,h1,h3{
+    color: rgb(255, 255, 255);
+}
