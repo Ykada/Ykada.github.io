@@ -243,7 +243,7 @@ footer {
   }
 
   .flex-grid {
-    grid-template-columns: fr;
+    grid-template-columns: 1fr;
   }
 
   .card img {
@@ -266,14 +266,14 @@ footer {
 }
 
 .project-item img {
-  max-width: 200px;
+  max-width: 400px;
   margin-top: 0.8rem;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
 .project-item img:hover {
-  transform: scale(2.25);
+  transform: scale(1.55);
   z-index: 10;
 }
 .page {
