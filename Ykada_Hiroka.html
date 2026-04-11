@@ -1,101 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YKΛDΛ_</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ykad_x</title>
   <link rel="icon" type="image/x-icon" href="Images/downloads (1).ico">
   <link rel="stylesheet" href="CSSS/Style.css">
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <header class="navbar">
-    <div class="logo">
-      <img src="Images/Cat.png" alt="Logo" width="30" height="30">
-      <span>Ykada_</span>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="logo">ykad_x / bo</div>
     <nav class="nav-links">
+      <a href="#" onclick="showPage('profile')">Profile</a>
+      <a href="#" onclick="showPage('projects')">Projects</a>
+
     </nav>
   </header>
 
   <main>
 
+    <!-- PROFILE PAGE -->
+    <section id="profile" class="page active">
+      <div class="profile-row">
+        <section class="card profile-card">
+          <h1>bo ♡</h1>
+          <p>18-year-old student at Media College Amsterdam. I work on my own projects and with friends on fun game projects.</p>
+          <p>I enjoy coding new systems and learning things while building projects.</p>
+          <p>I play airsoft with my friends on the field in my freetime, together with gaming with friends ofcourse</p>
+          <p>I have two dogs—both English Cocker Spaniels—and they’re very goofy!</p>
+        </section>
+        <div class="profile-side-image">
+          <img src="Images/Placeholder.png" alt="Profile Image">
+        </div>
+      </div>
+		<div class="card">
+			<h1>Experience</h1>
+			<p>• 4 years of experience in Roblox Studio (Lua & UI design)</p>
+			<p>• 2 years of experience in Unity (C#)</p>
+			<p>• Beginner with Python (small automated aplications)</p>
+			<p>• Experience working solo and in teams</p>
+		</div>
 
-<section class="card">
-  <h1>Project Information</h1>
-
-  <div class="project-row">
-
-    <div class="project-item">
-      <span>☢ RE:CLEAN — <a href="https://38703.hosts2.ma-cloud.nl/MainPortal/PageUnknown.html">InDEV</a></span>
-      <img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif">
-    </div>
-
-    <div class="project-item">
-      <span>ARC - 82 — <a href="https://38703.hosts2.ma-cloud.nl/MainPortal/PageUnknown.html">InDEV</a></span>
-      <img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png">
-    </div>
-
-    <div class="project-item">
-      <span>The Hunt — <a href="https://www.roblox.com/games/8833099801/The-Hunt">Roblox Experience</a></span>
-      <img src="Images/THEHUNT.png">
-    </div>
-
-    <div class="project-item">
-      <span>TORTEX — <a href="https://github.com/Ykada/OPERATION-STORMCHASE">InDEV</a></span>
-      <img src="Images/OPERATIONSTORM.png">
-      <img src="Images/OPERATIONSTORM2.png">
-    </div>
-
-    <div class="project-item">
-      <span>TOWER DEFENCE SIMULATOR — <a href="https://github.com/Ykada/TowerDefencegame">Unity School Experience</a></span>
-      <img src="Images/TDS.png">
-    </div>
-
-    <div class="project-item">
-      <span>Hel End Strife - <a href="https://github.com/ghostbusterbob/GA-GD-Project">Unity School Project</a></span>
-      <img src="Images/HSL1.png">
-      <img src="Images/HSL2.png">
-      <img src="Images/HSL3.png">
-      <img src="Images/HSL4.png">
-    </div>
-
-  </div>
-</section>
-
-
-    <section class="card">
-      <h1>Bo Bolweg</h1>
-      <p>17 Year old student at Media Collage Amsterdam, current working on multiplayer Project</p>
+      <section class="card contact-card">
+        <h2>Contact</h2>
+        <p>GitHub: <a href="https://github.com/Ykada" target="_blank">github.com/Ykada</a></p>
+        <p>Discord: ykada_</p>
+        <p>Roblox: ykad_x</p>
+        <div class="icon-row">
+          <img src="Images/image-removebg-preview.png" alt="Roblox">
+          <img src="Images/Discordlogo.png" alt="Discord">
+        </div>
+      </section>
     </section>
 
-    <div class="flex-grid">
-      <section class="card">
-        <h1>Experience</h1>
-        <p>4 Year Lua Experience, together with 1,5 year C# Experience, .Net beginner, Python Intermediate, 3 Years of 3D Gamedevelpment in both Roblox and Unity. 
-        </p>
-        <p>
-            My work Experience is usualy paired with working in a group with lots of Experience in smaller and bigger teams.
+    <!-- PROJECTS LIST PAGE -->
+    <section id="projects" class="page">
+      <div class="card">
+        <h1>Projects</h1>
+        <p>A selection of games I’ve worked on in Roblox Studio and Unity, focusing on scripting, game design, and UI.</p>
+        <div class="project-grid">
+
+          <!-- Each project links to its own page section -->
+          <div class="project-card" onclick="showPage('reclean')">
+            <img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif" alt="RE:CLEAN">
+            <div class="project-card-text">
+              <h2>☢ RE:CLEAN</h2>
+              <p>Unity · In Develpment · UI/UX · Multiplayer · Friends Project · Free Time</p>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="showPage('arc82')">
+            <img src="Images/scp-logo-unscreen.gif" alt="ARC - 82">
+            <div class="project-card-text">
+              <h2>ARC - 82</h2>
+				
+              <p>Roblox · In Develpment · Lua · UI/UX · Group Project · 2 Years Work · Limited Info Avalible</p>
+            </div>
+          </div>
+
+          <div class="project-card" onclick="showPage('thehunt')">
+            <img src="Images/THEHUNTGIF.gif" alt="The Hunt">
+            <div class="project-card-text">
+              <h2>The Hunt</h2>
+              <p>Roblox · Released · UI/UX · Art · Lua · Persenal Project · 1 Month Work</p>
+            </div>
+          </div>
 
 
-        </p>
-      </section>
+          <div class="project-card" onclick="showPage('tortex')">
+            <img src="Images/OPERATIONSTORM.png" alt="TORTEX">
+            <div class="project-card-text">
+              <h2>TORTEX</h2>
+              <p>Unity · In Develpment · Main Develper · Persenal Project · Free Time</p>
+            </div>
+          </div>
 
-      <section class="card">
-        <h1></h1>
-        <a href="https://38703.hosts2.ma-cloud.nl/MainPortal/PageUnknown.html" class="primary-btn">☢ RE:CLEAN</a>
-      </section>
-    </div>
+          <div class="project-card" onclick="showPage('tds')">
+            <img src="Images/TDS.png" alt="Tower Defence Simulator">
+            <div class="project-card-text">
+              <h2>Tower Defence Simulator</h2>
+              <p>Unity · C# · Solo · School Project · 10 Weeks Time</p>
+            </div>
+          </div>
 
-    <section class="intro card">
-      <h3>GameDev</h3>
-      <div class="icon-row">
-        <img src="Images/image-removebg-preview.png" alt="Tool 1" />
-        <img src="Images/unity_icon_136074.webp" alt="Unity" />
-        <img src="Images/godot-icon-2048x1931-53hetpyv.png" alt="Godot" />
+          <div class="project-card" onclick="showPage('helend')">
+            <img src="Images/HSL1.png" alt="Hel End Strife">
+            <div class="project-card-text">
+              <h2>Hel End Strife</h2>
+              <p>Unity · School project · Gameplay scripting · 10 Weeks Time</p>
+            </div>
+          </div>
+			<div class="project-card" onclick="showPage('TheCreatureWithin')">
+				<img src="Images/404.jpg" alt="Image Unavalible">
+					<div class="project-card-text">
+						<h2>TheCreatureWithin</h2>
+						<p>Unity · In Develpment · School project · Gameplay scripting · 1 Year Time · Limited Info Avalible</p>
+					</div>
+				</div>
+
+        </div>
       </div>
     </section>
-    
+
+
+    <section id="reclean" class="page project-detail">
+      <div class="card">
+        <h1>☢ RE:CLEAN</h1>
+        <div class="project-images">
+          <img src="Images/RECLEAN1.png" alt="RE:CLEAN 1">
+          <img src="Images/RECLEAN2.png" alt="RE:CLEAN 2">
+        </div>
+		  <p>A multiplayer project inspired by R.E.P.O. It’s currently on hold due to us not having enough time to work on it.</p>
+        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+      </div>
+    </section>
+
+    <section id="arc82" class="page project-detail">
+      <div class="card">
+        <h1>ARC - 82</h1>
+        <div class="project-images">
+          <img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png" alt="ARC - 82">
+		  <img src="Images/ROBLXUI1.png" alt="ARC - 82">
+      <img src="Images/ARC-82UIV1.png" alt="ARC - 82">
+        </div>
+		  <p>I have been working with multiple people on this project for around 2 years. The game is set to release in a year’s time.</p>
+		  <p>Ive been responsible in this project to everything related to UI, from basic Loadingscreens to highly advanced interactive ui's that controll the entire Vacility</p>
+		  <p>Dou to this being a Work in progress and yet to be released or Anounced info is farly kept hidden from the public</p>
+        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+      </div>
+    </section>
+
+	  <section id="helend" class="page project-detail">
+		  <div class="card">
+			  <h1>Hel End Strife</h1>
+			  <div class="project-images">
+				  <img src="Images/HSL1.png" alt="ARC - 82">
+					  <img src="Images/HSL2.png" alt="ARC - 82">
+						  <img src="Images/HSL3.png" alt="ARC - 82">
+							  <img src="Images/HSL4.png" alt="ARC - 82">
+        </div>
+			  <p>A unity school project that ive worked with 3 Develpers and 7 Artists on for a duration of 10 Weeks, a playable version is avalible for download on github!</p>
+			  <button class="primary-btn" onclick="window.location.href='https://github.com/ghostbusterbob/GA-GD-Project/tree/Ykada_';"> Link to Github </button>
+			  <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+		  </div>
+	  </section>
+	  
+	  <section id="tds" class="page project-detail">
+		  <div class="card">
+			  <h1>Tower Defence Simulator</h1>
+			  <div class="project-images">
+				  <img src="Images/TDS.png" alt="ARC - 82">
+					  <img src="Images/TGB2.png" alt="ARC - 82">
+						  <img src="Images/TGB3.png" alt="ARC - 82">
+							  <img src="Images/TGB4.png" alt="ARC - 82">
+								  <img src="Images/TGB5.png" alt="ARC - 82">
+        </div>
+			  <p>A school project for a solo Unity game, where we had to make a TowerDefence game, we had to make this in 10 weeks and that is how it turned out, i used AI to generat the Art, we had to make everything ourselfs, the scripts and varius systems are coded by me!</p>
+			  <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/TowerDefencegame';"> Link to Github </button>
+			  <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+		  </div>
+	  </section>
+
+	  <section id="tortex" class="page project-detail">
+		  <div class="card">
+			  <h1>TORTEX</h1>
+			  <div class="project-images">
+				  <img src="Images/OPERATIONSTORM.png" alt="ARC - 82">
+					  <img src="Images/OPERATIONSTORM2.png" alt="ARC - 82">
+        </div>
+			  <p>A Persenal unity project, where i am making a tornado chasing game, i started working on this becouse i really Enjoy stormchase games, ive been working a bit on it when i have the freetime</p>
+			  <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/OPERATION-STORMCHASE';"> Link to Github </button>
+			  <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+		  </div>
+	  </section>
+	  
+	  <section id="thehunt" class="page project-detail">
+		  <div class="card">
+			  <h1>The Hunt</h1>
+			  <div class="project-images">
+				  <img src="Images/THEHUNT.png" alt="ARC - 82">
+					  <img src="Images/THEHUNT2.png" alt="ARC - 82">
+						  <img src="Images/THEHUNT3.png" alt="ARC - 82">
+							  <img src="Images/THEHUNTGIF.gif" alt="ARC - 82">
+        </div>
+			  <p>Roblox project that i worked on when i was still 13. looking back at this project am really proud of what i managed to make back then, even more fun that i made a secual to the first edition i made, i am still proud of what i managed tomake with litle to no expierence</p>
+			  <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/8833099801/The-Hunt';"> Roblox The Hunt 1 </button>
+			  <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/9478545883/The-Hunt-V2';"> Roblox The Hunt 2 </button>
+			  <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+		  </div>
+	  </section>
+
+
   </main>
 
   <footer>
@@ -103,8 +220,10 @@
   </footer>
 
   <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('show');
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      window.scrollTo(0,0);
     }
   </script>
 </body>
