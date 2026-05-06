@@ -1,233 +1,1643 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ykad_x</title>
-  <link rel="icon" type="image/x-icon" href="Images/downloads (1).ico">
-  <link rel="stylesheet" href="CSSS/Style.css">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>ykad_x</title>
+				<link rel="icon" type="image/x-icon" href="Images/downloads (1).ico">
+					<link rel="stylesheet" href="CSSS/Style.css">
 </head>
-<body>
+	<body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">ykad_x / bo</div>
-    <nav class="nav-links">
-      <a href="#" onclick="showPage('profile')">Profile</a>
-      <a href="#" onclick="showPage('projects')">Projects</a>
+		<!-- NAVBAR -->
+		<header class="navbar">
+			<div class="logo">ykad_x / Bo</div>
+			<nav class="nav-links">
+				<a href="#" onclick="showPage('profile')">Profile</a>
+				<a href="#" onclick="showPage('projects')">Projects</a>
 
-    </nav>
-  </header>
+			</nav>
+		</header>
 
-  <main>
+		<main>
 
-    <!-- PROFILE PAGE -->
-    <section id="profile" class="page active">
-      <div class="profile-row">
-        <section class="card profile-card">
-          <h1>bo ♡</h1>
-          <p>18-year-old student at Media College Amsterdam. I work on my own projects and with friends on fun game projects.</p>
-          <p>I enjoy coding new systems and learning things while building projects.</p>
-          <p>I play airsoft with my friends on the field in my freetime, together with gaming with friends ofcourse</p>
-          <p>I have two dogs—both English Cocker Spaniels—and they’re very goofy!</p>
-        </section>
-        <div class="profile-side-image">
-          <img src="Images/IMG_1133.png" alt="Profile Image">
+			<!-- PROFILE PAGE -->
+			<section id="profile" class="page active">
+				<div class="profile-row">
+					<section class="card profile-card">
+						<h1>Bo ♡</h1>
+						<p>18-year-old student at Media College Amsterdam. I work on my own projects and with friends on fun game projects.</p>
+						<p>I enjoy coding new systems and learning things while building projects.</p>
+						<p>I play airsoft with my friends on the field in my freetime, together with gaming with friends ofcourse</p>
+						<p>I have two dogs—both English Cocker Spaniels—and they’re very goofy!</p>
+					</section>
+					<div class="profile-side-image">
+						<img src="Images/Placeholder.png" alt="Profile Image">
         </div>
-      </div>
-		<div class="card">
-			<h1>Experience</h1>
-			<p>• 4 years of experience in Roblox Studio (Lua & UI design)</p>
-			<p>• 2 years of experience in Unity (C#)</p>
-			<p>• Beginner with Python (small automated aplications)</p>
-			<p>• Experience working solo and in teams</p>
-		</div>
+				</div>
+				<div class="card">
+					<h1>Featured Projects</h1>
 
-      <section class="card contact-card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:bo.bolweg@gmail.com">bo.bolweg@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/Ykada" target="_blank">github.com/Ykada</a></p>
-        <p>Discord: ykada_</p>
-        <p>Instagram: ykad_x</p>
-        <p>Roblox: ykad_x</p>
-        <div class="icon-row">
-          <img src="Images/image-removebg-preview.png" alt="Roblox">
-          <img src="Images/Instalogo.png" alt="Instagram">
-          <img src="Images/Discordlogo.png" alt="Discord">
-        </div>
-      </section>
-    </section>
+					<div class="project-grid">
 
-    <!-- PROJECTS LIST PAGE -->
-    <section id="projects" class="page">
-      <div class="card">
-        <h1>Projects</h1>
-        <p>A selection of games I’ve worked on in Roblox Studio and Unity, focusing on scripting, game design, and UI.</p>
-        <div class="project-grid">
+						<div class="project-card" onclick="showPage('reclean')">
+							<img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif" alt="RE:CLEAN">
+								<div class="project-card-text">
+									<h2>☢ RE:CLEAN</h2>
+									<p>Unity · Multiplayer · UI/UX · Friends Project</p>
+								</div>
+							</div>
 
-          <!-- Each project links to its own page section -->
-          <div class="project-card" onclick="showPage('reclean')">
-            <img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif" alt="RE:CLEAN">
-            <div class="project-card-text">
-              <h2>☢ RE:CLEAN</h2>
-              <p>Unity · In Develpment · UI/UX · Multiplayer · Friends Project · Free Time</p>
-            </div>
-          </div>
+						<div class="project-card" onclick="showPage('arc82')">
+							<img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png" alt="ARC - 82">
+								<div class="project-card-text">
+									<h2>ARC - 82</h2>
+									<p>Roblox · UI/UX · 2 Year Project</p>
+								</div>
+							</div>
 
-          <div class="project-card" onclick="showPage('arc82')">
-            <img src="Images/scp-logo-unscreen.gif" alt="ARC - 82">
-            <div class="project-card-text">
-              <h2>ARC - 82</h2>
-				
-              <p>Roblox · In Develpment · Lua · UI/UX · Group Project · 2 Years Work · Limited Info Avalible</p>
-            </div>
-          </div>
-
-          <div class="project-card" onclick="showPage('thehunt')">
-            <img src="Images/THEHUNTGIF.gif" alt="The Hunt">
-            <div class="project-card-text">
-              <h2>The Hunt</h2>
-              <p>Roblox · Released · UI/UX · Art · Lua · Persenal Project · 1 Month Work</p>
-            </div>
-          </div>
-
-
-          <div class="project-card" onclick="showPage('tortex')">
-            <img src="Images/OPERATIONSTORM.png" alt="TORTEX">
-            <div class="project-card-text">
-              <h2>TORTEX</h2>
-              <p>Unity · In Develpment · Main Develper · Persenal Project · Free Time</p>
-            </div>
-          </div>
-
-          <div class="project-card" onclick="showPage('tds')">
-            <img src="Images/TDS.png" alt="Tower Defence Simulator">
-            <div class="project-card-text">
-              <h2>Tower Defence Simulator</h2>
-              <p>Unity · C# · Solo · School Project · 10 Weeks Time</p>
-            </div>
-          </div>
-
-          <div class="project-card" onclick="showPage('helend')">
-            <img src="Images/HSL1.png" alt="Hel End Strife">
-            <div class="project-card-text">
-              <h2>Hel End Strife</h2>
-              <p>Unity · School project · Gameplay scripting · 10 Weeks Time</p>
-            </div>
-          </div>
-			<div class="project-card" onclick="showPage('TheCreatureWithin')">
-				<img src="Images/404.jpg" alt="Image Unavalible">
-					<div class="project-card-text">
-						<h2>TheCreatureWithin</h2>
-						<p>Unity · In Develpment · School project · Gameplay scripting · 1 Year Time · Limited Info Avalible</p>
 					</div>
 				</div>
+				</div>
+				<div class="card">
+					<h1>Experience</h1>
+					<p>• 4 years of experience in Roblox Studio (Lua & UI design)</p>
+					<p>• 2 years of experience in Unity (C#)</p>
+					<p>• Beginner with Python (small automated aplications)</p>
+					<p>• Experience working solo and in teams</p>
+				</div>
 
+				<section class="card contact-card">
+					<h2>Contact</h2>
+					<p>
+						Email: <a href="mailto:bo.bolweg@gmail.com">bo.bolweg@gmail.com</a>
+					</p>
+					<p>
+						GitHub: <a href="https://github.com/Ykada" target="_blank">github.com/Ykada</a>
+					</p>
+					<p>Discord: ykada_</p>
+					<p>Instagram: ykad_x</p>
+					<p>Roblox: ykad_x</p>
+					<div class="icon-row">
+						<img src="Images/image-removebg-preview.png" alt="Roblox">
+							<img src="Images/Instalogo.png" alt="Instagram">
+								<img src="Images/Discordlogo.png" alt="Discord">
         </div>
-      </div>
-    </section>
+				</section>
+				<div class="card">
+					<h1>CV</h1>
+					<p>You can view or download my CV below.</p>
+
+					<div class="cv-buttons">
+						<button class="primary-btn" onclick="window.open('CV/YourCV.pdf')">
+							View CV
+						</button>
+
+						<a href="CV/YourCV.pdf" download="">
+							<button class="primary-btn">
+								Download CV
+							</button>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- PROJECTS LIST PAGE -->
+			<section id="projects" class="page">
+				<div class="card">
+					<h1>Projects</h1>
+					<p>A selection of games I’ve worked on in Roblox Studio and Unity, focusing on scripting, game design, and UI.</p>
+					<div class="project-grid">
+
+						<!-- Each project links to its own page section -->
+						<div class="project-card" onclick="showPage('reclean')">
+							<img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif" alt="RE:CLEAN">
+								<div class="project-card-text">
+									<h2>☢ RE:CLEAN</h2>
+									<p>Unity · In Develpment · UI/UX · Multiplayer · Friends Project · Free Time</p>
+								</div>
+							</div>
+
+						<div class="project-card" onclick="showPage('arc82')">
+							<img src="Images/scp-logo-unscreen.gif" alt="ARC - 82">
+								<div class="project-card-text">
+									<h2>ARC - 82</h2>
+
+									<p>Roblox · In Develpment · Lua · UI/UX · Group Project · 2 Years Work · Limited Info Avalible</p>
+								</div>
+							</div>
+
+						<div class="project-card" onclick="showPage('thehunt')">
+							<img src="Images/THEHUNTGIF.gif" alt="The Hunt">
+								<div class="project-card-text">
+									<h2>The Hunt</h2>
+									<p>Roblox · Released · UI/UX · Art · Lua · Persenal Project · 1 Month Work</p>
+								</div>
+							</div>
 
 
-    <section id="reclean" class="page project-detail">
-      <div class="card">
-        <h1>☢ RE:CLEAN</h1>
-        <div class="project-images">
-          <img src="Images/RECLEAN1.png" alt="RE:CLEAN 1">
-          <img src="Images/RECLEAN2.png" alt="RE:CLEAN 2">
+						<div class="project-card" onclick="showPage('tortex')">
+							<img src="Images/OPERATIONSTORM.png" alt="TORTEX">
+								<div class="project-card-text">
+									<h2>TORTEX</h2>
+									<p>Unity · In Develpment · Main Develper · Persenal Project · Free Time</p>
+								</div>
+							</div>
+
+						<div class="project-card" onclick="showPage('tds')">
+							<img src="Images/TDS.png" alt="Tower Defence Simulator">
+								<div class="project-card-text">
+									<h2>Tower Defence Simulator</h2>
+									<p>Unity · C# · Solo · School Project · 10 Weeks Time</p>
+								</div>
+							</div>
+
+						<div class="project-card" onclick="showPage('helend')">
+							<img src="Images/HSL1.png" alt="Hel End Strife">
+								<div class="project-card-text">
+									<h2>Hel End Strife</h2>
+									<p>Unity · School project · Gameplay scripting · 10 Weeks Time</p>
+								</div>
+							</div>
+						<div class="project-card" onclick="showPage('TheCreatureWithin')">
+							<img src="Images/404.jpg" alt="Image Unavalible">
+								<div class="project-card-text">
+									<h2>TheCreatureWithin</h2>
+									<p>Unity · In Develpment · School project · Gameplay scripting · 1 Year Time · Limited Info Avalible</p>
+								</div>
+							</div>
+
+					</div>
+				</div>
+			</section>
+
+
+			<section id="reclean" class="page project-detail">
+				<div class="card">
+					<h1>☢ RE:CLEAN</h1>
+					<div class="project-images">
+						<img src="Images/RECLEAN1.png" alt="RE:CLEAN 1">
+							<img src="Images/RECLEAN2.png" alt="RE:CLEAN 2">
         </div>
-		  <p>A multiplayer project inspired by R.E.P.O. It’s currently on hold due to us not having enough time to work on it.</p>
-        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-      </div>
-    </section>
 
-    <section id="arc82" class="page project-detail">
-      <div class="card">
-        <h1>ARC - 82</h1>
-        <div class="project-images">
-          <img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png" alt="ARC - 82">
-		  <img src="Images/ROBLXUI1.png" alt="ARC - 82">
-      <img src="Images/ARC-82UIV1.png" alt="ARC - 82">
+					<div class="contribution-section">
+						<h2>My Contributions</h2>
+						<div class="contribution-grid">
+
+							<div class="code-section">
+								<h3>Example Code</h3>
+								<pre>
+									<code>
+using System;
+using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
+
+[System.Serializable]
+
+public class SettingsData
+{
+public float volumeLevel;
+public float tvsoundlevel;
+public bool filmgrain;
+public bool bloom;
+public bool vog;
+public bool fullscreen;
+public float audioListenerVolume;
+public int fps;
+}
+
+public class SettingsSaveManager : MonoBehaviour
+{
+
+[SerializeField] private Slider volumeLevel;
+[SerializeField] private Slider tvsoundlevel;
+[SerializeField] private Toggle filmgrain;
+[SerializeField] private Toggle bloomToggle;
+[SerializeField] private Toggle vog;
+[SerializeField] private Toggle fullscreen;
+[SerializeField] private Button savebutton;
+[SerializeField] private AudioListener audioListener;
+[SerializeField] private AudioSource audioSource;
+[SerializeField] private InputField fps;
+
+private string filePath;
+
+private void Start()
+{
+savebutton.onClick.AddListener(SaveSettingsData);
+savebutton.onClick.AddListener(() => SetFrameRate(int.TryParse(fps.text, out int result) ? result : 60));
+
+}
+
+private void Awake()
+{
+filePath = Application.persistentDataPath + "/settings.json";
+if (System.IO.File.Exists(filePath))
+{
+SettingsData data = LoadSettingsData();
+volumeLevel.value = data.volumeLevel;
+filmgrain.isOn = data.filmgrain;
+bloomToggle.isOn = data.bloom;
+vog.isOn = data.vog;
+fullscreen.isOn = data.fullscreen;
+tvsoundlevel.value = data.tvsoundlevel;
+fps.text = data.fps.ToString();
+SetFrameRate(data.fps);
+}
+}
+
+#region fps
+
+public void SetFrameRate(int fps)
+{
+QualitySettings.vSyncCount = 0;
+Application.targetFrameRate = fps;
+
+}
+
+
+#endregion
+
+
+private SettingsData LoadSettingsData()
+{
+if (System.IO.File.Exists(filePath))
+{
+string json = System.IO.File.ReadAllText(filePath);
+return JsonUtility.FromJson<SettingsData>(json);
+tvsoundlevel.value = audioSource.volume;
+
+
+
+
+if (fullscreen.isOn)
+{
+    Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+}
+else
+{
+    Screen.fullScreenMode = FullScreenMode.Windowed;
+}
+
+}
+else
+{
+return new SettingsData { volumeLevel = 1, filmgrain = true, vog = true, fullscreen = true };
+}
+}
+private void SaveSettingsData()
+{
+SettingsData data = new SettingsData
+{
+volumeLevel = volumeLevel.value,
+filmgrain = filmgrain.isOn,
+bloom = bloomToggle.isOn,
+vog = vog.isOn,
+fullscreen = fullscreen.isOn,
+tvsoundlevel = tvsoundlevel.value,
+fps = int.TryParse(fps.text, out int result) ? result : 60,
+};
+        
+string json = JsonUtility.ToJson(data, true);
+System.IO.File.WriteAllText(filePath, json);
+}
+}
+
+						  </code>
+								</pre>
+							</div>
+
+							<div class="contribution-item">
+								<img src="Images/RECLEAN2.png">
+									<h3>UI Design</h3>
+									<p>Worked on interface concepts and layout design.</p>
+								</div>
+
+
+						</div>
+					</div>
+					<p>A multiplayer project inspired by R.E.P.O. It’s currently on hold due to us not having enough time to work on it.</p>
+					<button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+				</div>
+			</section>
+
+			<section id="arc82" class="page project-detail">
+				<div class="card">
+					<h1>ARC - 82</h1>
+					<div class="project-images">
+						<img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png" alt="ARC - 82">
+							<img src="Images/ROBLXUI1.png" alt="ARC - 82">
+								<img src="Images/ARC-82UIV1.png" alt="ARC - 82">
         </div>
-		  <p>I have been working with multiple people on this project for around 2 years. The game is set to release in a year’s time.</p>
-		  <p>Ive been responsible in this project to everything related to UI, from basic Loadingscreens to highly advanced interactive ui's that controll the entire Vacility</p>
-		  <p>Dou to this being a Work in progress and yet to be released or Anounced info is farly kept hidden from the public</p>
-        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-      </div>
-    </section>
 
-	  <section id="helend" class="page project-detail">
-		  <div class="card">
-			  <h1>Hel End Strife</h1>
-			  <div class="project-images">
-				  <img src="Images/HSL1.png" alt="ARC - 82">
-					  <img src="Images/HSL2.png" alt="ARC - 82">
-						  <img src="Images/HSL3.png" alt="ARC - 82">
-							  <img src="Images/HSL4.png" alt="ARC - 82">
+
+		  <div class="contribution-section">
+						<h2>My Contributions</h2>
+
+						<div class="contribution-grid">
+
+							<div class="contribution-item">
+								<img src="Images/ROBLXUI1.png" alt="UI Work">
+									<h3>UI Systems</h3>
+									<p>Created advanced interactive UI systems controlling the facility.</p>
+								</div>
+							<div class="code-section">
+								<h3>Camera Switching</h3>
+								<pre>
+									<code>
+local remoteEventRequest = Instance.new("RemoteEvent")
+remoteEventRequest.Name = "CameraSwitchRequest"
+remoteEventRequest.Parent = game.ReplicatedStorage
+local remoteEventDenied = Instance.new("RemoteEvent")
+remoteEventDenied.Name = "CameraSwitchDenied"
+remoteEventDenied.Parent = game.ReplicatedStorage
+local groupId = 33993584
+local allowedCamerasForGroup = {
+["ClassDCamera"] = true,
+["Camera2"] = true,
+}
+local function isPlayerInGroup(player)
+return player:IsInGroup(groupId)
+end
+print("hi!")
+remoteEventRequest.OnServerEvent:Connect(function(player, requestedCameraName)
+if isPlayerInGroup(player) then
+local camera = workspace:FindFirstChild(requestedCameraName)
+if camera and allowedCamerasForGroup[requestedCameraName] then
+remoteEventRequest:FireClient(player, requestedCameraName)
+else
+remoteEventDenied:FireClient(player)
+end
+else
+remoteEventDenied:FireClient(player)
+end
+end)
+
+									</code>
+								</pre>
+							</div>
+							<div class="code-section">
+								<h3>Icon Spinner</h3>
+								<pre>
+									<code>
+local TweenService = game:GetService("TweenService")
+
+local Frame = script.Parent
+
+coroutine.wrap(function()
+local Outside = Frame.Outside
+local OuterTween = TweenService:Create(Outside, TweenInfo.new(4, Enum.EasingStyle.Linear), {Rotation = 360})
+
+while true do
+Outside.Rotation = 0
+OuterTween:Play()
+OuterTween.Completed:Wait()
+end
+end)()
+
+coroutine.wrap(function()
+local Inside = Frame.Inside
+local Tweens = {}
+
+for Angle = 90, 360, 90 do
+table.insert(Tweens, TweenService:Create(Inside, TweenInfo.new(2, Enum.EasingStyle.Elastic), {Rotation = Angle}))
+end
+
+while true do
+Inside.Rotation = 0
+
+for i, Tween in ipairs(Tweens) do
+Tween:Play()
+Tween.Completed:Wait()
+task.wait(1)
+end
+end
+end)()
+
+									</code>
+								</pre>
+							</div>
+							<div class="code-section">
+								<h3>Own Avatar Dummy</h3>
+								<pre>
+									<code>
+local Players = game:GetService("Players")
+local dummy = script.Parent
+
+local function updateDummyAppearance(player)
+local humanoidDescription = Players:GetHumanoidDescriptionFromUserId(player.UserId)
+local dummyHumanoid = dummy:WaitForChild("Humanoid")
+dummyHumanoid:ApplyDescription(humanoidDescription)
+end
+
+local function onPlayerAdded(player)
+player.CharacterAdded:Connect(function(character)
+character:WaitForChild("Humanoid")
+character:WaitForChild("HumanoidRootPart")
+updateDummyAppearance(player)
+end)
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+for _, player in pairs(Players:GetPlayers()) do
+onPlayerAdded(player)
+end
+
+
+									</code>
+								</pre>
+							</div>
+
+						</div>
+					</div>
+
+					<p>A Roblox group project. I have been working with multiple people on this project for around 2 years. The game is set to release in a year’s time.</p>
+					<p>I have been working with multiple people on this project for around 2 years. The game is set to release in a year’s time.</p>
+					<p>Ive been responsible in this project to everything related to UI, from basic Loadingscreens to highly advanced interactive ui's that controll the entire Vacility</p>
+					<p>Dou to this being a Work in progress and yet to be released or Anounced info is farly kept hidden from the public</p>
+					<button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+				</div>
+			</section>
+
+			<section id="helend" class="page project-detail">
+				<div class="card">
+					<h1>Hel End Strife</h1>
+					<div class="project-images">
+						<img src="Images/HSL1.png" alt="ARC - 82">
+							<img src="Images/HSL2.png" alt="ARC - 82">
+								<img src="Images/HSL3.png" alt="ARC - 82">
+									<img src="Images/HSL4.png" alt="ARC - 82">
         </div>
-			  <p>A unity school project that ive worked with 3 Develpers and 7 Artists on for a duration of 10 Weeks, a playable version is avalible for download on github!</p>
-			  <button class="primary-btn" onclick="window.location.href='https://github.com/ghostbusterbob/GA-GD-Project/tree/Ykada_';"> Link to Github </button>
-			  <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-		  </div>
-	  </section>
-	  
-	  <section id="tds" class="page project-detail">
-		  <div class="card">
-			  <h1>Tower Defence Simulator</h1>
-			  <div class="project-images">
-				  <img src="Images/TDS.png" alt="ARC - 82">
-					  <img src="Images/TGB2.png" alt="ARC - 82">
-						  <img src="Images/TGB3.png" alt="ARC - 82">
-							  <img src="Images/TGB4.png" alt="ARC - 82">
-								  <img src="Images/TGB5.png" alt="ARC - 82">
-        </div>
-			  <p>A school project for a solo Unity game, where we had to make a TowerDefence game, we had to make this in 10 weeks and that is how it turned out, i used AI to generat the Art, we had to make everything ourselfs, the scripts and varius systems are coded by me!</p>
-			  <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/TowerDefencegame';"> Link to Github </button>
-			  <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-		  </div>
-	  </section>
+					<div class="contribution-section">
+						<h2>My Contributions</h2>
+						<div class="contribution-grid">
 
-	  <section id="tortex" class="page project-detail">
-		  <div class="card">
-			  <h1>TORTEX</h1>
-			  <div class="project-images">
-				  <img src="Images/OPERATIONSTORM.png" alt="ARC - 82">
-					  <img src="Images/OPERATIONSTORM2.png" alt="ARC - 82">
-        </div>
-			  <p>A Persenal unity project, where i am making a tornado chasing game, i started working on this becouse i really Enjoy stormchase games, ive been working a bit on it when i have the freetime</p>
-			  <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/OPERATION-STORMCHASE';"> Link to Github </button>
-			  <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-		  </div>
-	  </section>
-	  
-	  <section id="thehunt" class="page project-detail">
-		  <div class="card">
-			  <h1>The Hunt</h1>
-			  <div class="project-images">
-				  <img src="Images/THEHUNT.png" alt="ARC - 82">
-					  <img src="Images/THEHUNT2.png" alt="ARC - 82">
-						  <img src="Images/THEHUNT3.png" alt="ARC - 82">
-							  <img src="Images/THEHUNTGIF.gif" alt="ARC - 82">
-        </div>
-			  <p>Roblox project that i worked on when i was still 13. looking back at this project am really proud of what i managed to make back then, even more fun that i made a secual to the first edition i made, i am still proud of what i managed tomake with litle to no expierence</p>
-			  <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/8833099801/The-Hunt';"> Roblox The Hunt 1 </button>
-			  <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/9478545883/The-Hunt-V2';"> Roblox The Hunt 2 </button>
-			  <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-		  </div>
-	  </section>
+							<div class="contribution-item">
+								<img src="Images/HSL1.png">
+									<h3>Gameplay Systems</h3>
+									<p></p>
+								</div>
 
+							<div class="contribution-item">
+								<img src="Images/HSL2.png">
+									<h3>Team Collaboration</h3>
+									<p>Worked on Saving systems that save your current progress for later.</p>
+								</div>
 
-  </main>
+						</div>
+					</div>
+					<p>A unity school project that ive worked with 3 Develpers and 7 Artists on for a duration of 10 Weeks, a playable version is avalible for download on github!</p>
+					<p>
+						My contriubutions to th
+					</p>
 
-  <footer>
-    <p>ykad_x</p>
-  </footer>
+					<button class="primary-btn" onclick="window.location.href='https://github.com/ghostbusterbob/GA-GD-Project/tree/Ykada_';"> Link to Github </button>
+					<button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+				</div>
+			</section>
 
-  <script>
-    function showPage(pageId) {
-      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-      document.getElementById(pageId).classList.add('active');
-      window.scrollTo(0,0);
+			<section id="tds" class="page project-detail">
+				<div class="card">
+					<h1>Tower Defence Simulator</h1>
+					<div class="project-images">
+						<img src="Images/TDS.png" alt="ARC - 82">
+							<img src="Images/TGB2.png" alt="ARC - 82">
+								<img src="Images/TGB3.png" alt="ARC - 82">
+									<img src="Images/TGB4.png" alt="ARC - 82">
+										<img src="Images/TGB5.png" alt="ARC - 82">
+											<p>A school project for a solo Unity game, where we had to make a TowerDefence game, we had to make this in 10 weeks and that is how it turned out, i used AI to generat the Art, we had to make everything ourselfs, the scripts and varius systems are coded by me!</p>
+										</div>
+					<div class="contribution-section">
+						<h2>My Contributions</h2>
+						<div class="contribution-grid">
+
+							<div class="code-section">
+								<h3>Tower Placing</h3>
+								<pre>
+									<code>
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
+// TowerSpawner.cs
+// Manages tower selection, placement, rotation, removal, and UI updates in a tower defense game.
+// Ykada_Hiroka
+public class TowerSpawner : MonoBehaviour
+{
+[Header("Preview Prefabs (Ghost Towers)")]
+[SerializeField] private GameObject archerPreview;
+[SerializeField] private GameObject crossbowPreview;
+[SerializeField] private GameObject magePreview;
+[SerializeField] private GameObject cannonPreview;
+[SerializeField] private GameObject crystalPreview;
+[SerializeField] private GameObject minigunnerPreview;
+
+[Header("Tower Prefabs (Real Towers)")]
+[SerializeField] private GameObject archer;
+[SerializeField] private GameObject crossbow;
+[SerializeField] private GameObject mage;
+[SerializeField] private GameObject cannon;
+[SerializeField] private GameObject crystal;
+[SerializeField] private GameObject minigunner;
+
+[Header("Settings")]
+[SerializeField] private LayerMask placementLayer;
+[SerializeField] private int maxTowers = 25;
+[SerializeField] private int startingMoney = 500;
+[SerializeField] private int money;
+private float displayedMoney;
+
+[Header("UI")]
+[SerializeField] private Text moneyText;
+[SerializeField] private Text towerErrorLog;
+[SerializeField] private GameObject errorLogsPanel;
+[SerializeField] private Text currenttowersspawnedtext;
+
+private GameObject previewTower;
+private GameObject selectedTowerPrefab;
+private int previewCost;
+
+private readonly List<PlacedTower>
+	placedTowers = new List<PlacedTower>
+		();
+
+		private void Start()
+		{
+		money = startingMoney;
+		displayedMoney = money;
+		UpdateMoneyUI();
+		}
+
+		private void Update()
+		{
+		HandleTowerSelection();
+		HandleTowerPlacement();
+		HandleTowerInteraction();
+		displayedMoney = Mathf.Lerp(displayedMoney, money, Time.deltaTime * 10f);
+		moneyText.text = "$: " + Mathf.RoundToInt(displayedMoney);
+		}
+
+		#region Tower Selection
+		private void HandleTowerSelection()
+		{
+		if (Input.GetKeyDown(KeyCode.Alpha1)) TrySelectTower(archer, archerPreview, 250);
+		else if (Input.GetKeyDown(KeyCode.Alpha2)) TrySelectTower(crossbow, crossbowPreview, 500);
+		else if (Input.GetKeyDown(KeyCode.Alpha3)) TrySelectTower(mage, magePreview, 750);
+		else if (Input.GetKeyDown(KeyCode.Alpha4)) TrySelectTower(cannon, cannonPreview, 1500);
+		else if (Input.GetKeyDown(KeyCode.Alpha5)) TrySelectTower(crystal, crystalPreview, 5000);
+		else if (Input.GetKeyDown(KeyCode.Alpha6)) TrySelectTower(minigunner, minigunnerPreview, 15000);
+		}
+
+		private void TrySelectTower(GameObject prefab, GameObject previewPrefab, int cost)
+		{
+		if (placedTowers.Count >= maxTowers)
+		{
+		ShowError("Tower limit reached!");
+		return;
+		}
+
+		if (money < cost)
+    {
+        ShowError("Insufficient funds!");
+        return;
     }
-  </script>
-</body>
+
+    if (previewTower != null) Destroy(previewTower);
+
+    previewTower = Instantiate(previewPrefab); // show ghost tower
+    previewCost = cost;
+    selectedTowerPrefab = prefab; // save real tower
+}
+#endregion
+
+#region Tower Placement
+private void HandleTowerPlacement()
+{
+    if (previewTower == null) return;
+
+    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+    if (Physics.Raycast(ray, out RaycastHit hit, 100f, placementLayer))
+    {
+        Vector3 newPos = hit.point;
+        previewTower.transform.position = newPos;
+
+        previewTower.transform.rotation = Quaternion.Euler(0f, previewTower.transform.rotation.eulerAngles.y, 0f);
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            previewTower.transform.Rotate(0, 45f, 0);
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            PlaceTower();
+        }
+    }
+}
+
+private void PlaceTower()
+{
+    if (money < previewCost)
+    {
+        ShowError("Not enough money!");
+        Destroy(previewTower);
+        previewTower = null;
+        return;
+    }
+
+    money -= previewCost;
+    UpdateMoneyUI();
+
+    // Save preview position/rotation
+    Vector3 pos = previewTower.transform.position;
+    Quaternion rot = previewTower.transform.rotation;
+
+    Destroy(previewTower); // remove preview
+
+    // Spawn real tower
+    GameObject realTower = Instantiate(selectedTowerPrefab, pos, rot);
+
+    PlacedTower newTower = new PlacedTower(realTower, previewCost);
+    placedTowers.Add(newTower);
+
+    previewTower = null;
+    selectedTowerPrefab = null;
+}
+#endregion
+
+#region Tower Interaction (Rotate / Remove)
+private void HandleTowerInteraction()
+{
+    if (previewTower != null) return;
+
+    if (Input.GetKeyDown(KeyCode.R))
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            PlacedTower tower = placedTowers.Find(t => t.TowerObject == hit.collider.gameObject);
+            if (tower != null)
+            {
+                tower.TowerObject.transform.Rotate(0, 45f, 0);
+            }
+        }
+    }
+
+    if (Input.GetKeyDown(KeyCode.Backspace))
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            PlacedTower tower = placedTowers.Find(t => t.TowerObject == hit.collider.gameObject);
+            if (tower != null)
+            {
+                RemoveTower(tower);
+            }
+        }
+    }
+}
+
+private void RemoveTower(PlacedTower tower)
+{
+    int refund = tower.Cost / 2;
+    money += refund;
+    UpdateMoneyUI();
+
+    placedTowers.Remove(tower);
+    Destroy(tower.TowerObject);
+}
+#endregion
+
+#region Money & UI
+public void AddMoney(int amount)
+{
+    money += amount;
+    UpdateMoneyUI();
+}
+
+private void UpdateMoneyUI()
+{
+
+    moneyText.text = $"$ {money}";
+    currenttowersspawnedtext.text = $"Towers: {placedTowers.Count}/{maxTowers}";
+}
+
+private void ShowError(string message)
+{
+    errorLogsPanel.SetActive(true);
+    towerErrorLog.text = message;
+    StartCoroutine(HideErrorAfterDelay(2.5f));
+}
+
+private IEnumerator HideErrorAfterDelay(float delay)
+{
+    yield return new WaitForSeconds(delay);
+    errorLogsPanel.SetActive(false);
+}
+#endregion
+
+#region Helper Class
+private class PlacedTower
+{
+    public GameObject TowerObject { get; }
+    public int Cost { get; }
+
+    public PlacedTower(GameObject obj, int cost)
+    {
+        TowerObject = obj;
+        Cost = cost;
+    }
+}
+#endregion
+}
+
+// © 2025 ykad_x. All rights reserved.
+									</code>
+								</pre>
+							</div>
+							<div class="contribution-item">
+								<img src="Images/TGB3.png">
+									<h3>Programming</h3>
+									<p>All scripts and mechanics coded by me in C#.</p>
+								</div>
+
+							<div class="contribution-item">
+								<img src="Images/TDSEnemyswalking.gif">
+									<h3>Game Design</h3>
+									<p>Designed progression, balancing, and core gameplay loop.</p>
+								</div>
+
+						</div>
+					</div>
+
+					<button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/TowerDefencegame';"> Link to Github </button>
+					<button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+				</div>
+			</section>
+
+			<section id="tortex" class="page project-detail">
+				<div class="card">
+					<h1>TORTEX</h1>
+					<div class="project-images">
+						<img src="Images/OPERATIONSTORM.png" alt="ARC - 82">
+							<img src="Images/OPERATIONSTORM2.png" alt="ARC - 82">
+        </div>
+					<div class="contribution-section">
+						<h2>My Contributions</h2>
+						<div class="contribution-grid">
+
+							<div class="code-section">
+								<h3>Tornado Code</h3>
+								<pre>
+									<code>
+using UnityEngine;
+using UnityEngine.UI;
+
+//\\
+// ykad_x \\
+//\\
+
+[RequireComponent(typeof(Rigidbody))]
+public class Tornado : MonoBehaviour
+{
+#region Private Fields
+
+[Header("Tornado Settings (Loaded from Data Script)")]
+private float TORNADOwindspeed;
+private float TORNADObaseWindSpeed;
+private float TORNADOCoreSpeed;
+private float TORNADOgroundSpeed;
+private float TORNADOtornadoRadius;
+private float TORNADOliftForce;
+private float TORNADOrotationSpeed;
+private float TORNADOeffectRadius;
+private float TORNADOmaxDistance;
+
+private float TORNADOcurrentWindDirection;
+private float TORNADOwindShiftSpeed;
+
+[Header("Physics & Behavior")]
+[SerializeField] private Rigidbody tornadoCore;
+[SerializeField] private LayerMask interactableLayers;
+
+[Header("Visuals & UI")]
+[SerializeField] private ParticleSystem[] tornadoParticles;
+[SerializeField] private Canvas tornadoUICanvas;
+[SerializeField] private Text currentWindSpeedText;
+
+[Header("System Integration")]
+[SerializeField] private GeneralWetherSystem weatherSystem;
+[SerializeField] private GeneralStormStatistics stats;
+private bool DevelperOverWriteOfDebugSystem;
+
+[Header("Debug & Player Tracking")]
+[SerializeField] private Transform playerTransform;
+private Vector3 rotationAxis = Vector3.up;
+private Vector3 moveDirection;
+private float turnSpeedPerSecond;
+
+private float valueUpdateTimer = 0f;
+[SerializeField] private float valueUpdateInterval = 10f;   // updates every 10 seconds
+
+#endregion
+
+private void Start()
+{
+turnSpeedPerSecond = 15f / 60f;
+moveDirection = new Vector3(Random.Range(-1f, 1f), 0, Random.Range(-1f, 1f)).normalized;
+
+if (tornadoCore == null)
+tornadoCore = GetComponent<Rigidbody>
+	();
+
+	tornadoParticles = GetComponentsInChildren<ParticleSystem>();
+	DevelperOverWriteOfDebugSystem = stats.DevelperOverWriteOfDebugSystem;
+	UpdateTornadoStats();   // initial load
+	}
+	private void Update()
+	{
+		// Update movement and physics every frame
+		HandleWeatherBasedSpeed();
+		HandlePlayerWindInteraction();
+
+		//  2 second stat update 
+		valueUpdateTimer += Time.deltaTime;
+		if (valueUpdateTimer >= valueUpdateInterval)
+		{
+			valueUpdateTimer = 0f;
+			UpdateTornadoStats();
+		}
+
+		// UI
+
+	}
+	private void FixedUpdate()
+	{
+		HandleMovement();
+		//  HandleRotation();
+	}
+	#region Stats Update
+
+	private void UpdateTornadoStats()
+	{
+		if (weatherSystem == null) return;
+
+		// copy stats from weather system
+		TORNADOwindspeed = stats.Windspeed;
+		TORNADObaseWindSpeed = stats.BaseWindSpeed;
+		TORNADOCoreSpeed = stats.MaxCoreSpeed;
+		TORNADOgroundSpeed = stats.GroundSpeed;
+		TORNADOtornadoRadius = stats.TornadoRadius;
+		TORNADOliftForce = stats.LiftForce;
+		TORNADOrotationSpeed = stats.RotationSpeed;
+		TORNADOeffectRadius = stats.EffectRadius;
+		TORNADOmaxDistance = stats.MaxDistance;
+		//TORNADOwindShiftSpeed = stats.WindShiftSpeed;
+
+		// copy wind direction from weather system
+		TORNADOcurrentWindDirection = stats.CurrentWindDirection;
+
+		// update UI
+		currentWindSpeedText.text = $"Wind Speed: {TORNADOwindspeed} km/h";
+
+		// debugs
+		if (DevelperOverWriteOfDebugSystem == false)
+		{
+			Debug.Log($"[Tornado] Wind Speed: {TORNADOwindspeed}");
+			Debug.Log($"[Tornado] Core Speed: {TORNADOCoreSpeed}");
+			Debug.Log($"[Tornado] Ground Speed: {TORNADOgroundSpeed}");
+			Debug.Log($"[Tornado] Tornado Radius: {TORNADOtornadoRadius}");
+			Debug.Log($"[Tornado] Lift Force: {TORNADOliftForce}");
+			Debug.Log($"[Tornado] Rotation Speed: {TORNADOrotationSpeed}");
+		}
+		else
+		{ return; }
+
+	}
+
+	#endregion
+
+	#region Tornado Movement
+	private void HandleMovement()
+	{
+		if (tornadoCore == null) return;
+
+		if (weatherSystem != null)
+		{
+			Vector3 targetDirection = weatherSystem.CurrentWindDirection.normalized;
+
+			if (targetDirection.sqrMagnitude > 0.01f)
+			{
+				moveDirection = Vector3.RotateTowards(
+					moveDirection,
+					targetDirection,
+					Mathf.Deg2Rad * turnSpeedPerSecond * Time.fixedDeltaTime,
+					0f
+				).normalized;
+			}
+		}
+
+		Vector3 movement = moveDirection * TORNADOgroundSpeed * Time.fixedDeltaTime;
+		tornadoCore.MovePosition(tornadoCore.position + movement);
+	}
+
+
+	private void HandleRotation()
+	{
+		transform.Rotate(rotationAxis, TORNADOrotationSpeed * Time.deltaTime, Space.World);
+
+		if (tornadoCore != null)
+			tornadoCore.AddTorque(rotationAxis * TORNADOrotationSpeed, ForceMode.Acceleration);
+	}
+	#endregion
+
+	#region Weather & Speed
+	private void HandleWeatherBasedSpeed()
+	{
+		TORNADOCoreSpeed = Mathf.Lerp(TORNADOCoreSpeed, TORNADObaseWindSpeed, Time.deltaTime * 0.5f);
+	}
+	#endregion
+
+	#region Tornado Visuals
+
+	//void UpdateTornadoVisuals()
+	//{
+
+	//    tornadoRadius = stats.tornadoRadius;
+        
+	//    effectRadius = tornadoRadius * 2f;
+
+	//}
+
+	#endregion
+
+	#region Player Interaction
+	private void HandlePlayerWindInteraction()
+	{
+		if (playerTransform == null) return;
+
+		float distance = Vector3.Distance(transform.position, playerTransform.position);
+		float proximityFactor = Mathf.Clamp01(1 - (distance / TORNADOeffectRadius));
+
+		float adjustedWind = Mathf.Lerp(TORNADObaseWindSpeed * 0.5f, TORNADObaseWindSpeed * 1.5f, proximityFactor);
+		TORNADOCoreSpeed = adjustedWind;
+
+		Collider[] nearby = Physics.OverlapSphere(transform.position, TORNADOeffectRadius, interactableLayers);
+		foreach (var col in nearby)
+		{
+			Rigidbody rb = col.attachedRigidbody;
+			if (rb != null)
+			{
+				Vector3 directionToCore = (transform.position - rb.position).normalized;
+				float pullForce = TORNADOliftForce * proximityFactor;
+
+				rb.AddForce(directionToCore * pullForce, ForceMode.Acceleration);
+				rb.AddForce(Vector3.up * (TORNADOliftForce * 0.5f * proximityFactor), ForceMode.Acceleration);
+			}
+		}
+	}
+	#endregion
+}
+							  </code>
+								</pre>
+							</div>
+
+							<div class="contribution-item">
+								<img src="Images/TORTEXTORNADO.png">
+									<h3>Core Gameplay</h3>
+									<p>Creating tornado systems.</p>
+								</div>
+
+						</div>
+					</div>
+					<p>A Persenal unity project, where i am making a tornado chasing game, i started working on this becouse i really Enjoy stormchase games, ive been working a bit on it when i have the freetime</p>
+					<button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/OPERATION-STORMCHASE';"> Link to Github </button>
+					<button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+				</div>
+			</section>
+
+			<section id="thehunt" class="page project-detail">
+				<div class="card">
+					<h1>The Hunt</h1>
+					<div class="project-images">
+						<img src="Images/THEHUNT.png" alt="ARC - 82">
+							<img src="Images/THEHUNT2.png" alt="ARC - 82">
+								<img src="Images/THEHUNT3.png" alt="ARC - 82">
+									<img src="Images/THEHUNTGIF.gif" alt="ARC - 82">
+        </div>
+					<div class="contribution-section">
+						<h2>My Contributions</h2>
+						<div class="contribution-grid">
+
+							<div class="contribution-item">
+								<img src="Images/THEHUNT.png">
+									<h3>Game Creation</h3>
+									<p>Designed and built the full game from scratch at age 13.</p>
+								</div>
+
+							<div class="code-section">
+								<h3>automatic doors</h3>
+								<pre>
+									<code>
+			local larm = script.Parent:FindFirstChild("HumanoidRootPart")
+			local rarm = script.Parent:FindFirstChild("HumanoidRootPart")
+			local hum = script.Parent:FindFirstChild("Item")
+			local anim = hum:LoadAnimation(script.Parent["058attack1"])
+			local anim2 = hum:LoadAnimation(script.Parent["058attack2"])
+			local attackdb = false
+
+			local anims = {"whip", "sting"}
+			local DETECTION_RADIUS = 125 -- Radius to detect and follow the player
+
+			function attackAnim()
+			local randomanim = anims[math.random(1, #anims)]
+			if randomanim == "whip" then
+			anim:Play()
+			wait(0.6)
+			else
+			wait(0.6)
+			anim2:Play()
+			end
+			end
+
+			function findNearestPlayer(pos)
+			local minDist = math.huge
+			local nearestPlayer = nil
+			for _, player in ipairs(game.Players:GetPlayers()) do
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			local dist = (player.Character.HumanoidRootPart.Position - pos).magnitude
+			if dist < minDist then
+				minDist = dist
+				nearestPlayer = player.Character.HumanoidRootPart
+			end
+		end
+	end
+	return nearestPlayer
+end
+
+function wander()
+	while true do
+		local nearestPlayer = findNearestPlayer(script.Parent.HumanoidRootPart.Position)
+		if nearestPlayer and (nearestPlayer.Position - larm.Position).magnitude <= DETECTION_RADIUS then
+		while (nearestPlayer.Position - larm.Position).magnitude <= DETECTION_RADIUS do
+		script.Parent.Item:MoveTo(nearestPlayer.Position)
+		wait(0.4)
+		end
+		end
+
+		local newPosition = Vector3.new(
+		math.random(-750, 750),
+		0,
+		math.random(-750, 750)
+		)
+		script.Parent.Item:MoveTo(newPosition)
+		wait(5) -- Adjust the wait time to control how often the enemy changes its wandering destination
+		end
+		end
+
+		function isPlayerNearby(target)
+		return (target.Position - larm.Position).magnitude < 10
+end
+
+-- Function to deal damage to the humanoid
+function dealDamageToPlayer(humanoid)
+	if humanoid then
+		humanoid:TakeDamage(35)
+	end
+end
+
+function onTouched(hit)
+	local humanoid = hit.Parent:FindFirstChildOfClass("Humanoid")
+	if humanoid then
+		dealDamageToPlayer(humanoid)
+	end
+end
+
+while true do
+	wait(0.4)
+	local target = findNearestPlayer(script.Parent.HumanoidRootPart.Position)
+	if target ~= nil then
+		script.Parent.Item:MoveTo(target.Position, target) 
+		if (target.Position - larm.Position).magnitude < 10 and attackdb == false then
+			attackdb = true
+			script.Parent.Head.Sprint:Play()  
+			attackAnim()
+			wait(0.1)
+			dealDamageToPlayer(target.Parent:FindFirstChild("Humanoid")) -- Deal damage to the player
+			wait(0.3)
+			attackdb = false
+		end
+	else
+		wander() -- If no target found, wander around the map
+	end
+end
+
+									</code>
+								</pre>
+							</div>
+
+							<div class="contribution-item">
+								<img src="Images/THEHUNT3.png">
+									<h3>Sequel Development</h3>
+									<p>Created a second version improving on the original concept.</p>
+								</div>
+
+						</div>
+					</div>
+					<p>Roblox project that i worked on when i was still 13. looking back at this project am really proud of what i managed to make back then, even more fun that i made a secual to the first edition i made, i am still proud of what i managed tomake with litle to no expierence</p>
+					<button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/8833099801/The-Hunt';"> Roblox The Hunt 1 </button>
+					<button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/9478545883/The-Hunt-V2';"> Roblox The Hunt 2 </button>
+					<button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+				</div>
+			</section>
+			<section id="TheCreatureWithin" class="page project-detail">
+				<div class="card">
+
+				</div>
+				<div class="contribution-section">
+					<h2>My Contributions</h2>
+					<div class="contribution-grid">
+
+						<div class="code-section">
+							<h3>Enemy Movement, With microphone</h3>
+							<pre>
+								<code>
+using UnityEngine;
+using UnityEngine.AI;
+using System.Collections;
+using Unity.AI.Navigation;
+using UnityEngine.Audio;
+
+// stupidmonkeylord made this, dont ask why its so bad, i just wanted to make a sound detecting enemy and it turned into this mess, enjoy :D
+
+// selection of script (BasicEnemyControlsAndAutomation)
+
+// Script is responsible for movement and audiocontroll for the enemy
+
+// Multipe Breakpoints are known, these being:
+// NavMesh Not being baked
+
+
+
+public class EnemyMovingController : MonoBehaviour
+{
+public GameObject Player;
+float speed = 1f;
+private float timer;
+[SerializeField] private Animator animator;
+public NavMeshAgent agent;
+[SerializeField] private float distanceToPlayer;
+private bool indistance;
+[SerializeField] private float wanderingradius = 10f;
+[SerializeField] private float wanderingtimer = 5f;
+[SerializeField] private float fieldofview = 30f;
+[SerializeField] private float rotatespeed = 5f;
+
+[Header("Microhpone")]
+[SerializeField] private float hearingrange = 10f;
+[SerializeField] private float hearingfieldofview = 360f;
+[SerializeField] private float hearingrotatespeed = 60f;
+[SerializeField] private float micSensitivity = 100f;
+[SerializeField] private float micThreshold = 0.05f;
+[SerializeField] private int sampleWindow = 128;
+
+private AudioClip micclip;
+private string micDevice;
+private bool heardplayer;
+private Vector3 lastheardposition;
+
+[Header("Object Sound Detection")]
+[SerializeField] private float nonmichearingrange = 25f;
+private bool heardobjectsound;
+private Vector3 lastheardobjectposition;
+
+[SerializeField] private LayerMask obstacleMask;
+[SerializeField] private float audioCheckInterval = 0.5f;
+[SerializeField] private LayerMask soundSourceMask;
+[SerializeField] private float nonsoundingplayerhearingfieldofview = 240f;
+
+private float audioTimer;
+
+[Header("Activation Settings")]
+[SerializeField] private bool abletoseeplayer;
+[SerializeField] private bool canusemicrohpone;
+[SerializeField] private bool canhearobjects;
+[SerializeField] private bool develpmentmode;
+
+
+private void Start()
+{
+//debugsystem
+//if a system is not working how its supposed to, this will log that and you will find where the issue is where its noted
+
+if (develpmentmode == true)
+{
+Debug.Log("Development mode enabled: Debug lines and logs will be shown.");
+Debug.Log("Enemy initialized at position: " + transform.position);
+Debug.Log("Player found: " + (Player != null ? Player.name : "No player found with tag 'Player'"));
+Debug.Log("Microphone enabled: " + canusemicrohpone);
+Debug.Log("Object sound detection enabled: " + canhearobjects);
+Debug.Log("Field of view: " + fieldofview);
+Debug.Log("Hearing range: " + hearingrange);
+Debug.Log("Non-microphone hearing range: " + nonmichearingrange);
+Debug.Log("Microphone sensitivity: " + micSensitivity);
+Debug.Log("Microphone threshold: " + micThreshold);
+Debug.Log("Audio check interval: " + audioCheckInterval);
+Debug.Log(RandomNavSphere(transform.position, wanderingradius));
+Debug.Log("NavMeshAgent component found: " + (agent != null ? "Yes" : "No"));
+Debug.Log("Obstacle mask: " + obstacleMask);
+Debug.Log("Sound source mask: " + soundSourceMask);
+Debug.Log(NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 1f, NavMesh.AllAreas) ? "NavMesh is baked and valid" : "NavMesh is not baked or invalid at enemy position");
+Debug.Log(CompareTag("Enemy") ? "Enemy tag is correctly set" : "Enemy tag is not set to 'Enemy'");
+}
+
+
+
+//animator = GetComponent<Animator>
+	();
+	Player = GameObject.FindGameObjectWithTag("Player");
+	//animator.SetBool("IsWalking", true);
+	if (canusemicrohpone == true)
+	{
+	if (Microphone.devices.Length > 0)
+	{
+	micDevice = Microphone.devices[0];
+	micclip = Microphone.Start(micDevice, true, 10, 44100);
+	Debug.Log("Microphone found: " + micDevice);
+	}
+	}
+	}
+	private Vector3 RandomNavSphere(Vector3 origin, float distance)
+	{
+	Vector3 randomDirection = Random.insideUnitSphere * distance;
+	randomDirection += origin;
+	NavMeshHit navHit;
+	NavMesh.SamplePosition(randomDirection, out navHit, distance, NavMesh.AllAreas);
+	return navHit.position;
+	}
+	private void Update()
+	{
+	if (canusemicrohpone == true)
+	{
+	if (micclip != null)
+	{
+	int micPos = Microphone.GetPosition(micDevice) - sampleWindow;
+	if (micPos < 0) return;
+
+float[] samples = new float[sampleWindow];
+micclip.GetData(samples, micPos);
+
+float level = 0f;
+
+for (int i = 0; i < sampleWindow; i++)
+{
+level += Mathf.Abs(samples[i]);
+}
+
+level = (level / sampleWindow) * micSensitivity;
+
+Debug.Log("Microphone level: " + level);
+
+if (level > micThreshold)
+{
+heardplayer = true;
+lastheardposition = Player.transform.position;
+}
+else
+{
+heardplayer = false;
+}
+}
+//        heardplayer = true;
+//        lastheardposition = Player.transform.position;
+//        Debug.Log("Heard player at position: " + lastheardposition);
+//    }
+//    else
+//    {
+//        heardplayer = false;
+//    }
+}
+distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
+{
+
+if (heardplayer) {
+Vector3 directionToLastHeard = (lastheardposition - transform.position).normalized;
+Quaternion targetRot = Quaternion.LookRotation(directionToLastHeard, Vector3.up);
+transform.rotation = Quaternion.Slerp(
+transform.rotation,
+targetRot,
+hearingrotatespeed * Time.deltaTime
+);
+agent.SetDestination(lastheardposition);
+}
+
+RaycastHit hit;
+
+if (Player == null) return;
+
+Vector3 directionToPlayer = (Player.transform.position - transform.position).normalized;
+float distanceToPlayer = Vector3.Distance(transform.position, Player.transform.position);
+if (Vector3.Angle(transform.forward, directionToPlayer) < fieldofview / 1.2f)
+{
+if (Physics.Raycast(transform.position, directionToPlayer, out hit, distanceToPlayer /*, layerMask */))
+{
+if (hit.collider.CompareTag("Player"))
+{
+agent.SetDestination(Player.transform.position);
+Quaternion targetRot = Quaternion.LookRotation(directionToPlayer, Vector3.up);
+transform.rotation = Quaternion.Slerp(
+transform.rotation,
+targetRot,
+rotatespeed * Time.deltaTime
+);
+indistance = true;
+
+}
+else
+{
+indistance = false;
+}
+}
+else
+{
+indistance = false;
+}
+
+}
+if (canhearobjects == true)
+{
+audioTimer += Time.deltaTime;
+if (audioTimer >= audioCheckInterval)
+{
+audioTimer = 0f;
+checkforaudiosources();
+}
+}
+if (heardobjectsound == true)
+{
+
+Vector3 directionToLastHeardObject = (lastheardobjectposition - transform.position).normalized;
+Quaternion targetRot = Quaternion.LookRotation(directionToLastHeardObject, Vector3.up);
+RaycastHit objectHit;
+
+if (Vector3.Angle(transform.forward, directionToLastHeardObject) < nonsoundingplayerhearingfieldofview)
+{
+if (Physics.Raycast(transform.position, directionToLastHeardObject, out objectHit, Vector3.Distance(transform.position, lastheardobjectposition)))
+{
+if (objectHit.collider.CompareTag("Player"))
+{
+agent.SetDestination(lastheardobjectposition);
+transform.rotation = Quaternion.Slerp(
+transform.rotation,
+targetRot,
+hearingrotatespeed * Time.deltaTime
+);
+}
+}
+}
+}
+if (indistance == true)
+{
+}
+else
+{
+timer += Time.deltaTime;
+
+if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+{
+Vector3 newPos = RandomNavSphere(transform.position, wanderingradius);
+agent.SetDestination(newPos);
+}
+}
+}
+
+}
+
+private void checkforaudiosources()
+{
+Collider[] hits = Physics.OverlapSphere(transform.position, nonmichearingrange, soundSourceMask);
+foreach (Collider hit in hits)
+{
+
+AudioSource[] audioSources = FindObjectsByType<AudioSource>
+	(FindObjectsSortMode.None);
+
+	foreach (AudioSource source in audioSources)
+	{
+	if (source.isPlaying)
+	{
+	float dist = Vector3.Distance(transform.position, source.transform.position);
+	if (dist <= nonmichearingrange)
+	{
+	Vector3 dir = (source.transform.position - transform.position).normalized;
+	if (!Physics.Raycast(transform.position, dir, dist, obstacleMask))
+	{
+	heardobjectsound = true;
+	lastheardobjectposition = source.transform.position;
+	agent.SetDestination(lastheardobjectposition);
+	}
+	}
+	}
+	}
+	}
+	}
+
+	public void HearObjectSound(Vector3 soundPosition)
+	{
+	if (!canhearobjects) return;
+
+	float dist = Vector3.Distance(transform.position, soundPosition);
+
+	if (dist <= hearingrange)
+	{
+	Vector3 dir = (soundPosition - transform.position).normalized;
+
+	if (!Physics.Raycast(transform.position, dir, dist))
+	{
+	heardobjectsound = true;
+	lastheardobjectposition = soundPosition;
+	}
+	}
+	}
+	private void OnAnimatorMove()
+	{
+
+	}
+
+	}
+
+										</code>
+							</pre>
+						</div>
+
+						<div class="code-section">
+							<h3>automatic doors</h3>
+							<pre>
+								<code>
+using UnityEngine;
+using System.Collections;
+
+public class OpenVualtDoor : MonoBehaviour
+{
+[Header("Door gameobjects")]
+[SerializeField] private GameObject VualtDoor;
+[SerializeField] private GameObject ParticalObjecs;
+[SerializeField] private Transform player;
+
+[Header("Door open settings")]
+[SerializeField] private float openDoorSpeed = 2f;
+[SerializeField] private float playerdetectionArea = 5f;
+[SerializeField] private Vector3 openOffset;
+
+private bool isDoorOpen = false;
+private bool isMoving = false;
+
+private Vector3 closedPosition;
+private Vector3 openPosition;
+
+private void Start()
+{
+closedPosition = VualtDoor.transform.position;
+openPosition = closedPosition + openOffset;
+}
+
+private void Update()
+{
+float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+if (distanceToPlayer < playerdetectionArea && !isDoorOpen && !isMoving)
+{
+StartCoroutine(MoveDoor(openPosition));
+isDoorOpen = true;
+}
+}
+
+private IEnumerator MoveDoor(Vector3 targetPosition)
+{
+isMoving = true;
+ParticalObjecs.SetActive(true);
+
+while (Vector3.Distance(VualtDoor.transform.position, targetPosition) > 0.01f)
+{
+VualtDoor.transform.position = Vector3.MoveTowards(
+VualtDoor.transform.position,
+targetPosition,
+openDoorSpeed * Time.deltaTime
+);
+
+yield return null;
+}
+
+ParticalObjecs.SetActive(false);
+isMoving = false;
+}
+}
+								</code>
+							</pre>
+						</div>
+
+						<div class="code-section">
+							<h3>Local Lighting, And breaking light</h3>
+							<pre>
+								<code>
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.InputSystem.Controls;
+public class LocalLighting : MonoBehaviour
+{
+[Header("Lightingsettings")]
+[SerializeField] private Light currentlight;
+[SerializeField] private Rigidbody LightFallBody;
+[SerializeField] private GameObject player;
+[SerializeField] private GameObject brokenlight;
+[SerializeField] private AudioSource breakslightsource;
+
+[Header("Flicker Settings")]
+[SerializeField] private float flickerIntensity = 0.5f;
+[SerializeField] private float flickerSpeed = 4;
+[SerializeField] private float EnableLightAfterDelay = 5f;
+
+[Header("Main Settings")]
+[SerializeField] bool flickerEnabled;
+[SerializeField] bool canbreak;
+
+private void Start()
+{
+player = GameObject.FindGameObjectWithTag("Player");
+}
+
+private void Update()
+{
+if (flickerEnabled)
+{
+if (player != null && currentlight != null)
+{
+float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+if (distanceToPlayer < 5f)
+{
+FlickerLight();
+}
+else
+{
+}
+}
+}
+if (canbreak)
+{
+
+if (player != null && currentlight != null)
+{
+float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+if (distanceToPlayer < 5f)
+{
+currentlight.enabled = false;
+GetComponent<Rigidbody>
+	().useGravity = true;
+	}
+	}
+	}
+	}
+
+	private void OnCollisionEnter(Collision collision)
+	{
+	if (collision.gameObject.CompareTag("Ground"))
+	{
+	breakslightsource.PlayDelayed(0.2f);
+	Instantiate(brokenlight, transform.position, transform.rotation);
+	brokenlight.GetComponent<Collider>().enabled = false;
+Destroy(gameObject);
+}
+}
+private void FlickerLight()
+{
+float noise = Mathf.PerlinNoise(Time.time * flickerSpeed, 0f);
+currentlight.intensity = Mathf.Lerp(currentlight.intensity, flickerIntensity, noise);
+}
+}
+
+							  </code>
+							</pre>
+						</div>
+					</div>
+					<p>Currently working on this project inside of NEON Orignes for an entire year, and currently working on this</p>
+					<button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+				</div>
+			</section>
+
+
+		</main>
+
+		<footer>
+			<p>ykad_x</p>
+		</footer>
+
+		<script>
+			function showPage(pageId) {
+			document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+			document.getElementById(pageId).classList.add('active');
+			window.scrollTo(0,0);
+			}
+		</script>
+	</body>
 </html>

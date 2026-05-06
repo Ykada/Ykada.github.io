@@ -7,6 +7,74 @@
   box-sizing: border-box;
 }
 
+.project-card-text {
+  padding: 10px;
+}
+
+.project-card h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.project-card p {
+  font-size: 13px;
+  color: #aaa;
+}
+.contribution-section {
+  margin-top: 20px;
+}
+
+.code-section {
+  margin-top: 15px;
+}
+
+/* Make it look like contribution-item */
+.code-section pre {
+  background: transparent;              /* transparent */
+  color: #e6e6e6;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 500px;
+  font-size: 13px;
+  border: 1px solid #2a2a2a;            /* same subtle border */
+}
+
+/* Make text behave nicely */
+.code-section code {
+  font-family: monospace;
+  white-space: pre;
+}
+
+.contribution-section h2 {
+  margin-bottom: 10px;
+}
+
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.contribution-item {
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contribution-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.contribution-item h3 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
 body {
   font-family: 'Rajdhani', sans-serif;
   background: radial-gradient(circle at 20% 20%, #ff0077 0%, transparent 25%),
