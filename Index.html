@@ -1,153 +1,161 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>ykad_x — portfolio</title>
     <link rel="icon" href="Images/downloads (1).ico" />
     <link rel="stylesheet" href="CSSS/Style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <header class="navbar container">
-      <div class="logo"><span class="dot"></span> ykad_x</div>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#profile">Profile</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleNav()">☰</button>
+        <div class="logo"><span class="dot"></span> ykad_x</div>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#profile">Profile</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleNav()">☰</button>
     </header>
 
     <main class="container">
-      <!-- PROFILE -->
-      <section id="profile" class="page active">
-        <div class="hero card">
-          <div>
-            <h1>Bo ♡</h1>
-            <p>18-year-old student at Media College Amsterdam. I build games and systems in Unity and Roblox — I focus on gameplay, UI, and collaboration.</p>
-            <p style="color:var(--muted)">I play airsoft, game with friends, and have two goofy English Cocker Spaniel dogs.</p>
+        <!-- PROFILE -->
+        <section id="profile" class="page active">
+            <div class="hero card">
+                <div>
+                    <h1>Bo ♡</h1>
+                    <p>18-year-old student at Media College Amsterdam. I build games and systems in Unity and Roblox — I focus on gameplay, UI, and collaboration.</p>
+                    <p style="color:var(--muted)">I play airsoft, game with friends, and have two goofy English Cocker Spaniel dogs.</p>
 
-            <div style="margin-top:1rem;display:flex;gap:.5rem;align-items:center">
-              <button class="primary-btn" onclick="showPage('projects')">View projects</button>
-              <a class="secondary-btn" href="CV/CV.pdf" download>Download CV</a>
+                    <div style="margin-top:1rem;display:flex;gap:.5rem;align-items:center">
+                        <button class="primary-btn" onclick="showPage('projects')">View projects</button>
+                        <a class="secondary-btn" href="CV/CV.pdf" download>Download CV</a>
+                    </div>
+                </div>
+
+                <div class="profile-image">
+                    <!-- <img src="Images/IMG_1133.png" alt="Profile image of Bo" /> -->
+                </div>
             </div>
-          </div>
+            <br />
 
-          <div class="profile-image">
-              <!-- <img src="Images/IMG_1133.png" alt="Profile image of Bo" /> -->
-          </div> 
-        </div>
-        <br />
+            <div class="card">
+                <h2 style="color:var(--accent-1)">Experience</h2>
+                <ul style="color:var(--muted);margin-left:1rem;line-height:1.8">
+                    <li>4 years — Roblox Studio (Lua & UI design)</li>
+                    <li>2 years — Unity (C#)</li>
+                    <li>Beginner — Python</li>
+                    <li>Comfortable working solo and in teams</li>
+                </ul>
+            </div>
 
-        <div class="card">
-          <h2 style="color:var(--accent-1)">Experience</h2>
-          <ul style="color:var(--muted);margin-left:1rem;line-height:1.8">
-            <li>4 years — Roblox Studio (Lua & UI design)</li>
-            <li>2 years — Unity (C#)</li>
-            <li>Beginner — Python</li>
-            <li>Comfortable working solo and in teams</li>
-          </ul>
-        </div>
+            <section id="contact" class="card contact-card" style="margin-top:1rem">
+                <h3 style="color:var(--accent-1)">Contact</h3>
+                <p style="color:var(--muted)">Email: <a href="mailto:bo.bolweg@gmail.com">bo.bolweg@gmail.com</a></p>
+                <p style="color:var(--muted)">GitHub: <a href="https://github.com/Ykada" target="_blank" rel="noopener">github.com/Ykada</a></p>
+                <p style="color:var(--muted)">Discord: ykada_ • Instagram: ykad_x • Roblox: ykad_x</p>
+                <div class="icon-row" style="margin-top:.5rem">
+                    <img src="Images/image-removebg-preview.png" alt="Roblox logo" />
+                    <img src="Images/Instalogo.png" alt="Instagram logo" />
+                    <img src="Images/Discordlogo.png" alt="Discord logo" />
+                </div>
+            </section>
 
-        <section id="contact" class="card contact-card" style="margin-top:1rem">
-          <h3 style="color:var(--accent-1)">Contact</h3>
-          <p style="color:var(--muted)">Email: <a href="mailto:bo.bolweg@gmail.com">bo.bolweg@gmail.com</a></p>
-          <p style="color:var(--muted)">GitHub: <a href="https://github.com/Ykada" target="_blank" rel="noopener">github.com/Ykada</a></p>
-          <p style="color:var(--muted)">Discord: ykada_ • Instagram: ykad_x • Roblox: ykad_x</p>
-          <div class="icon-row" style="margin-top:.5rem">
-            <img src="Images/image-removebg-preview.png" alt="Roblox logo" />
-            <img src="Images/Instalogo.png" alt="Instagram logo" />
-            <img src="Images/Discordlogo.png" alt="Discord logo" />
-          </div>
+            <div class="card" style="margin-top:1rem">
+                <h2 style="color:var(--accent-1)">Internship Availability</h2>
+                <p style="color:var(--muted)">31-01-2027 until 30-07-2027</p>
+                <p style="color:var(--muted)">31-07-2027 until 31-01-2028</p>
+            </div>
         </section>
 
-        <div class="card" style="margin-top:1rem">
-          <h2 style="color:var(--accent-1)">Internship Availability</h2>
-          <p style="color:var(--muted)">31-01-2027 until 30-07-2027</p>
-          <p style="color:var(--muted)">31-07-2027 until 31-01-2028</p>
-        </div>
-      </section>
+        <!-- PROJECTS LIST -->
+        <section id="projects" class="page">
+            <div class="card">
+                <h2 style="color:var(--accent-1)">Projects</h2>
+                <p style="color:var(--muted)">A selection of games I’ve worked on in Roblox Studio and Unity, focusing on scripting, game design, and UI.</p>
 
-      <!-- PROJECTS LIST -->
-      <section id="projects" class="page">
-        <div class="card">
-          <h2 style="color:var(--accent-1)">Projects</h2>
-          <p style="color:var(--muted)">A selection of games I’ve worked on in Roblox Studio and Unity, focusing on scripting, game design, and UI.</p>
+                <div class="project-grid">
+                    <div class="project-card project-theme-card theme-reclean" onclick="showPage('reclean')" role="button">
+                        <img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif" alt="RE:CLEAN" />
+                        <div class="meta">
+                            <h3>☢ RE:CLEAN</h3>
+                            <p>Unity · In Development · UI/UX · Multiplayer</p>
+                        </div>
+                    </div>
 
-          <div class="project-grid">
-            <div class="project-card" onclick="showPage('reclean')" role="button">
-              <img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif" alt="RE:CLEAN" />
-              <div class="meta">
-                <h3>☢ RE:CLEAN</h3>
-                <p>Unity · In Development · UI/UX · Multiplayer</p>
-              </div>
+                    <div class="project-card project-theme-card theme-arc82" onclick="showPage('arc82')" role="button">
+                        <img src="Images/scp-logo-unscreen.gif" alt="ARC - 82" />
+                        <div class="meta">
+                            <h3>ARC - 82</h3>
+                            <p>Roblox · Lua · UI/UX · Group Project</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-theme-card theme-thehunt" onclick="showPage('thehunt')" role="button">
+                        <img src="Images/THEHUNTGIF.gif" alt="The Hunt" />
+                        <div class="meta">
+                            <h3>The Hunt</h3>
+                            <p>Roblox · Released · UI/UX · Art · Lua</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-theme-card theme-tortex" onclick="showPage('tortex')" role="button">
+                        <img src="Images/OPERATIONSTORM.png" alt="TORTEX" />
+                        <div class="meta">
+                            <h3>TORTEX</h3>
+                            <p>Unity · Personal project · Tornado systems</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-theme-card theme-tds" onclick="showPage('tds')" role="button">
+                        <img src="Images/TDS.png" alt="Tower Defence Simulator" />
+                        <div class="meta">
+                            <h3>Tower Defence Simulator</h3>
+                            <p>Unity · C# · Solo school project</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-theme-card theme-helend" onclick="showPage('helend')" role="button">
+                        <img src="Images/HSL1.png" alt="Hel End Strife" />
+                        <div class="meta">
+                            <h3>Hel End Strife</h3>
+                            <p>Unity · Team project · Gameplay scripting</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card project-theme-card theme-creature" onclick="showPage('TheCreatureWithin')" role="button">
+                        <img src="Images/TheCreatureWithin Banner.jpg" alt="The Creature Within" />
+                        <div class="meta">
+                            <h3>The Creature Within</h3>
+                            <p>Unity · In Development · School project</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card belowater-project-card" onclick="showPage('belowater')" role="button">
+                        <img src="Images/BeloWaterBanner.jpg" alt="BeloWater" />
+                        <div class="meta">
+                            <h3>BeloWater</h3>
+                            <p>Unity · AI project · 10 weeks</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+        </section>
 
-            <div class="project-card" onclick="showPage('arc82')" role="button">
-              <img src="Images/scp-logo-unscreen.gif" alt="ARC - 82" />
-              <div class="meta">
-                <h3>ARC - 82</h3>
-                <p>Roblox · Lua · UI/UX · Group Project</p>
-              </div>
-            </div>
+        <!-- PROJECT DETAILS: RECLEAN -->
+        <section id="reclean" class="page project-detail project-theme theme-reclean">
+            <div class="card">
+                <h2 style="color:var(--accent-1)">☢ RE:CLEAN</h2>
+                <div class="project-images">
+                    <img src="Images/RECLEAN1.png" alt="RE:CLEAN 1" />
+                    <img src="Images/RECLEAN2.png" alt="RE:CLEAN 2" />
+                </div>
 
-            <div class="project-card" onclick="showPage('thehunt')" role="button">
-              <img src="Images/THEHUNTGIF.gif" alt="The Hunt" />
-              <div class="meta">
-                <h3>The Hunt</h3>
-                <p>Roblox · Released · UI/UX · Art · Lua</p>
-              </div>
-            </div>
-
-            <div class="project-card" onclick="showPage('tortex')" role="button">
-              <img src="Images/OPERATIONSTORM.png" alt="TORTEX" />
-              <div class="meta">
-                <h3>TORTEX</h3>
-                <p>Unity · Personal project · Tornado systems</p>
-              </div>
-            </div>
-
-            <div class="project-card" onclick="showPage('tds')" role="button">
-              <img src="Images/TDS.png" alt="Tower Defence Simulator" />
-              <div class="meta">
-                <h3>Tower Defence Simulator</h3>
-                <p>Unity · C# · Solo school project</p>
-              </div>
-            </div>
-
-            <div class="project-card" onclick="showPage('helend')" role="button">
-              <img src="Images/HSL1.png" alt="Hel End Strife" />
-              <div class="meta">
-                <h3>Hel End Strife</h3>
-                <p>Unity · Team project · Gameplay scripting</p>
-              </div>
-            </div>
-
-            <div class="project-card" onclick="showPage('TheCreatureWithin')" role="button">
-              <img src="Images/404.jpg" alt="TheCreatureWithin" />
-              <div class="meta">
-                <h3>TheCreatureWithin</h3>
-                <p>Unity · In Development · School project</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECT DETAILS: RECLEAN -->
-      <section id="reclean" class="page project-detail">
-        <div class="card">
-          <h2 style="color:var(--accent-1)">☢ RE:CLEAN</h2>
-          <div class="project-images">
-            <img src="Images/RECLEAN1.png" alt="RE:CLEAN 1" />
-            <img src="Images/RECLEAN2.png" alt="RE:CLEAN 2" />
-          </div>
-
-          <div class="contribution-grid">
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">Example Code</h4>
-              <pre><code>using System;
+                <div class="contribution-grid">
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">Example Code</h4>
+                        <pre><code>using System;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
@@ -263,42 +271,42 @@ System.IO.File.WriteAllText(filePath, json);
 }
 }
 </code></pre>
+                    </div>
+
+                    <div class="contribution-item">
+                        <img src="Images/RECLEAN2.png" alt="UI" />
+                        <h4>UI Design</h4>
+                        <p style="color:var(--muted)">Worked on interface concepts and layout design.</p>
+                    </div>
+                </div>
+
+                <p style="color:var(--muted)">A multiplayer project inspired by R.E.P.O. Currently on hold due to limited time.</p>
+                <div style="margin-top:1rem;display:flex;gap:.5rem">
+                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                </div>
             </div>
+        </section>
 
-            <div class="contribution-item">
-              <img src="Images/RECLEAN2.png" alt="UI" />
-              <h4>UI Design</h4>
-              <p style="color:var(--muted)">Worked on interface concepts and layout design.</p>
-            </div>
-          </div>
+        <!-- PROJECT DETAILS: ARC-82 -->
+        <section id="arc82" class="page project-detail project-theme theme-arc82">
+            <div class="card">
+                <h2 style="color:var(--accent-1)">ARC - 82</h2>
+                <div class="project-images">
+                    <img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png" alt="ARC - 82" />
+                    <img src="Images/ROBLXUI1.png" alt="ARC UI" />
+                    <img src="Images/ARC-82UIV1.png" alt="ARC UI" />
+                </div>
 
-          <p style="color:var(--muted)">A multiplayer project inspired by R.E.P.O. Currently on hold due to limited time.</p>
-          <div style="margin-top:1rem;display:flex;gap:.5rem">
-            <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-          </div>
-        </div>
-      </section>
+                <div class="contribution-grid">
+                    <div class="contribution-item">
+                        <img src="Images/ROBLXUI1.png" alt="UI Work" />
+                        <h4>UI Systems</h4>
+                        <p style="color:var(--muted)">Created advanced interactive UI systems controlling the facility.</p>
+                    </div>
 
-      <!-- PROJECT DETAILS: ARC-82 -->
-      <section id="arc82" class="page project-detail">
-        <div class="card">
-          <h2 style="color:var(--accent-1)">ARC - 82</h2>
-          <div class="project-images">
-            <img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png" alt="ARC - 82" />
-            <img src="Images/ROBLXUI1.png" alt="ARC UI" />
-            <img src="Images/ARC-82UIV1.png" alt="ARC UI" />
-          </div>
-
-          <div class="contribution-grid">
-            <div class="contribution-item">
-              <img src="Images/ROBLXUI1.png" alt="UI Work" />
-              <h4>UI Systems</h4>
-              <p style="color:var(--muted)">Created advanced interactive UI systems controlling the facility.</p>
-            </div>
-
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">Camera Switching (Lua)</h4>
-              <pre><code>local remoteEventRequest = Instance.new("RemoteEvent")
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">Camera Switching (Lua)</h4>
+                        <pre><code>local remoteEventRequest = Instance.new("RemoteEvent")
 remoteEventRequest.Name = "CameraSwitchRequest"
 remoteEventRequest.Parent = game.ReplicatedStorage
 local remoteEventDenied = Instance.new("RemoteEvent")
@@ -326,11 +334,11 @@ remoteEventDenied:FireClient(player)
 end
 end)
 </code></pre>
-            </div>
+                    </div>
 
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">Icon Spinner (Lua)</h4>
-              <pre><code>local TweenService = game:GetService("TweenService")
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">Icon Spinner (Lua)</h4>
+                        <pre><code>local TweenService = game:GetService("TweenService")
 
 local Frame = script.Parent
 
@@ -364,11 +372,11 @@ end
 end
 end)()
 </code></pre>
-            </div>
+                    </div>
 
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">Own Avatar Dummy (Lua)</h4>
-              <pre><code>local Players = game:GetService("Players")
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">Own Avatar Dummy (Lua)</h4>
+                        <pre><code>local Players = game:GetService("Players")
 local dummy = script.Parent
 
 local function updateDummyAppearance(player)
@@ -390,66 +398,96 @@ for _, player in pairs(Players:GetPlayers()) do
 onPlayerAdded(player)
 end
 </code></pre>
+                    </div>
+
+                </div>
+
+                <p style="color:var(--muted)">A long-term group project for Roblox. Responsible for UI and interactive systems.</p>
+                <div style="margin-top:1rem;display:flex;gap:.5rem">
+                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                </div>
             </div>
+        </section>
 
-          </div>
+        <!-- PROJECT DETAILS: HEL END STRIFE -->
+        <section id="helend" class="page project-detail project-theme theme-helend">
+            <div class="card">
+                <h2 style="color:var(--accent-1)">Hel End Strife</h2>
+                <div class="project-images">
+                    <img src="Images/HSL1.png" alt="HSL1" />
+                    <img src="Images/HSL2.png" alt="HSL2" />
+                    <img src="Images/HSL3.png" alt="HSL3" />
+                    <img src="Images/HSL4.png" alt="HSL4" />
+                </div>
 
-          <p style="color:var(--muted)">A long-term group project for Roblox. Responsible for UI and interactive systems.</p>
-          <div style="margin-top:1rem;display:flex;gap:.5rem">
-            <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-          </div>
-        </div>
-      </section>
+                <div class="contribution-grid">
+                    <div class="contribution-item">
+                        <img src="Images/HSL1.png" alt="Gameplay" />
+                        <h4>Gameplay Systems</h4>
+                    </div>
+                    <div class="contribution-item">
+                        <img src="Images/HSL2.png" alt="SavingSystems" />
+                        <h4>Team Collaboration</h4>
+                        <p style="color:var(--muted)">Worked on saving systems that save your current progress.</p>
+                    </div>
+                </div>
 
-      <!-- PROJECT DETAILS: HEL END STRIFE -->
-      <section id="helend" class="page project-detail">
-        <div class="card">
-          <h2 style="color:var(--accent-1)">Hel End Strife</h2>
-          <div class="project-images">
-            <img src="Images/HSL1.png" alt="HSL1" />
-            <img src="Images/HSL2.png" alt="HSL2" />
-            <img src="Images/HSL3.png" alt="HSL3" />
-            <img src="Images/HSL4.png" alt="HSL4" />
-          </div>
+                <section class="project-scripts" aria-labelledby="helend-scripts-title">
+                    <h3 id="helend-scripts-title" style="color:var(--accent-1)">Gameplay &amp; Saving Scripts</h3>
+                    <p>Scripts used for player progress, enemy waves, and saving game data.</p>
 
-          <div class="contribution-grid">
-            <div class="contribution-item">
-              <img src="Images/HSL1.png" alt="Gameplay" />
-              <h4>Gameplay Systems</h4>
+                    <details class="project-script">
+                        <summary>Enemy location saving <span>EnemyLocationSaving.cs</span></summary>
+                        <pre><code data-script-src="https://raw.githubusercontent.com/ghostbusterbob/GA-GD-Project/main/Assets/_Scripts/EnemyScripts/EnemyLocationSaving.cs">Loading script…</code></pre>
+                    </details>
+                    <details class="project-script">
+                        <summary>Enemy spawner <span>Spawner.cs</span></summary>
+                        <pre><code data-script-src="https://raw.githubusercontent.com/ghostbusterbob/GA-GD-Project/main/Assets/_Scripts/EnemyScripts/Spawner.cs">Loading script…</code></pre>
+                    </details>
+                    <details class="project-script">
+                        <summary>Player data manager <span>GameDataManager.cs</span></summary>
+                        <pre><code data-script-src="https://raw.githubusercontent.com/ghostbusterbob/GA-GD-Project/main/Assets/_Scripts/DataPresistence/Data/GameDataManager.cs">Loading script…</code></pre>
+                    </details>
+                    <details class="project-script">
+                        <summary>Experience system <span>XPSCRIPT.cs</span></summary>
+                        <pre><code data-script-src="https://raw.githubusercontent.com/ghostbusterbob/GA-GD-Project/main/Assets/_Scripts/DataPresistence/Data/XPSCRIPT.cs">Loading script…</code></pre>
+                    </details>
+                    <details class="project-script">
+                        <summary>Dropped-object data <span>Droppedobjectslocationsaving.cs</span></summary>
+                        <pre><code data-script-src="https://raw.githubusercontent.com/ghostbusterbob/GA-GD-Project/main/Assets/_Scripts/DataPresistence/Data/Droppedobjectslocationsaving.cs">Loading script…</code></pre>
+                    </details>
+                    <details class="project-script">
+                        <summary>Game data model <span>GameData.cs</span></summary>
+                        <pre><code data-script-src="https://raw.githubusercontent.com/ghostbusterbob/GA-GD-Project/main/Assets/_Scripts/DataPresistence/Data/GameData.cs">Loading script…</code></pre>
+                    </details>
+                </section>
+
+                <p style="color:var(--muted)">A Unity school project made with 3 developers and 7 artists over 10 weeks. Playable version available on GitHub.</p>
+                <div style="margin-top:1rem;display:flex;gap:.5rem">
+                    <button class="primary-btn" onclick="window.location.href='https://github.com/ghostbusterbob/GA-GD-Project/tree/Ykada_';">Link to Github</button>
+                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                </div>
             </div>
-            <div class="contribution-item">
-              <img src="Images/HSL2.png" alt="SavingSystems" />
-              <h4>Team Collaboration</h4>
-              <p style="color:var(--muted)">Worked on saving systems that save your current progress.</p>
-            </div>
-          </div>
+        </section>
 
-          <p style="color:var(--muted)">A Unity school project made with 3 developers and 7 artists over 10 weeks. Playable version available on GitHub.</p>
-          <div style="margin-top:1rem;display:flex;gap:.5rem">
-            <button class="primary-btn" onclick="window.location.href='https://github.com/ghostbusterbob/GA-GD-Project/tree/Ykada_';">Link to Github</button>
-            <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-          </div>
-        </div>
-      </section>
+        <!-- PROJECT DETAILS: TDS -->
+        <section id="tds" class="page project-detail project-theme theme-tds">
+            <div class="card">
+                <h2 style="color:var(--accent-1)">Tower Defence Simulator</h2>
+                <div class="project-images">
+                    <img src="Images/TDS.png" alt="TDS" />
+                    <img src="Images/TGB2.png" alt="TGB2" />
+                    <img src="Images/TGB3.png" alt="TGB3" />
+                    <img src="Images/TGB4.png" alt="TGB4" />
+                    <img src="Images/TGB5.png" alt="TGB5" />
+                </div>
 
-      <!-- PROJECT DETAILS: TDS -->
-      <section id="tds" class="page project-detail">
-        <div class="card">
-          <h2 style="color:var(--accent-1)">Tower Defence Simulator</h2>
-          <div class="project-images">
-            <img src="Images/TDS.png" alt="TDS" />
-            <img src="Images/TGB2.png" alt="TGB2" />
-            <img src="Images/TGB3.png" alt="TGB3" />
-            <img src="Images/TGB4.png" alt="TGB4" />
-            <img src="Images/TGB5.png" alt="TGB5" />
-          </div>
+                <p style="color:var(--muted)">A solo Unity school project built in 10 weeks. All scripts and systems coded by me.</p>
 
-          <p style="color:var(--muted)">A solo Unity school project built in 10 weeks. All scripts and systems coded by me.</p>
-
-          <div class="contribution-grid">
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">Tower Placing (C#)</h4>
-              <pre><code>using UnityEngine;
+                <div class="contribution-grid">
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">Tower Placing (C#)</h4>
+                        <pre><code>using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -688,41 +726,41 @@ private class PlacedTower
 
 // © 2025 ykad_x. All rights reserved.
 </code></pre>
+                    </div>
+
+                    <div class="contribution-item">
+                        <img src="Images/TGB3.png" alt="Programming" />
+                        <h4>Programming</h4>
+                        <p style="color:var(--muted)">All scripts and mechanics coded in C#.</p>
+                    </div>
+
+                    <div class="contribution-item">
+                        <img src="Images/TDSEnemyswalking.gif" alt="Design" />
+                        <h4>Game Design</h4>
+                        <p style="color:var(--muted)">Progression, balancing, and core loop design.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem;display:flex;gap:.5rem">
+                    <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/TowerDefencegame';">Link to Github</button>
+                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                </div>
             </div>
+        </section>
 
-            <div class="contribution-item">
-              <img src="Images/TGB3.png" alt="Programming" />
-              <h4>Programming</h4>
-              <p style="color:var(--muted)">All scripts and mechanics coded in C#.</p>
-            </div>
+        <!-- PROJECT DETAILS: TORTEX -->
+        <section id="tortex" class="page project-detail project-theme theme-tortex">
+            <div class="card">
+                <h2 style="color:var(--accent-1)">TORTEX</h2>
+                <div class="project-images">
+                    <img src="Images/OPERATIONSTORM.png" alt="OPERATIONSTORM" />
+                    <img src="Images/OPERATIONSTORM2.png" alt="OPERATIONSTORM2" />
+                </div>
 
-            <div class="contribution-item">
-              <img src="Images/TDSEnemyswalking.gif" alt="Design" />
-              <h4>Game Design</h4>
-              <p style="color:var(--muted)">Progression, balancing, and core loop design.</p>
-            </div>
-          </div>
-
-          <div style="margin-top:1rem;display:flex;gap:.5rem">
-            <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/TowerDefencegame';">Link to Github</button>
-            <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECT DETAILS: TORTEX -->
-      <section id="tortex" class="page project-detail">
-        <div class="card">
-          <h2 style="color:var(--accent-1)">TORTEX</h2>
-          <div class="project-images">
-            <img src="Images/OPERATIONSTORM.png" alt="OPERATIONSTORM" />
-            <img src="Images/OPERATIONSTORM2.png" alt="OPERATIONSTORM2" />
-          </div>
-
-          <div class="contribution-grid">
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">Tornado Code (C#)</h4>
-              <pre><code>using UnityEngine;
+                <div class="contribution-grid">
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">Tornado Code (C#)</h4>
+                        <pre><code>using UnityEngine;
 using UnityEngine.UI;
 
 //\\
@@ -931,44 +969,44 @@ tornadoCore = GetComponent<Rigidbody>
 	#endregion
 }
 </code></pre>
+                    </div>
+
+                    <div class="contribution-item">
+                        <img src="Images/TORTEXTORNADO.png" alt="Tornado" />
+                        <h4>Core Gameplay</h4>
+                        <p style="color:var(--muted)">Creating tornado systems.</p>
+                    </div>
+                </div>
+
+                <p style="color:var(--muted)">Personal Unity project inspired by stormchase games.</p>
+                <div style="margin-top:1rem;display:flex;gap:.5rem">
+                    <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/OPERATION-STORMCHASE';">Link to Github</button>
+                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                </div>
             </div>
+        </section>
 
-            <div class="contribution-item">
-              <img src="Images/TORTEXTORNADO.png" alt="Tornado" />
-              <h4>Core Gameplay</h4>
-              <p style="color:var(--muted)">Creating tornado systems.</p>
-            </div>
-          </div>
+        <!-- PROJECT DETAILS: THE HUNT -->
+        <section id="thehunt" class="page project-detail project-theme theme-thehunt">
+            <div class="card">
+                <h2 style="color:var(--accent-1)">The Hunt</h2>
+                <div class="project-images">
+                    <img src="Images/THEHUNT.png" alt="The Hunt" />
+                    <img src="Images/THEHUNT2.png" alt="The Hunt 2" />
+                    <img src="Images/THEHUNT3.png" alt="The Hunt 3" />
+                    <img src="Images/THEHUNTGIF.gif" alt="The Hunt gif" />
+                </div>
 
-          <p style="color:var(--muted)">Personal Unity project inspired by stormchase games.</p>
-          <div style="margin-top:1rem;display:flex;gap:.5rem">
-            <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/OPERATION-STORMCHASE';">Link to Github</button>
-            <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-          </div>
-        </div>
-      </section>
+                <div class="contribution-grid">
+                    <div class="contribution-item">
+                        <img src="Images/THEHUNT.png" alt="Created game" />
+                        <h4>Game Creation</h4>
+                        <p style="color:var(--muted)">Designed and built the full game from scratch at age 13.</p>
+                    </div>
 
-      <!-- PROJECT DETAILS: THE HUNT -->
-      <section id="thehunt" class="page project-detail">
-        <div class="card">
-          <h2 style="color:var(--accent-1)">The Hunt</h2>
-          <div class="project-images">
-            <img src="Images/THEHUNT.png" alt="The Hunt" />
-            <img src="Images/THEHUNT2.png" alt="The Hunt 2" />
-            <img src="Images/THEHUNT3.png" alt="The Hunt 3" />
-            <img src="Images/THEHUNTGIF.gif" alt="The Hunt gif" />
-          </div>
-
-          <div class="contribution-grid">
-            <div class="contribution-item">
-              <img src="Images/THEHUNT.png" alt="Created game" />
-              <h4>Game Creation</h4>
-              <p style="color:var(--muted)">Designed and built the full game from scratch at age 13.</p>
-            </div>
-
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">automatic doors</h4>
-              <pre><code>local larm = script.Parent:FindFirstChild("HumanoidRootPart")
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">automatic doors</h4>
+                        <pre><code>local larm = script.Parent:FindFirstChild("HumanoidRootPart")
 local rarm = script.Parent:FindFirstChild("HumanoidRootPart")
 local hum = script.Parent:FindFirstChild("Item")
 local anim = hum:LoadAnimation(script.Parent["058attack1"])
@@ -1061,34 +1099,110 @@ while true do
 	end
 end
 </code></pre>
+                    </div>
+
+                    <div class="contribution-item">
+                        <img src="Images/THEHUNT3.png" alt="Sequel" />
+                        <h4>Sequel Development</h4>
+                        <p style="color:var(--muted)">Improved on the original concept.</p>
+                    </div>
+                </div>
+
+                <p style="color:var(--muted)">Roblox project made at age 13 — proud of this work.</p>
+                <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
+                    <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/8833099801/The-Hunt';">Roblox The Hunt 1</button>
+                    <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/9478545883/The-Hunt-V2';">Roblox The Hunt 2</button>
+                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                </div>
             </div>
+        </section>
 
-            <div class="contribution-item">
-              <img src="Images/THEHUNT3.png" alt="Sequel" />
-              <h4>Sequel Development</h4>
-              <p style="color:var(--muted)">Improved on the original concept.</p>
+        <!-- PROJECT DETAILS: BELOWATER -->
+        <section id="belowater" class="page project-detail belowater-page">
+            <div class="card belowater-card">
+                <div class="belowater-hero">
+                    <img src="Images/BeloWaterBanner.jpg" alt="BeloWater submarine on a tropical ocean" />
+                    <div class="belowater-hero-copy">
+                        <span>10-week AI project</span>
+                        <h2>BeloWater</h2>
+                        <p>An underwater survival project built around exploration, a raft, and a shark-filled ocean.</p>
+                    </div>
+                </div>
+
+                <div class="belowater-content">
+                    <div class="belowater-intro">
+                        <span class="belowater-eyebrow">Project goal</span>
+                        <h3>Build an underwater world worth exploring.</h3>
+                        <p>The goal is to recreate as much of the Subnautica experience as possible within ten weeks, with a focus on a believable ocean, exploration, and survival gameplay.</p>
+                    </div>
+
+                    <figure class="belowater-feature">
+                        <img src="Images/Realistic BeloWater water.jpg" alt="BeloWater's realistic water, raft, and shark" />
+                        <figcaption>
+                            <h4>Realistic Water</h4>
+                            <p>Water visuals, a player raft, and an underwater shark bring the first playable ocean scene to life.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="belowater-feature">
+                        <div class="belowater-map-images">
+                            <img src="Images/mapgenerationbelowater.jpg" alt="Randomly generated BeloWater terrain map" />
+                            <img src="Images/Mappinggeneration graph.png" alt="BeloWater map generation graph" />
+                        </div>
+                        <figcaption>
+                            <h4>Map Generation</h4>
+                            <p>A randomly generated map for each play session, with the graph showing the terrain-generation setup and optimisation work behind it.</p>
+                        </figcaption>
+                    </figure>
+
+                    <div class="belowater-pill-row" aria-label="BeloWater project details">
+                        <span>Unity</span>
+                        <span>10 weeks</span>
+                        <span>Underwater survival</span>
+                    </div>
+                </div>
+
+                <div class="belowater-actions">
+                    <button class="belowater-back-btn" onclick="showPage('projects')">Back to Projects</button>
+                </div>
             </div>
-          </div>
+        </section>
 
-          <p style="color:var(--muted)">Roblox project made at age 13 — proud of this work.</p>
-          <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
-            <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/8833099801/The-Hunt';">Roblox The Hunt 1</button>
-            <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/9478545883/The-Hunt-V2';">Roblox The Hunt 2</button>
-            <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-          </div>
-        </div>
-      </section>
+        <!-- PROJECT DETAILS: THECREATUREWITHIN -->
+        <section id="TheCreatureWithin" class="page project-detail project-theme theme-creature">
+            <div class="card">
+                <h2 style="color:var(--accent-1)">The Creature Within</h2>
+                <p style="color:var(--muted)">Work in progress at NEON Orignes.</p>
 
-      <!-- PROJECT DETAILS: THECREATUREWITHIN -->
-      <section id="TheCreatureWithin" class="page project-detail">
-        <div class="card">
-          <h2 style="color:var(--accent-1)">TheCreatureWithin</h2>
-          <p style="color:var(--muted)">Work in progress at NEON Orignes.</p>
+                <section class="creature-showcase" aria-labelledby="creature-showcase-title">
+                    <img class="creature-banner" src="Images/TheCreatureWithin Banner.jpg" alt="The Creature Within gameplay scene" />
+                    <div class="creature-showcase-heading">
+                        <span>Development showcase</span>
+                        <h3 id="creature-showcase-title">Systems built for the experience</h3>
+                        <p>Enemy behaviour and optimisation work developed for The Creature Within.</p>
+                    </div>
+                    <div class="creature-feature-grid">
+                        <figure class="creature-feature">
+                            <img src="Images/EnemyAIeditedphoto.jpg" alt="Enemy AI behaviour in The Creature Within" />
+                            <figcaption>
+                                <h4>Enemy AI</h4>
+                                <p>Sound-aware enemy movement and player detection.</p>
+                            </figcaption>
+                        </figure>
+                        <figure class="creature-feature">
+                            <img src="Images/CullingOptimization.jpg" alt="Culling optimisation setup in The Creature Within" />
+                            <figcaption>
+                                <h4>Culling Optimisation</h4>
+                                <p>Performance-focused scene visibility improvements.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </section>
 
-          <div class="contribution-grid">
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">Enemy Movement, With microphone</h4>
-              <pre><code>using UnityEngine;
+                <div class="contribution-grid">
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">Enemy Movement, With microphone</h4>
+                        <pre><code>using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 using Unity.AI.Navigation;
@@ -1390,11 +1504,11 @@ private void OnAnimatorMove()
 
 }
 </code></pre>
-            </div>
+                    </div>
 
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">automatic doors</h4>
-              <pre><code>using UnityEngine;
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">automatic doors</h4>
+                        <pre><code>using UnityEngine;
 using System.Collections;
 
 public class OpenVualtDoor : MonoBehaviour
@@ -1453,11 +1567,11 @@ isMoving = false;
 }
 }
 </code></pre>
-            </div>
+                    </div>
 
-            <div class="code-section">
-              <h4 style="color:var(--accent-1)">Local Lighting, And breaking light</h4>
-              <pre><code>using Unity.VisualScripting;
+                    <div class="code-section">
+                        <h4 style="color:var(--accent-1)">Local Lighting, And breaking light</h4>
+                        <pre><code>using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
 public class LocalLighting : MonoBehaviour
@@ -1532,116 +1646,139 @@ currentlight.intensity = Mathf.Lerp(currentlight.intensity, flickerIntensity, no
 }
 }
 </code></pre>
+                    </div>
+                </div>
+                <p style="color:var(--muted)">Currently working on this project inside NEON Orignes for a year.</p>
+                <div style="margin-top:1rem;display:flex;gap:.5rem">
+                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                </div>
             </div>
-          </div>
-          <p style="color:var(--muted)">Currently working on this project inside NEON Orignes for a year.</p>
-          <div style="margin-top:1rem;display:flex;gap:.5rem">
-            <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-          </div>
-        </div>
-      </section>
+        </section>
 
     </main>
 
     <footer>
-      <div class="container">ykad_x — portfolio</div>
+        <div class="container">ykad_x — portfolio</div>
     </footer>
 
     <script>
-      // Enhanced navigation with history (supports browser back / mouse back button)
-      function showPage(id, pushState = true){
+        // Enhanced navigation with history (supports browser back / mouse back button)
+        function showPage(id, pushState = true){
         try{
-          if(!id) id = 'profile';
-          document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-          const el = document.getElementById(id);
-          if(el) el.classList.add('active');
-          const nav = document.querySelector('.nav-links'); if(nav) nav.classList.remove('open');
-          window.scrollTo({top:0,behavior:'smooth'});
-          if(pushState){
-            try{ history.pushState({page:id}, '', '#'+id); }catch(e){}
-          }
-        }catch(err){
-          console.error('showPage error', err);
+        if(!id) id = 'profile';
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        const el = document.getElementById(id);
+        if(el) el.classList.add('active');
+        const nav = document.querySelector('.nav-links'); if(nav) nav.classList.remove('open');
+        window.scrollTo({top:0,behavior:'smooth'});
+        if(pushState){
+        try{ history.pushState({page:id}, '', '#'+id); }catch(e){}
         }
-      }
+        }catch(err){
+        console.error('showPage error', err);
+        }
+        }
 
-      function toggleNav(){
+        function toggleNav(){
         const nav = document.querySelector('.nav-links');
         if(!nav) return;
         nav.classList.toggle('open');
-      }
+        }
 
-      // Intercept anchor clicks with hash targets to prevent default and use showPage
-      document.addEventListener('click', function(e){
+        // Intercept anchor clicks with hash targets to prevent default and use showPage
+        document.addEventListener('click', function(e){
         const a = e.target.closest('a');
         if(!a) return;
         const href = a.getAttribute('href') || '';
         if(href.startsWith('#')){
-          e.preventDefault();
-          const id = href.slice(1) || 'profile';
-          showPage(id);
+        e.preventDefault();
+        const id = href.slice(1) || 'profile';
+        showPage(id);
         }
-      });
-
-      // Code block toolbar (copy button, title from heading)
-      function setupCodeToolbars(){
-        document.querySelectorAll('.code-section').forEach(section => {
-          const pre = section.querySelector('pre');
-          if(!pre) return;
-          if(pre.parentElement && pre.parentElement.classList.contains('code-wrapper')) return;
-          const titleEl = section.querySelector('h4,h3');
-          const title = titleEl ? titleEl.innerText.trim() : 'Code';
-
-          const wrapper = document.createElement('div');
-          wrapper.className = 'code-wrapper';
-
-          const toolbar = document.createElement('div');
-          toolbar.className = 'code-toolbar';
-
-          const meta = document.createElement('div');
-          meta.className = 'meta';
-          meta.textContent = title;
-
-          const copy = document.createElement('button');
-          copy.className = 'copy-btn';
-          copy.type = 'button';
-          copy.textContent = 'Copy';
-
-          copy.addEventListener('click', async () => {
-            const codeNode = pre.querySelector('code');
-            const text = codeNode ? codeNode.innerText : pre.innerText;
-            try{
-              await navigator.clipboard.writeText(text);
-              copy.textContent = 'Copied';
-              setTimeout(()=> copy.textContent = 'Copy', 1500);
-            }catch(e){
-              const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
-              copy.textContent = 'Copied';
-              setTimeout(()=> copy.textContent = 'Copy', 1500);
-            }
-          });
-
-          toolbar.appendChild(meta);
-          toolbar.appendChild(copy);
-
-          pre.parentNode.insertBefore(wrapper, pre);
-          wrapper.appendChild(toolbar);
-          wrapper.appendChild(pre);
         });
-      }
 
-      // Handle back/forward navigation
-      window.addEventListener('popstate', (ev) => {
+        // Code block toolbar (copy button, title from heading)
+        function setupCodeToolbars(){
+        document.querySelectorAll('.code-section').forEach(section => {
+        const pre = section.querySelector('pre');
+        if(!pre) return;
+        if(pre.parentElement && pre.parentElement.classList.contains('code-wrapper')) return;
+        const titleEl = section.querySelector('h4,h3');
+        const title = titleEl ? titleEl.innerText.trim() : 'Code';
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-wrapper';
+
+        const toolbar = document.createElement('div');
+        toolbar.className = 'code-toolbar';
+
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        meta.textContent = title;
+
+        const copy = document.createElement('button');
+        copy.className = 'copy-btn';
+        copy.type = 'button';
+        copy.textContent = 'Copy';
+
+        copy.addEventListener('click', async () => {
+        const codeNode = pre.querySelector('code');
+        const text = codeNode ? codeNode.innerText : pre.innerText;
+        try{
+        await navigator.clipboard.writeText(text);
+        copy.textContent = 'Copied';
+        setTimeout(()=> copy.textContent = 'Copy', 1500);
+        }catch(e){
+        const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+        copy.textContent = 'Copied';
+        setTimeout(()=> copy.textContent = 'Copy', 1500);
+        }
+        });
+
+        toolbar.appendChild(meta);
+        toolbar.appendChild(copy);
+
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(toolbar);
+        wrapper.appendChild(pre);
+        });
+        }
+
+        // Fetch external script files referenced via data-script-src and drop
+        // their contents into the matching <code> block (fixes the Hel End
+        // Strife tab, whose scripts are hosted on GitHub instead of inlined).
+        async function loadExternalScripts(){
+        const blocks = document.querySelectorAll('code[data-script-src]');
+        for (const block of blocks) {
+        const url = block.getAttribute('data-script-src');
+        try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+        block.textContent = text;
+        } catch (err) {
+        block.textContent = '// Failed to load script from GitHub.\n// ' + err.message + '\n// URL: ' + url;
+        console.error('Failed to load script', url, err);
+        }
+        }
+        // Re-run the copy-button toolbar setup in case any of these
+        // <details> code blocks need wrapping too.
+        setupCodeToolbars();
+        }
+
+        // Handle back/forward navigation
+        window.addEventListener('popstate', (ev) => {
         const page = (ev.state && ev.state.page) || (location.hash ? location.hash.slice(1) : 'profile');
         showPage(page, false);
-      });
+        });
 
-      document.addEventListener('DOMContentLoaded', ()=>{
+        document.addEventListener('DOMContentLoaded', ()=>{
         const initial = location.hash ? location.hash.slice(1) : 'profile';
         try{ history.replaceState({page:initial}, '', location.hash || '#'+initial); }catch(e){}
         showPage(initial, false);
         setupCodeToolbars();
-      });
+        loadExternalScripts();
+        });
     </script>
-  </body>
+</body>
 </html>

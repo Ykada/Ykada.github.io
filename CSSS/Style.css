@@ -53,10 +53,84 @@ a{color:var(--accent-1); text-decoration:none}
 .project-card .meta{padding:.85rem}
 .project-card h3{font-size:1rem;margin-bottom:.2rem;color:var(--accent-1)}
 .project-card p{font-size:.85rem;color:var(--muted)}
+.belowater-project-card{border-color:rgba(76,216,224,.22)}
+.belowater-project-card h3{color:#6fe7e5}
+
+/* Project-specific colour systems. These only apply inside each project card and detail page. */
+.theme-reclean{--project-accent:#a9e85e;--project-accent-2:#ebff75;--project-rgb:169,232,94;--project-bg:#102018}
+.theme-arc82{--project-accent:#ef6570;--project-accent-2:#ffad5b;--project-rgb:239,101,112;--project-bg:#24151b}
+.theme-thehunt{--project-accent:#e5bd55;--project-accent-2:#f7df8c;--project-rgb:229,189,85;--project-bg:#211b0d}
+.theme-tortex{--project-accent:#70bfff;--project-accent-2:#c0efff;--project-rgb:112,191,255;--project-bg:#0c1b30}
+.theme-tds{--project-accent:#9785ff;--project-accent-2:#5dd8ff;--project-rgb:151,133,255;--project-bg:#171335}
+.theme-helend{--project-accent:#ff7958;--project-accent-2:#ffd064;--project-rgb:255,121,88;--project-bg:#29120e}
+.theme-creature{--project-accent:#f36db3;--project-accent-2:#ff9d58;--project-rgb:243,109,179;--project-bg:#260f24}
+.project-theme-card{border-color:rgba(var(--project-rgb),.28)}
+.project-theme-card h3{color:var(--project-accent)}
+.project-theme-card:hover{box-shadow:0 18px 50px rgba(var(--project-rgb),.16)}
 
 /* DETAIL IMAGES */
 .project-images{display:flex;flex-wrap:wrap;gap:.75rem;margin:1rem 0}
 .project-images img{width:calc(50% - .375rem);border-radius:10px;object-fit:cover}
+
+/* Existing project pages inherit their own palette without affecting the shared site shell. */
+.project-theme{--accent-1:var(--project-accent);--accent-2:var(--project-accent-2)}
+.project-theme .card{border-color:rgba(var(--project-rgb),.25);background:radial-gradient(780px 350px at 92% 0%,rgba(var(--project-rgb),.16),transparent 62%),linear-gradient(145deg,rgba(var(--project-rgb),.08),var(--project-bg) 58%,#080b12);box-shadow:0 14px 42px rgba(0,0,0,.46)}
+.project-theme .project-images img,.project-theme .contribution-item,.project-theme .code-wrapper{border:1px solid rgba(var(--project-rgb),.19)}
+.project-theme .contribution-item{background:rgba(var(--project-rgb),.07)}
+.project-theme .code-toolbar{background:linear-gradient(90deg,rgba(var(--project-rgb),.16),rgba(var(--project-rgb),.035))}
+.project-theme .primary-btn{background:linear-gradient(90deg,var(--project-accent),var(--project-accent-2));color:#071019}
+.project-theme .secondary-btn,.project-theme .copy-btn{border-color:rgba(var(--project-rgb),.28)}
+
+/* Expandable source files on project pages */
+.project-scripts{margin-top:1.5rem}
+.project-scripts > p{color:var(--muted);margin:.25rem 0 .8rem}
+.project-script{margin-top:.6rem;border:1px solid rgba(var(--project-rgb),.2);border-radius:10px;overflow:hidden;background:rgba(0,0,0,.12)}
+.project-script summary{cursor:pointer;padding:.75rem .9rem;color:var(--project-accent);font-weight:700;list-style-position:inside}
+.project-script summary span{color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,monospace;font-size:.78rem;font-weight:400;margin-left:.35rem}
+.project-script[open] summary{border-bottom:1px solid rgba(var(--project-rgb),.16);background:rgba(var(--project-rgb),.08)}
+.project-script pre{margin:0;max-height:520px;overflow:auto;padding:1rem;background:#0b0b0b;color:#dcdcdc;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,'Roboto Mono',monospace;font-size:13px;line-height:1.55}
+
+/* THE CREATURE WITHIN */
+.creature-showcase{margin:1.25rem 0 1.5rem;border:1px solid rgba(255,77,166,.16);border-radius:14px;overflow:hidden;background:linear-gradient(145deg,rgba(255,77,166,.08),rgba(255,122,45,.035) 55%,rgba(255,255,255,.02));box-shadow:0 12px 36px rgba(0,0,0,.28)}
+.creature-banner{display:block;width:100%;height:clamp(180px,30vw,350px);object-fit:cover;object-position:center}
+.creature-showcase-heading{padding:1rem 1.1rem .9rem}
+.creature-showcase-heading span{color:var(--accent-2);font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.creature-showcase-heading h3{margin:.2rem 0;color:#fff;font-family:Rajdhani,Inter;font-size:1.45rem}
+.creature-showcase-heading p{color:var(--muted);font-size:.92rem}
+.creature-feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;padding:0 1.1rem 1.1rem}
+.creature-feature{margin:0;overflow:hidden;border:1px solid rgba(255,255,255,.08);border-radius:10px;background:rgba(0,0,0,.2)}
+.creature-feature img{display:block;width:100%;height:180px;object-fit:cover;transition:transform .25s ease}
+.creature-feature:hover img{transform:scale(1.035)}
+.creature-feature figcaption{padding:.7rem .8rem .8rem}
+.creature-feature h4{color:var(--accent-1);font-size:1rem;margin-bottom:.12rem}
+.creature-feature p{color:var(--muted);font-size:.84rem}
+
+/* BELOWATER — local underwater theme */
+.belowater-card{padding:0;overflow:hidden;border-color:rgba(113,228,228,.22);background:radial-gradient(900px 420px at 90% 0%,rgba(96,218,224,.18),transparent 58%),linear-gradient(155deg,#052d3a,#031b29 62%,#02141f);box-shadow:0 16px 45px rgba(0,24,38,.65)}
+.belowater-hero{position:relative;min-height:clamp(255px,35vw,420px);overflow:hidden}
+.belowater-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,20,31,.78),rgba(2,20,31,.18) 62%,rgba(2,20,31,.12)),linear-gradient(0deg,rgba(3,27,41,.86),transparent 55%)}
+.belowater-hero img{width:100%;height:100%;min-height:clamp(255px,35vw,420px);object-fit:cover;display:block}
+.belowater-hero-copy{position:absolute;z-index:1;left:clamp(1rem,4vw,3rem);right:1rem;bottom:clamp(1.25rem,4vw,2.75rem);max-width:590px}
+.belowater-hero-copy span,.belowater-eyebrow{color:#9df4ed;font-size:.75rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.belowater-hero-copy h2{font-family:Rajdhani,Inter;font-size:clamp(2.3rem,6vw,4.5rem);line-height:.95;color:#fff;margin:.25rem 0 .55rem;text-shadow:0 3px 18px rgba(0,0,0,.45)}
+.belowater-hero-copy p{color:#d4f9f7;font-size:clamp(.9rem,2vw,1.05rem);max-width:510px}
+.belowater-content{padding:clamp(1.2rem,4vw,2.4rem)}
+.belowater-intro{max-width:720px;margin-bottom:1.2rem}
+.belowater-intro h3{font-family:Rajdhani,Inter;color:#f4ffff;font-size:clamp(1.55rem,3vw,2.15rem);margin:.25rem 0 .4rem}
+.belowater-intro p{color:#b7dddf}
+.belowater-feature{margin:0;overflow:hidden;border:1px solid rgba(154,243,239,.26);border-radius:12px;background:rgba(162,239,239,.07)}
+.belowater-feature + .belowater-feature{margin-top:1rem}
+.belowater-feature img{display:block;width:100%;max-height:390px;object-fit:cover}
+.belowater-map-images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem;padding:.75rem;background:rgba(0,0,0,.16)}
+.belowater-map-images img{height:250px;max-height:none;border-radius:7px;object-fit:cover}
+.belowater-map-images img:last-child{object-fit:contain;background:#202020}
+.belowater-feature figcaption{padding:1rem 1.1rem}
+.belowater-feature h4{color:#9df4ed;font-size:1.1rem;margin-bottom:.18rem}
+.belowater-feature p{color:#c0e6e6;font-size:.9rem}
+.belowater-pill-row{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.1rem}
+.belowater-pill-row span{border:1px solid rgba(157,244,237,.29);border-radius:999px;padding:.35rem .7rem;color:#bdfaf5;background:rgba(157,244,237,.08);font-size:.82rem;font-weight:600}
+.belowater-actions{display:flex;gap:.5rem;padding:0 clamp(1.2rem,4vw,2.4rem) clamp(1.2rem,4vw,2.1rem)}
+.belowater-back-btn{display:inline-block;padding:.6rem 1rem;border-radius:999px;background:linear-gradient(90deg,#7ce9e7,#54aeda);color:#03212e;font-weight:800;border:none;cursor:pointer}
 
 /* CONTRIBUTIONS */
 .contribution-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:.75rem}
@@ -99,6 +173,10 @@ footer{opacity:.9;text-align:center;color:var(--muted);padding:1rem;font-size:.9
 @media(max-width:520px){
   body{padding:1rem}
   .project-images img{width:100%}
+  .creature-feature-grid{grid-template-columns:1fr}
+  .creature-feature img{height:165px}
+  .belowater-hero-copy{left:1rem;bottom:1.1rem}
+  .belowater-map-images{grid-template-columns:1fr}
   .code-section pre{font-size:12px;max-height:360px}
 }
 
