@@ -6,6 +6,77 @@
     <title>ykad_x — portfolio</title>
     <link rel="icon" href="Images/downloads (1).ico" />
     <link rel="stylesheet" href="CSSS/Style.css" />
+    <style>
+        /* Featured projects strip at top of home */
+        .featured-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .featured-project-card {
+            position: relative;
+            border-radius: 14px;
+            overflow: hidden;
+            background: color-mix(in oklab, var(--card-bg, #111), #000 10%);
+            border: 1px solid color-mix(in oklab, var(--card-border, #222), #000 20%);
+            transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+            cursor: pointer;
+            min-height: 160px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .featured-project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,.35);
+            border-color: color-mix(in oklab, var(--accent-1, #6cf), #fff 15%);
+        }
+
+        .featured-project-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+            filter: saturate(1.05) contrast(1.03);
+        }
+
+        .featured-project-card .meta {
+            padding: .7rem .8rem;
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+            background: linear-gradient(to bottom, transparent, rgba(0,0,0,.25));
+        }
+
+        .featured-project-card h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            letter-spacing: .2px;
+            color: var(--text, #eee);
+        }
+
+        .featured-project-card p {
+            margin: 0;
+            font-size: .82rem;
+            color: var(--muted, #aaa);
+        }
+
+        /* Slightly different style for Creature Within to make it pop */
+        .featured-project-card.creature {
+            border-color: color-mix(in oklab, var(--accent-1, #6cf), #fff 10%);
+        }
+
+        .featured-project-card.belowater {
+            border-color: color-mix(in oklab, #4cf, #fff 10%);
+        }
+
+        /* Reduce spacing now that projects are at top */
+        .hero.card {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
     <header class="navbar container">
@@ -13,14 +84,44 @@
         <nav class="nav-links" aria-label="Primary">
             <a href="#profile">Profile</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <!-- Contact removed -->
         </nav>
         <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleNav()">☰</button>
     </header>
-
+    
     <main class="container">
-        <!-- PROFILE -->
+        <!-- HOME / PROFILE PAGE -->
         <section id="profile" class="page active">
+
+            <!-- FEATURED PROJECTS (only BeloWater + The Creature Within) -->
+            <div class="card">
+                <h2 style="color:var(--accent-1); margin-bottom:.5rem">Featured projects</h2>
+                <p style="color:var(--muted); margin-bottom:1rem">
+                    Latest work: BeloWater and The Creature Within.
+                </p>
+
+                <div class="featured-projects">
+                    <!-- BeloWater -->
+                    <div class="featured-project-card belowater" onclick="showPage('belowater')" role="button">
+                        <img src="Images/BeloWaterBanner.jpg" alt="BeloWater" />
+                        <div class="meta">
+                            <h3>BeloWater</h3>
+                            <p>Unity · AI project · 10 weeks</p>
+                        </div>
+                    </div>
+
+                    <!-- The Creature Within -->
+                    <div class="featured-project-card creature" onclick="showPage('TheCreatureWithin')" role="button">
+                        <img src="Images/TheCreatureWithin Banner.jpg" alt="The Creature Within" />
+                        <div class="meta">
+                            <h3>The Creature Within</h3>
+                            <p>Unity · In Development · School project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROFILE / ABOUT ME -->
             <div class="hero card">
                 <div>
                     <h1>Bo ♡</h1>
@@ -28,7 +129,7 @@
                     <p style="color:var(--muted)">Outside of development, I enjoy aviation, flight simulation, train Simulators, gaming with friends, and spending time with my two goofy English Cocker Spaniels. I also have experience managing online aviation and military communities and working with teams.</p>
 
                     <div style="margin-top:1rem;display:flex;gap:.5rem;align-items:center">
-                        <button class="primary-btn" onclick="showPage('projects')">View projects</button>
+                        <button class="primary-btn" onclick="showPage('projects')">View all projects</button>
                         <a class="secondary-btn" href="CV/CV.pdf" download>Download CV</a>
                     </div>
                 </div>
@@ -49,17 +150,7 @@
                 </ul>
             </div>
 
-            <section id="contact" class="card contact-card" style="margin-top:1rem">
-                <h3 style="color:var(--accent-1)">Contact</h3>
-                <p style="color:var(--muted)">Email: <a href="mailto:bo.bolweg@gmail.com">bo.bolweg@gmail.com</a></p>
-                <p style="color:var(--muted)">GitHub: <a href="https://github.com/Ykada" target="_blank" rel="noopener">github.com/Ykada</a></p>
-                <p style="color:var(--muted)">Discord: ykada_ • Instagram: ykad_x • Roblox: ykad_x</p>
-                <div class="icon-row" style="margin-top:.5rem">
-                    <img src="Images/image-removebg-preview.png" alt="Roblox logo" />
-                    <img src="Images/Instalogo.png" alt="Instagram logo" />
-                    <img src="Images/Discordlogo.png" alt="Discord logo" />
-                </div>
-            </section>
+            <!-- Contact section removed -->
 
             <div class="card" style="margin-top:1rem">
                 <h2 style="color:var(--accent-1)">Internship Availability</h2>
@@ -176,7 +267,6 @@ public int fps;
 
 public class SettingsSaveManager : MonoBehaviour
 {
-
 [SerializeField] private Slider volumeLevel;
 [SerializeField] private Slider tvsoundlevel;
 [SerializeField] private Toggle filmgrain;
@@ -234,19 +324,6 @@ if (System.IO.File.Exists(filePath))
 string json = System.IO.File.ReadAllText(filePath);
 return JsonUtility.FromJson<SettingsData>(json);
 tvsoundlevel.value = audioSource.volume;
-
-
-
-
-if (fullscreen.isOn)
-{
-    Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
-}
-else
-{
-    Screen.fullScreenMode = FullScreenMode.Windowed;
-}
-
 }
 else
 {
@@ -435,7 +512,6 @@ end
                 <section class="project-scripts" aria-labelledby="helend-scripts-title">
                     <h3 id="helend-scripts-title" style="color:var(--accent-1)">Gameplay &amp; Saving Scripts</h3>
                     <p>Scripts used for player progress, enemy waves, and saving game data.</p>
-
                     <details class="project-script">
                         <summary>Enemy location saving <span>EnemyLocationSaving.cs</span></summary>
                         <pre><code data-script-src="https://raw.githubusercontent.com/ghostbusterbob/GA-GD-Project/main/Assets/_Scripts/EnemyScripts/EnemyLocationSaving.cs">Loading script…</code></pre>
@@ -911,7 +987,6 @@ tornadoCore = GetComponent<Rigidbody>
 		tornadoCore.MovePosition(tornadoCore.position + movement);
 	}
 
-
 	private void HandleRotation()
 	{
 		transform.Rotate(rotationAxis, TORNADOrotationSpeed * Time.deltaTime, Space.World);
@@ -1147,7 +1222,7 @@ end
                     <figure class="belowater-feature">
                         <div class="belowater-map-images">
                             <img src="Images/mapgenerationbelowater.jpg" alt="Randomly generated BeloWater terrain map" />
-                            <img src="Images/Mappinggeneration graph.png" alt="BeloWater map generation graph" />
+                            <img src="Images/Mapping generation graph.png" alt="BeloWater map generation graph" />
                         </div>
                         <figcaption>
                             <h4>Map Generation</h4>
@@ -1215,11 +1290,7 @@ using UnityEngine.Audio;
 // Script is responsible for movement and audiocontroll for the enemy
 
 // Multipe Breakpoints are known, these being:
-// NavMesh Not being baked
-
-
-
-public class EnemyMovingController : MonoBehaviour
+// NavMesh Not being baked... public class EnemyMovingController : MonoBehaviour
 {
 public GameObject Player;
 float speed = 1f;
@@ -1291,37 +1362,36 @@ Debug.Log(NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 1f, Nav
 Debug.Log(CompareTag("Enemy") ? "Enemy tag is correctly set" : "Enemy tag is not set to 'Enemy'");
 }
 
-
 //animator = GetComponent<Animator>
-	();
-	Player = GameObject.FindGameObjectWithTag("Player");
-	//animator.SetBool("IsWalking", true);
-	if (canusemicrohpone == true)
-	{
-	if (Microphone.devices.Length > 0)
-	{
-	micDevice = Microphone.devices[0];
-	micclip = Microphone.Start(micDevice, true, 10, 44100);
-	Debug.Log("Microphone found: " + micDevice);
-	}
-	}
-	}
-	private Vector3 RandomNavSphere(Vector3 origin, float distance)
-	{
-	Vector3 randomDirection = Random.insideUnitSphere * distance;
-	randomDirection += origin;
-	NavMeshHit navHit;
-	NavMesh.SamplePosition(randomDirection, out navHit, distance, NavMesh.AllAreas);
-	return navHit.position;
-	}
-	private void Update()
-	{
-	if (canusemicrohpone == true)
-	{
-	if (micclip != null)
-	{
-	int micPos = Microphone.GetPosition(micDevice) - sampleWindow;
-	if (micPos < 0) return;
+();
+Player = GameObject.FindGameObjectWithTag("Player");
+//animator.SetBool("IsWalking", true);
+if (canusemicrohpone == true)
+{
+if (Microphone.devices.Length > 0)
+{
+micDevice = Microphone.devices[0];
+micclip = Microphone.Start(micDevice, true, 10, 44100);
+Debug.Log("Microphone found: " + micDevice);
+}
+}
+}
+private Vector3 RandomNavSphere(Vector3 origin, float distance)
+{
+Vector3 randomDirection = Random.insideUnitSphere * distance;
+randomDirection += origin;
+NavMeshHit navHit;
+NavMesh.SamplePosition(randomDirection, out navHit, distance, NavMesh.AllAreas);
+return navHit.position;
+}
+private void Update()
+{
+if (canusemicrohpone == true)
+{
+if (micclip != null)
+{
+int micPos = Microphone.GetPosition(micDevice) - sampleWindow;
+if (micPos < 0) return;
 
 float[] samples = new float[sampleWindow];
 micclip.GetData(samples, micPos);
@@ -1459,7 +1529,7 @@ foreach (Collider hit in hits)
 {
 
 AudioSource[] audioSources = FindObjectsByType<AudioSource>
-	(FindObjectsSortMode.None);
+(FindObjectsSortMode.None);
 
 	foreach (AudioSource source in audioSources)
 	{
@@ -1623,20 +1693,20 @@ if (distanceToPlayer < 5f)
 {
 currentlight.enabled = false;
 GetComponent<Rigidbody>
-	().useGravity = true;
-	}
-	}
-	}
-	}
+().useGravity = true;
+}
+}
+}
+}
 
-	private void OnCollisionEnter(Collision collision)
-	{
-	if (collision.gameObject.CompareTag("Ground"))
-	{
-	breakslightsource.PlayDelayed(0.2f);
-	Instantiate(brokenlight, transform.position, transform.rotation);
-	brokenlight.GetComponent<Collider>().enabled = false;
-	Destroy(gameObject);
+private void OnCollisionEnter(Collision collision)
+{
+if (collision.gameObject.CompareTag("Ground"))
+{
+breakslightsource.PlayDelayed(0.2f);
+Instantiate(brokenlight, transform.position, transform.rotation);
+brokenlight.GetComponent<Collider>().enabled = false;
+Destroy(gameObject);
 }
 }
 private void FlickerLight()
