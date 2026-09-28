@@ -72,9 +72,151 @@
             border-color: color-mix(in oklab, #4cf, #fff 10%);
         }
 
-        /* Reduce spacing now that projects are at top */
-        .hero.card {
-            margin-top: 0;
+        /* Consistent spacing between sections on the home page */
+        #profile .card {
+            margin-bottom: 1.5rem;
+        }
+
+        #profile .card:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ===== SLIDESHOW STYLES ===== */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .slideshow-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slideshow-slide {
+            min-width: 100%;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .slideshow-slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slideshow-info {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(255,77,166,0.08), rgba(255,122,45,0.04));
+            border-top: 1px solid rgba(255,77,166,0.1);
+        }
+
+        .slideshow-info h3 {
+            color: var(--accent-1);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .slideshow-info p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .slideshow-desc {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+
+        /* Slideshow Controls */
+        .slideshow-btn {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            background: rgba(255,77,166,0.2);
+            color: white;
+            border: 1px solid rgba(255,77,166,0.3);
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+            z-index: 10;
+            backdrop-filter: blur(4px);
+        }
+
+        .slideshow-btn:hover {
+            background: rgba(255,77,166,0.4);
+            border-color: rgba(255,77,166,0.6);
+            box-shadow: 0 0 15px rgba(255,77,166,0.3);
+        }
+
+        .slideshow-btn.prev {
+            left: 1rem;
+        }
+
+        .slideshow-btn.next {
+            right: 1rem;
+        }
+
+        /* Slide Indicators */
+        .slideshow-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,77,166,0.2);
+        }
+
+        .indicator:hover {
+            background: rgba(255,77,166,0.4);
+            border-color: rgba(255,77,166,0.5);
+        }
+
+        .indicator.active {
+            background: var(--accent-1);
+            border-color: var(--accent-1);
+            box-shadow: 0 0 10px rgba(255,77,166,0.5);
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            .slideshow-slide img {
+                height: 250px;
+            }
+
+            .slideshow-btn {
+                padding: 0.5rem 0.75rem;
+                font-size: 1.2rem;
+            }
+
+            .slideshow-btn.prev {
+                left: 0.5rem;
+            }
+
+            .slideshow-btn.next {
+                right: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -124,7 +266,7 @@
             <!-- PROFILE / ABOUT ME -->
             <div class="hero card">
                 <div>
-                    <h1>Bo ♡</h1>
+                    <h1>Bo Bolweg ♡</h1>
                     <p>I am a student at Media College Amsterdam and a game developer from the Netherlands. I make games, gameplay systems, and slight changes in how people play the games in Unity and Roblox, with a focus on gameplay, UI and programming.</p>
                     <p style="color:var(--muted)">Outside of development, I enjoy aviation, flight simulation, train Simulators, gaming with friends, and spending time with my two goofy English Cocker Spaniels. I also have experience managing online aviation and military communities and working with teams.</p>
 
@@ -138,7 +280,6 @@
                     <!-- <img src="Images/IMG_1133.png" alt="Profile image of Bo" /> -->
                 </div>
             </div>
-            <br />
 
             <div class="card">
                 <h2 style="color:var(--accent-1)">Experience</h2>
@@ -150,12 +291,93 @@
                 </ul>
             </div>
 
-            <!-- Contact section removed -->
+            <!-- PROJECTS SLIDESHOW -->
+            <div class="card">
+                <h2 style="color:var(--accent-1); margin-bottom:.5rem">My Projects</h2>
+                <p style="color:var(--muted); margin-bottom:1rem">Click any project to view details</p>
 
-            <div class="card" style="margin-top:1rem">
-                <h2 style="color:var(--accent-1)">Internship Availability</h2>
-                <p style="color:var(--muted)">31-01-2027 until 30-07-2027</p>
-                <p style="color:var(--muted)">31-07-2027 until 31-01-2028</p>
+                <div class="slideshow-container">
+                    <div class="slideshow-wrapper" id="slideshow">
+                        <div class="slideshow-slide" onclick="showPage('belowater')" role="button">
+                            <img src="Images/BeloWaterBanner.jpg" alt="BeloWater" />
+                            <div class="slideshow-info">
+                                <h3>BeloWater</h3>
+                                <p>Unity · AI project · 10 weeks</p>
+                                <p class="slideshow-desc">Latest work featuring advanced AI systems and gameplay mechanics.</p>
+                            </div>
+                        </div>
+
+                        <div class="slideshow-slide" onclick="showPage('TheCreatureWithin')" role="button">
+                            <img src="Images/TheCreatureWithin Banner.jpg" alt="TheCreatureWithin" />
+                            <div class="slideshow-info">
+                                <h3>TheCreatureWithin</h3>
+                                <p>Unity · In Development · School project · 1 year</p>
+                                <p class="slideshow-desc">Advanced AI systems with sound detection and dynamic enemy behavior.</p>
+                            </div>
+                        </div>
+
+                        <div class="slideshow-slide" onclick="showPage('reclean')" role="button">
+                            <img src="Images/493507649-ad7ff910-1d34-4edd-aec2-e391a233c618.gif" alt="RE:CLEAN" />
+                            <div class="slideshow-info">
+                                <h3>☢ RE:CLEAN</h3>
+                                <p>Unity · Multiplayer · UI/UX · Friends Project</p>
+                                <p class="slideshow-desc">A multiplayer project inspired by R.E.P.O with advanced UI systems and gameplay mechanics.</p>
+                            </div>
+                        </div>
+
+                        <div class="slideshow-slide" onclick="showPage('arc82')" role="button">
+                            <img src="Images/scp-logo-unscreen.gif" alt="ARC - 82" />
+                            <div class="slideshow-info">
+                                <h3>ARC - 82</h3>
+                                <p>Roblox · Lua · UI/UX · Group Project</p>
+                                <p class="slideshow-desc">Long-term group project with advanced interactive UI systems controlling the facility.</p>
+                            </div>
+                        </div>
+
+                        <div class="slideshow-slide" onclick="showPage('thehunt')" role="button">
+                            <img src="Images/THEHUNTGIF.gif" alt="The Hunt" />
+                            <div class="slideshow-info">
+                                <h3>The Hunt</h3>
+                                <p>Roblox · Released · UI/UX · Art · Lua</p>
+                                <p class="slideshow-desc">Created at age 13, improved sequel with better gameplay and design.</p>
+                            </div>
+                        </div>
+
+                        <div class="slideshow-slide" onclick="showPage('tortex')" role="button">
+                            <img src="Images/OPERATIONSTORM.png" alt="TORTEX" />
+                            <div class="slideshow-info">
+                                <h3>TORTEX</h3>
+                                <p>Unity · Personal project · Tornado systems</p>
+                                <p class="slideshow-desc">Storm chasing game with dynamic tornado physics and weather systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="slideshow-slide" onclick="showPage('tds')" role="button">
+                            <img src="Images/TDS.png" alt="Tower Defence Simulator" />
+                            <div class="slideshow-info">
+                                <h3>Tower Defence Simulator</h3>
+                                <p>Unity · C# · Solo school project · 10 weeks</p>
+                                <p class="slideshow-desc">Solo Unity project featuring tower placement, AI enemies, and game mechanics.</p>
+                            </div>
+                        </div>
+
+                        <div class="slideshow-slide" onclick="showPage('helend')" role="button">
+                            <img src="Images/HSL1.png" alt="Hel End Strife" />
+                            <div class="slideshow-info">
+                                <h3>Hel End Strife</h3>
+                                <p>Unity · Team project · Gameplay scripting · 10 weeks</p>
+                                <p class="slideshow-desc">Team-based Unity project with saving systems and gameplay mechanics.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slideshow Controls -->
+                    <button class="slideshow-btn prev" onclick="prevSlide()" aria-label="Previous project">❮</button>
+                    <button class="slideshow-btn next" onclick="nextSlide()" aria-label="Next project">❯</button>
+
+                    <!-- Slide indicators -->
+                    <div class="slideshow-indicators" id="indicators"></div>
+                </div>
             </div>
         </section>
 
@@ -1848,7 +2070,88 @@ currentlight.intensity = Mathf.Lerp(currentlight.intensity, flickerIntensity, no
         showPage(initial, false);
         setupCodeToolbars();
         loadExternalScripts();
+        initSlideshow();
         });
+
+        // ===== SLIDESHOW FUNCTIONALITY =====
+        let currentSlideIndex = 0;
+        let slideshowAutoAdvance;
+
+        function initSlideshow() {
+        const slideshow = document.getElementById('slideshow');
+        if (!slideshow) return;
+
+        const slides = slideshow.querySelectorAll('.slideshow-slide');
+        const indicatorsContainer = document.getElementById('indicators');
+
+        // Create indicators
+        slides.forEach((_, index) => {
+        const indicator = document.createElement('div');
+        indicator.className = 'indicator';
+        if (index === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => goToSlide(index));
+        indicatorsContainer.appendChild(indicator);
+        });
+
+        // Auto-advance slideshow every 6 seconds
+        startAutoAdvance();
+
+        // Pause auto-advance on hover
+        slideshow.addEventListener('mouseenter', stopAutoAdvance);
+        slideshow.addEventListener('mouseleave', startAutoAdvance);
+        }
+
+        function showSlide(index) {
+        const slideshow = document.getElementById('slideshow');
+        const slides = slideshow.querySelectorAll('.slideshow-slide');
+        const indicators = document.querySelectorAll('.indicator');
+
+        // Wrap around
+        if (index >= slides.length) {
+        currentSlideIndex = 0;
+        } else if (index < 0) {
+        currentSlideIndex = slides.length - 1;
+        } else {
+        currentSlideIndex = index;
+        }
+
+        // Update slide position
+        const offset = -currentSlideIndex * 100;
+        slideshow.style.transform = `translateX(${offset}%)`;
+
+        // Update indicators
+        indicators.forEach((ind, i) => {
+        ind.classList.toggle('active', i === currentSlideIndex);
+        });
+        }
+
+        function nextSlide() {
+        stopAutoAdvance();
+        showSlide(currentSlideIndex + 1);
+        startAutoAdvance();
+        }
+
+        function prevSlide() {
+        stopAutoAdvance();
+        showSlide(currentSlideIndex - 1);
+        startAutoAdvance();
+        }
+
+        function goToSlide(index) {
+        stopAutoAdvance();
+        showSlide(index);
+        startAutoAdvance();
+        }
+
+        function startAutoAdvance() {
+        slideshowAutoAdvance = setInterval(() => {
+        showSlide(currentSlideIndex + 1);
+        }, 6000);
+        }
+
+        function stopAutoAdvance() {
+        clearInterval(slideshowAutoAdvance);
+        }
     </script>
 </body>
 </html>
