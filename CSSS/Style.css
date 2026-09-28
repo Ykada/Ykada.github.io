@@ -182,3 +182,45 @@ footer{opacity:.9;text-align:center;color:var(--muted);padding:1rem;font-size:.9
 
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
+
+/* ===== CLICKABLE LOGO ===== */
+a.logo{text-decoration:none;cursor:pointer;transition:transform .18s,filter .18s}
+a.logo:hover{filter:brightness(1.2) drop-shadow(0 0 8px rgba(255,77,166,.35));transform:translateY(-1px)}
+a.logo:focus-visible{outline:2px solid var(--accent-1);outline-offset:4px;border-radius:8px}
+
+/* ===== "EXTRA PROUD OF" HIGHLIGHTS ===== */
+.proud-badge{position:absolute;top:.7rem;left:.7rem;z-index:3;padding:.3rem .65rem;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#1a1200;background:linear-gradient(90deg,#ffd76a,#ffab3d);box-shadow:0 4px 14px rgba(255,190,60,.35);pointer-events:none}
+.proud-card{position:relative;border-color:rgba(255,205,90,.55)!important;box-shadow:0 0 0 1px rgba(255,205,90,.25),0 10px 34px rgba(255,190,60,.14)}
+.proud-card:hover{box-shadow:0 0 0 1px rgba(255,205,90,.5),0 18px 50px rgba(255,190,60,.25)}
+.proud-slide .slideshow-info{border-top:2px solid rgba(255,205,90,.6)}
+
+/* ===== CODE SNIPPET IMAGES ===== */
+.snippet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1rem;margin-top:.8rem}
+.snippet-card{margin:0;overflow:hidden;border-radius:10px;border:1px solid rgba(var(--project-rgb,255,77,166),.22);background:#0b0b0b}
+.snippet-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.snippet-card figcaption{padding:.6rem .85rem;color:var(--project-accent,var(--accent-1));font-weight:700;font-size:.92rem;border-top:1px solid rgba(var(--project-rgb,255,77,166),.16)}
+.snippet-card figcaption span{color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.75rem;font-weight:400;margin-left:.4rem}
+@media(max-width:520px){.snippet-grid{grid-template-columns:1fr}}
+
+/* ===== SNIPPET VIEWER (enlarged image + text) ===== */
+.snippet-card{cursor:zoom-in;transition:transform .2s,box-shadow .2s}
+.snippet-card:hover,.snippet-card:focus-visible{transform:translateY(-3px);box-shadow:0 12px 30px rgba(var(--project-rgb,255,77,166),.22);outline:none}
+.snippet-modal[hidden]{display:none}
+.snippet-modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:1.25rem;background:rgba(3,3,8,.88);backdrop-filter:blur(6px);animation:fade .2s ease both}
+.snippet-modal-inner{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:1.25rem;width:min(1500px,100%);max-height:100%;overflow:auto;padding:1.25rem;border-radius:16px;background:#0f1220;border:1px solid rgba(255,255,255,.1);box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.snippet-modal-image{display:flex;align-items:center;justify-content:center;background:#0b0b0b;border-radius:10px;min-width:0}
+.snippet-modal-image img{display:block;max-width:100%;max-height:82vh;width:auto;height:auto;border-radius:10px}
+.snippet-modal-text{display:flex;flex-direction:column;gap:.7rem;padding-top:1.6rem}
+.snippet-modal-text h3{color:var(--accent-1);font-family:Rajdhani,Inter;font-size:1.5rem;line-height:1.15}
+.snippet-modal-text code{align-self:flex-start;padding:.2rem .55rem;border-radius:6px;background:rgba(255,255,255,.07);color:var(--muted);font-size:.8rem}
+.snippet-modal-text p{color:#d6d6d6;font-size:.98rem;line-height:1.6}
+.snippet-modal-nav{display:flex;gap:.5rem;margin-top:auto}
+.snippet-modal-nav button{flex:1;padding:.55rem;border-radius:8px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--muted);font-weight:700;cursor:pointer}
+.snippet-modal-nav button:hover{color:#fff;background:rgba(255,255,255,.09)}
+.snippet-modal-close{position:absolute;top:.6rem;right:.7rem;z-index:2;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:rgba(0,0,0,.5);color:#fff;font-size:1rem;cursor:pointer}
+.snippet-modal-close:hover{background:rgba(255,77,166,.35)}
+@media(max-width:800px){
+  .snippet-modal-inner{grid-template-columns:1fr}
+  .snippet-modal-text{padding-top:0}
+  .snippet-modal-image img{max-height:55vh}
+}
