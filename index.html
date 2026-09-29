@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>ykad_x — portfolio</title>
+    <meta name="description" content="Bo Bolweg (ykad_x) — game developer portfolio. Unity/C# and Roblox/Lua projects including BeloWater, The Creature Within, Hel End Strife and TORTEX." />
+    <meta property="og:title" content="ykad_x — portfolio" />
+    <meta property="og:description" content="Game developer portfolio: Unity/C# and Roblox/Lua projects, gameplay systems and code samples." />
+    <meta property="og:image" content="Images/HSL1.png" />
+    <meta property="og:type" content="website" />
     <link rel="icon" href="Images/downloads (1).ico" />
     <link rel="stylesheet" href="CSSS/Style.css" />
     <style>
@@ -256,7 +261,7 @@
                     <div class="featured-project-card creature" onclick="showPage('helend')" role="button">
                         <img src="Images/HSL1.png" alt="Hel End Strife" />
                         <div class="meta">
-                            <h3>Hell End Strife</h3>
+                            <h3>Hel End Strife</h3>
                             <p>Unity · 3rd Place · Team Project</p>
                         </div>
                     </div>
@@ -478,292 +483,159 @@
         </section>
 
         <!-- PROJECT DETAILS: RECLEAN -->
-        <section id="reclean" class="page project-detail project-theme theme-reclean">
-            <div class="card">
-                <h2 style="color:var(--accent-1)">☢ RE:CLEAN</h2>
-                <div class="project-images">
-                    <img src="Images/RECLEAN1.png" alt="RE:CLEAN 1" />
-                    <img src="Images/RECLEAN2.png" alt="RE:CLEAN 2" />
-                </div>
-
-                <div class="contribution-grid">
-                    <div class="code-section">
-                        <h4 style="color:var(--accent-1)">Example Code</h4>
-                        <pre><code>using System;
-using UnityEngine;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.UI;
-
-[System.Serializable]
-
-public class SettingsData
-{
-public float volumeLevel;
-public float tvsoundlevel;
-public bool filmgrain;
-public bool bloom;
-public bool vog;
-public bool fullscreen;
-public float audioListenerVolume;
-public int fps;
-}
-
-public class SettingsSaveManager : MonoBehaviour
-{
-[SerializeField] private Slider volumeLevel;
-[SerializeField] private Slider tvsoundlevel;
-[SerializeField] private Toggle filmgrain;
-[SerializeField] private Toggle bloomToggle;
-[SerializeField] private Toggle vog;
-[SerializeField] private Toggle fullscreen;
-[SerializeField] private Button savebutton;
-[SerializeField] private AudioListener audioListener;
-[SerializeField] private AudioSource audioSource;
-[SerializeField] private InputField fps;
-
-private string filePath;
-
-private void Start()
-{
-savebutton.onClick.AddListener(SaveSettingsData);
-savebutton.onClick.AddListener(() => SetFrameRate(int.TryParse(fps.text, out int result) ? result : 60));
-
-}
-
-private void Awake()
-{
-filePath = Application.persistentDataPath + "/settings.json";
-if (System.IO.File.Exists(filePath))
-{
-SettingsData data = LoadSettingsData();
-volumeLevel.value = data.volumeLevel;
-filmgrain.isOn = data.filmgrain;
-bloomToggle.isOn = data.bloom;
-vog.isOn = data.vog;
-fullscreen.isOn = data.fullscreen;
-tvsoundlevel.value = data.tvsoundlevel;
-fps.text = data.fps.ToString();
-SetFrameRate(data.fps);
-}
-}
-
-#region fps
-
-public void SetFrameRate(int fps)
-{
-QualitySettings.vSyncCount = 0;
-Application.targetFrameRate = fps;
-
-}
-
-
-#endregion
-
-
-private SettingsData LoadSettingsData()
-{
-if (System.IO.File.Exists(filePath))
-{
-string json = System.IO.File.ReadAllText(filePath);
-return JsonUtility.FromJson<SettingsData>(json);
-tvsoundlevel.value = audioSource.volume;
-}
-else
-{
-return new SettingsData { volumeLevel = 1, filmgrain = true, vog = true, fullscreen = true };
-}
-}
-private void SaveSettingsData()
-{
-SettingsData data = new SettingsData
-{
-volumeLevel = volumeLevel.value,
-filmgrain = filmgrain.isOn,
-bloom = bloomToggle.isOn,
-vog = vog.isOn,
-fullscreen = fullscreen.isOn,
-tvsoundlevel = tvsoundlevel.value,
-fps = int.TryParse(fps.text, out int result) ? result : 60,
-};
-        
-string json = JsonUtility.ToJson(data, true);
-System.IO.File.WriteAllText(filePath, json);
-}
-}
-</code></pre>
-                    </div>
-
-                    <div class="contribution-item">
-                        <img src="Images/RECLEAN2.png" alt="UI" />
-                        <h4>UI Design</h4>
-                        <p style="color:var(--muted)">Worked on interface concepts and layout design.</p>
+                <section id="reclean" class="page project-detail project-theme theme-reclean">
+            <div class="card project-page-card">
+                <div class="project-hero">
+                    <img src="Images/RECLEAN1.png" alt="RE:CLEAN interface concept" />
+                    <div class="project-hero-copy">
+                        <span class="project-eyebrow">On hold</span>
+                        <h2>☢ RE:CLEAN</h2>
+                        <p>A multiplayer project inspired by R.E.P.O.</p>
                     </div>
                 </div>
 
-                <p style="color:var(--muted)">A multiplayer project inspired by R.E.P.O. Currently on hold due to limited time.</p>
-                <div style="margin-top:1rem;display:flex;gap:.5rem">
-                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                <div class="project-content">
+                    <div class="project-intro">
+                        <span class="project-eyebrow">Overview</span>
+                        <h3>Settings that actually stick</h3>
+                        <p style="color:var(--muted)">A multiplayer project inspired by R.E.P.O. I focused on UI and on a settings system that saves the player's choices between sessions. Currently on hold due to limited time.</p>
+                    </div>
+
+                    <div class="project-feature-grid">
+                        <figure class="project-feature">
+                            <img src="Images/RECLEAN2.png" alt="RE:CLEAN UI design" loading="lazy" />
+                            <figcaption><h4>UI Design</h4><p>Worked on interface concepts and layout design.</p></figcaption>
+                        </figure>
+                    </div>
+                    <section class="project-scripts" aria-labelledby="reclean-scripts-title">
+                        <h3 id="reclean-scripts-title" style="color:var(--accent-1)">Code Snippet</h3>
+                        <p style="color:var(--muted)">Settings persistence, written in C#.</p>
+                        <div class="snippet-grid">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Settings save manager" data-title="Settings save manager" data-file="SettingsSaveManager.cs" data-desc="Saves and loads the player’s settings (volume, film grain, bloom, vignette, fullscreen, target FPS) to a JSON file in persistentDataPath, and applies them again on startup.">
+                            <img src="Images/CodeSnippets/Reclean-SettingsSaveManager.png" alt="Code snippet: Settings save manager" loading="lazy" />
+                            <figcaption>Settings save manager <span>SettingsSaveManager.cs</span></figcaption>
+                        </figure>
+                        </div>
+                    </section>
+
+                    <div class="project-pill-row" aria-label="Project details">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Multiplayer</span>
+                        <span>On hold</span>
+                    </div>
                 </div>
+
+                    <div class="project-actions">
+                        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                    </div>
             </div>
         </section>
 
         <!-- PROJECT DETAILS: ARC-82 -->
-        <section id="arc82" class="page project-detail project-theme theme-arc82">
-            <div class="card">
-                <h2 style="color:var(--accent-1)">ARC - 82</h2>
-                <div class="project-images">
-                    <img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png" alt="ARC - 82" />
-                    <img src="Images/ROBLXUI1.png" alt="ARC UI" />
-                    <img src="Images/ARC-82UIV1.png" alt="ARC UI" />
+                <section id="arc82" class="page project-detail project-theme theme-arc82">
+            <div class="card project-page-card">
+                <div class="project-hero">
+                    <img src="Images/493531442-61c5a022-32b8-4cd8-9e0c-8de7509e1529.png" alt="ARC - 82 facility" />
+                    <div class="project-hero-copy">
+                        <span class="project-eyebrow">Roblox · Long-term</span>
+                        <h2>ARC - 82</h2>
+                        <p>A long-term group project for Roblox.</p>
+                    </div>
                 </div>
 
-                <div class="contribution-grid">
-                    <div class="contribution-item">
-                        <img src="Images/ROBLXUI1.png" alt="UI Work" />
-                        <h4>UI Systems</h4>
-                        <p style="color:var(--muted)">Created advanced interactive UI systems controlling the facility.</p>
+                <div class="project-content">
+                    <div class="project-intro">
+                        <span class="project-eyebrow">Overview</span>
+                        <h3>Interactive systems for the facility</h3>
+                        <p style="color:var(--muted)">A long-term group project for Roblox. I was responsible for the UI and the interactive systems that run the facility.</p>
                     </div>
 
-                    <div class="code-section">
-                        <h4 style="color:var(--accent-1)">Camera Switching (Lua)</h4>
-                        <pre><code>local remoteEventRequest = Instance.new("RemoteEvent")
-remoteEventRequest.Name = "CameraSwitchRequest"
-remoteEventRequest.Parent = game.ReplicatedStorage
-local remoteEventDenied = Instance.new("RemoteEvent")
-remoteEventDenied.Name = "CameraSwitchDenied"
-remoteEventDenied.Parent = game.ReplicatedStorage
-local groupId = 33993584
-local allowedCamerasForGroup = {
-["ClassDCamera"] = true,
-["Camera2"] = true,
-}
-local function isPlayerInGroup(player)
-return player:IsInGroup(groupId)
-end
-print("hi!")
-remoteEventRequest.OnServerEvent:Connect(function(player, requestedCameraName)
-if isPlayerInGroup(player) then
-local camera = workspace:FindFirstChild(requestedCameraName)
-if camera and allowedCamerasForGroup[requestedCameraName] then
-remoteEventRequest:FireClient(player, requestedCameraName)
-else
-remoteEventDenied:FireClient(player)
-end
-else
-remoteEventDenied:FireClient(player)
-end
-end)
-</code></pre>
+                    <div class="project-feature-grid">
+                        <figure class="project-feature">
+                            <img src="Images/ROBLXUI1.png" alt="ARC-82 UI work" loading="lazy" />
+                            <figcaption><h4>UI Systems</h4><p>Created advanced interactive UI systems controlling the facility.</p></figcaption>
+                        </figure>
                     </div>
-
-                    <div class="code-section">
-                        <h4 style="color:var(--accent-1)">Icon Spinner (Lua)</h4>
-                        <pre><code>local TweenService = game:GetService("TweenService")
-
-local Frame = script.Parent
-
-coroutine.wrap(function()
-local Outside = Frame.Outside
-local OuterTween = TweenService:Create(Outside, TweenInfo.new(4, Enum.EasingStyle.Linear), {Rotation = 360})
-
-while true do
-Outside.Rotation = 0
-OuterTween:Play()
-OuterTween.Completed:Wait()
-end
-end)()
-
-coroutine.wrap(function()
-local Inside = Frame.Inside
-local Tweens = {}
-
-for Angle = 90, 360, 90 do
-table.insert(Tweens, TweenService:Create(Inside, TweenInfo.new(2, Enum.EasingStyle.Elastic), {Rotation = Angle}))
-end
-
-while true do
-Inside.Rotation = 0
-
-for i, Tween in ipairs(Tweens) do
-Tween:Play()
-Tween.Completed:Wait()
-task.wait(1)
-end
-end
-end)()
-</code></pre>
+                    <div class="project-gallery" aria-label="More screenshots">
+                        <img src="Images/ARC-82UIV1.png" alt="ARC-82 UI, second version" loading="lazy" />
                     </div>
+                    <section class="project-scripts" aria-labelledby="arc82-scripts-title">
+                        <h3 id="arc82-scripts-title" style="color:var(--accent-1)">Code Snippets (Lua)</h3>
+                        <p style="color:var(--muted)">A few of the scripts behind the facility.</p>
+                        <div class="snippet-grid">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Camera switching" data-title="Camera switching" data-file="CameraSwitching.lua" data-desc="Lets a player request a camera switch through a RemoteEvent, checked server-side against an allowed list and the player’s group membership before it’s granted.">
+                            <img src="Images/CodeSnippets/Arc82-CameraSwitching.png" alt="Code snippet: Camera switching" loading="lazy" />
+                            <figcaption>Camera switching <span>CameraSwitching.lua</span></figcaption>
+                        </figure>
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Icon spinner" data-title="Icon spinner" data-file="IconSpinner.lua" data-desc="Animates a UI icon with two looping TweenService animations: an outer ring spinning continuously and an inner ring stepping through angles with an elastic ease.">
+                            <img src="Images/CodeSnippets/Arc82-IconSpinner.png" alt="Code snippet: Icon spinner" loading="lazy" />
+                            <figcaption>Icon spinner <span>IconSpinner.lua</span></figcaption>
+                        </figure>
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Own avatar dummy" data-title="Own avatar dummy" data-file="AvatarDummy.lua" data-desc="Copies a player’s real avatar appearance onto an in-world dummy NPC using GetHumanoidDescriptionFromUserId, updating it whenever their character respawns.">
+                            <img src="Images/CodeSnippets/Arc82-AvatarDummy.png" alt="Code snippet: Own avatar dummy" loading="lazy" />
+                            <figcaption>Own avatar dummy <span>AvatarDummy.lua</span></figcaption>
+                        </figure>
+                        </div>
+                    </section>
 
-                    <div class="code-section">
-                        <h4 style="color:var(--accent-1)">Own Avatar Dummy (Lua)</h4>
-                        <pre><code>local Players = game:GetService("Players")
-local dummy = script.Parent
-
-local function updateDummyAppearance(player)
-local humanoidDescription = Players:GetHumanoidDescriptionFromUserId(player.UserId)
-local dummyHumanoid = dummy:WaitForChild("Humanoid")
-dummyHumanoid:ApplyDescription(humanoidDescription)
-end
-
-local function onPlayerAdded(player)
-player.CharacterAdded:Connect(function(character)
-character:WaitForChild("Humanoid")
-character:WaitForChild("HumanoidRootPart")
-updateDummyAppearance(player)
-end)
-end
-
-Players.PlayerAdded:Connect(onPlayerAdded)
-for _, player in pairs(Players:GetPlayers()) do
-onPlayerAdded(player)
-end
-</code></pre>
+                    <div class="project-pill-row" aria-label="Project details">
+                        <span>Roblox</span>
+                        <span>Lua</span>
+                        <span>Group project</span>
+                        <span>UI & systems</span>
                     </div>
-
                 </div>
 
-                <p style="color:var(--muted)">A long-term group project for Roblox. Responsible for UI and interactive systems.</p>
-                <div style="margin-top:1rem;display:flex;gap:.5rem">
-                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-                </div>
+                    <div class="project-actions">
+                        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                    </div>
             </div>
         </section>
 
         <!-- PROJECT DETAILS: HEL END STRIFE -->
-        <section id="helend" class="page project-detail project-theme theme-helend">
-            <div class="card">
-                <h2 style="color:var(--accent-1)">Hel End Strife</h2>
-                <div class="project-images">
-                    <img src="Images/HSL1.png" alt="HSL1" />
-                    <img src="Images/HSL2.png" alt="HSL2" />
-                    <img src="Images/HSL3.png" alt="HSL3" />
-                    <img src="Images/HSL4.png" alt="HSL4" />
-                </div>
-
-                <div class="contribution-grid">
-                    <div class="contribution-item">
-                        <img src="Images/HSL1.png" alt="Gameplay" />
-                        <h4>Gameplay Systems</h4>
-                    </div>
-                    <div class="contribution-item">
-                        <img src="Images/HSL2.png" alt="SavingSystems" />
-                        <h4>Team Collaboration</h4>
-                        <p style="color:var(--muted)">Worked on saving systems that save your current progress.</p>
+                <section id="helend" class="page project-detail project-theme theme-helend">
+            <div class="card project-page-card">
+                <div class="project-hero">
+                    <img src="Images/HSL1.png" alt="Hel End Strife gameplay" />
+                    <div class="project-hero-copy">
+                        <span class="project-eyebrow">10-week team project · 3rd place</span>
+                        <h2>Hel End Strife</h2>
+                        <p>A Unity school project made with 3 developers and 7 artists.</p>
                     </div>
                 </div>
 
-                <section class="project-scripts" aria-labelledby="helend-scripts-title">
-                    <h3 id="helend-scripts-title" style="color:var(--accent-1)">Achievements &amp; And what i learned</h3>
-                    <p>Parts of the project that I was involved in and made: I was responsible for creating the gameplay systems and implementing the saving functionality. We made this with a small team and ended up getting 3rd in the competition we had, which I’m really proud of. During playtesting, we had to use five different laptops to give everyone time to play the game, as there was a queue of around eight people waiting to try it. Me and the rest of the developers and artists are really proud of this.</p>
-                    <h3 id="helend-scripts-title" style="color:var(--accent-1)">GamePlay Systems i made for this project</h3>
-                    <div class="snippet-grid">
+                <div class="project-content">
+                    <div class="project-intro">
+                        <span class="project-eyebrow">Overview</span>
+                        <h3>Achievements & what I learned</h3>
+                        <p style="color:var(--muted)">Parts of the project that I was involved in and made: I was responsible for creating the gameplay systems and implementing the saving functionality. We made this with a small team and ended up getting 3rd in the competition we had, which I’m really proud of. During playtesting, we had to use five different laptops to give everyone time to play the game, as there was a queue of around eight people waiting to try it. Me and the rest of the developers and artists are really proud of this.</p>
+                    </div>
+
+                    <div class="project-feature-grid">
+                        <figure class="project-feature">
+                            <img src="Images/HSL2.png" alt="Hel End Strife saving systems" loading="lazy" />
+                            <figcaption><h4>Team Collaboration</h4><p>Worked on saving systems that save your current progress.</p></figcaption>
+                        </figure>
+                        <figure class="project-feature">
+                            <img src="Images/HSL3.png" alt="Hel End Strife gameplay" loading="lazy" />
+                            <figcaption><h4>Gameplay Systems</h4><p>Enemy spawning, XP and dropped-object data all built to survive a save/load cycle.</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="project-gallery" aria-label="More screenshots">
+                        <img src="Images/HSL4.png" alt="Hel End Strife, extra screenshot" loading="lazy" />
+                    </div>
+                    <section class="project-scripts" aria-labelledby="helend-scripts-title">
+                        <h3 id="helend-scripts-title" style="color:var(--accent-1)">Gameplay systems I made for this project</h3>
+                        <p style="color:var(--muted)">The saving, spawning and progression scripts behind the game.</p>
+                        <div class="snippet-grid">
                         <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Enemy location saving" data-title="Enemy location saving" data-file="EnemyLocationSaving.cs" data-desc="It took me a long time to get this working correctly, and I learned a lot from making these systems. I’d never worked with this type of system before, so it was interesting to learn this stuff.">
-                            <img src="Images/EnemyLocationSavingHNS.PNG" alt="Code snippet: Enemy location saving" loading="lazy" />
+                            <img src="Images/EnemyLocationSavingHNS.png" alt="Code snippet: Enemy location saving" loading="lazy" />
                             <figcaption>Enemy location saving <span>EnemyLocationSaving.cs</span></figcaption>
                         </figure>
-                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Enemy location Loading" data-title="Enemy location Loading" data-file="EnemyLocationSaving.cs" data-desc="Loading data was one of the hardest things I’ve done in this project. I thought saving the data would be the hardest, but apparently it’s child’s play compared to getting specific enemies to load in the correct spots. It took me a full three weeks to figure out how to correctly load enemies in the right places, so I learned a lot during this.">
-                            <img src="Images/EnemyLocationLoadingHNS.PNG" alt="Code snippet: Enemy location saving" loading="lazy" />
-                            <figcaption>Enemy location saving <span>EnemyLocationSaving.cs</span></figcaption>
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Enemy location loading" data-title="Enemy location loading" data-file="EnemyLocationSaving.cs" data-desc="Loading data was one of the hardest things I’ve done in this project. I thought saving the data would be the hardest, but apparently it’s child’s play compared to getting specific enemies to load in the correct spots. It took me a full three weeks to figure out how to correctly load enemies in the right places, so I learned a lot during this.">
+                            <img src="Images/EnemyLocationLoadingHNS.png" alt="Code snippet: Enemy location loading" loading="lazy" />
+                            <figcaption>Enemy location loading <span>EnemyLocationSaving.cs</span></figcaption>
                         </figure>
                         <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Enemy spawner" data-title="Enemy spawner" data-file="Spawner.cs" data-desc="One of the scripts I made at the beginning of the project. I tried to make it a spawner that I could just assign spawn points to, so I did that using transforms from empty GameObjects. But it took me a lot longer than I expected. I didn’t have the skills needed to make these things at the time, and it was my first time actually making a proper project with a small group.">
                             <img src="Images/EnemySpawningHNS.png" alt="Code snippet: Enemy spawner" loading="lazy" />
@@ -777,577 +649,316 @@ end
                             <img src="Images/XPSystemCodeSnipitHNS.png" alt="Code snippet: Experience system" loading="lazy" />
                             <figcaption>Experience system <span>XPSCRIPT.cs</span></figcaption>
                         </figure>
-                        <figure class="snippet-card" tabindex="0">
-                            <video src="Images/HELLANDSTRIFEGAMEPLAY.MP4" controls></video>
-                        </figure>
-                    </div>
-                </section>
+                        </div>
+                    </section>
 
-                <p style="color:var(--muted)">A Unity school project made with 3 developers and 7 artists over 10 weeks. Playable version available on GitHub.</p>
-                <div style="margin-top:1rem;display:flex;gap:.5rem">
-                    <button class="primary-btn" onclick="window.location.href='https://github.com/ghostbusterbob/GA-GD-Project/tree/Ykada_';">Link to Github</button>
-                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                    <div class="project-video">
+                        <h4>Gameplay footage</h4>
+                        <video src="Images/HELLANDSTRIFEGAMEPLAY.mp4" controls muted playsinline preload="metadata"></video>
+                    </div>
+
+                    <div class="project-pill-row" aria-label="Project details">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>3 devs + 7 artists</span>
+                        <span>10 weeks</span>
+                        <span>3rd place</span>
+                    </div>
                 </div>
+
+                    <div class="project-actions">
+                        <button class="primary-btn" onclick="window.location.href='https://github.com/ghostbusterbob/GA-GD-Project/tree/Ykada_';">Link to Github</button>
+                        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                    </div>
             </div>
         </section>
 
         <!-- PROJECT DETAILS: TDS -->
-        <section id="tds" class="page project-detail project-theme theme-tds">
-            <div class="card">
-                <h2 style="color:var(--accent-1)">Tower Defence Simulator</h2>
-                <div class="project-images">
-                    <img src="Images/TDS.png" alt="TDS" />
-                    <img src="Images/TGB2.png" alt="TGB2" />
-                    <img src="Images/TGB3.png" alt="TGB3" />
-                    <img src="Images/TGB4.png" alt="TGB4" />
-                    <img src="Images/TGB5.png" alt="TGB5" />
-                </div>
-
-                <p style="color:var(--muted)">A solo Unity school project built in 10 weeks. All scripts and systems coded by me.</p>
-
-                <div class="contribution-grid">
-                    <div class="code-section">
-                        <h4 style="color:var(--accent-1)">Tower Placing (C#)</h4>
-                        <pre><code>using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
-using System.Collections.Generic;
-
-// TowerSpawner.cs
-// Manages tower selection, placement, rotation, removal, and UI updates in a tower defense game.
-// Ykada_Hiroka
-public class TowerSpawner : MonoBehaviour
-{
-[Header("Preview Prefabs (Ghost Towers)")]
-[SerializeField] private GameObject archerPreview;
-[SerializeField] private GameObject crossbowPreview;
-[SerializeField] private GameObject magePreview;
-[SerializeField] private GameObject cannonPreview;
-[SerializeField] private GameObject crystalPreview;
-[SerializeField] private GameObject minigunnerPreview;
-
-[Header("Tower Prefabs (Real Towers)")]
-[SerializeField] private GameObject archer;
-[SerializeField] private GameObject crossbow;
-[SerializeField] private GameObject mage;
-[SerializeField] private GameObject cannon;
-[SerializeField] private GameObject crystal;
-[SerializeField] private GameObject minigunner;
-
-[Header("Settings")]
-[SerializeField] private LayerMask placementLayer;
-[SerializeField] private int maxTowers = 25;
-[SerializeField] private int startingMoney = 500;
-[SerializeField] private int money;
-private float displayedMoney;
-
-[Header("UI")]
-[SerializeField] private Text moneyText;
-[SerializeField] private Text towerErrorLog;
-[SerializeField] private GameObject errorLogsPanel;
-[SerializeField] private Text currenttowersspawnedtext;
-
-private GameObject previewTower;
-private GameObject selectedTowerPrefab;
-private int previewCost;
-
-private readonly List<PlacedTower>
-	placedTowers = new List<PlacedTower>
-		();
-
-		private void Start()
-		{
-		money = startingMoney;
-		displayedMoney = money;
-		UpdateMoneyUI();
-		}
-
-		private void Update()
-		{
-		HandleTowerSelection();
-		HandleTowerPlacement();
-		HandleTowerInteraction();
-		displayedMoney = Mathf.Lerp(displayedMoney, money, Time.deltaTime * 10f);
-		moneyText.text = "$: " + Mathf.RoundToInt(displayedMoney);
-		}
-
-		#region Tower Selection
-		private void HandleTowerSelection()
-		{
-		if (Input.GetKeyDown(KeyCode.Alpha1)) TrySelectTower(archer, archerPreview, 250);
-		else if (Input.GetKeyDown(KeyCode.Alpha2)) TrySelectTower(crossbow, crossbowPreview, 500);
-		else if (Input.GetKeyDown(KeyCode.Alpha3)) TrySelectTower(mage, magePreview, 750);
-		else if (Input.GetKeyDown(KeyCode.Alpha4)) TrySelectTower(cannon, cannonPreview, 1500);
-		else if (Input.GetKeyDown(KeyCode.Alpha5)) TrySelectTower(crystal, crystalPreview, 5000);
-		else if (Input.GetKeyDown(KeyCode.Alpha6)) TrySelectTower(minigunner, minigunnerPreview, 15000);
-		}
-
-		private void TrySelectTower(GameObject prefab, GameObject previewPrefab, int cost)
-		{
-		if (placedTowers.Count >= maxTowers)
-		{
-		ShowError("Tower limit reached!");
-		return;
-		}
-
-		if (money < cost)
-    {
-        ShowError("Insufficient funds!");
-        return;
-    }
-
-    if (previewTower != null) Destroy(previewTower);
-
-    previewTower = Instantiate(previewPrefab); // show ghost tower
-    previewCost = cost;
-    selectedTowerPrefab = prefab; // save real tower
-}
-#endregion
-
-#region Tower Placement
-private void HandleTowerPlacement()
-{
-    if (previewTower == null) return;
-
-    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    if (Physics.Raycast(ray, out RaycastHit hit, 100f, placementLayer))
-    {
-        Vector3 newPos = hit.point;
-        previewTower.transform.position = newPos;
-
-        previewTower.transform.rotation = Quaternion.Euler(0f, previewTower.transform.rotation.eulerAngles.y, 0f);
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            previewTower.transform.Rotate(0, 45f, 0);
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            PlaceTower();
-        }
-    }
-}
-
-private void PlaceTower()
-{
-    if (money < previewCost)
-    {
-        ShowError("Not enough money!");
-        Destroy(previewTower);
-        previewTower = null;
-        return;
-    }
-
-    money -= previewCost;
-    UpdateMoneyUI();
-
-    // Save preview position/rotation
-    Vector3 pos = previewTower.transform.position;
-    Quaternion rot = previewTower.transform.rotation;
-
-    Destroy(previewTower); // remove preview
-
-    // Spawn real tower
-    GameObject realTower = Instantiate(selectedTowerPrefab, pos, rot);
-
-    PlacedTower newTower = new PlacedTower(realTower, previewCost);
-    placedTowers.Add(newTower);
-
-    previewTower = null;
-    selectedTowerPrefab = null;
-}
-#endregion
-
-#region Tower Interaction (Rotate / Remove)
-private void HandleTowerInteraction()
-{
-    if (previewTower != null) return;
-
-    if (Input.GetKeyDown(KeyCode.R))
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit))
-        {
-            PlacedTower tower = placedTowers.Find(t => t.TowerObject == hit.collider.gameObject);
-            if (tower != null)
-            {
-                tower.TowerObject.transform.Rotate(0, 45f, 0);
-            }
-        }
-    }
-
-    if (Input.GetKeyDown(KeyCode.Backspace))
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit))
-        {
-            PlacedTower tower = placedTowers.Find(t => t.TowerObject == hit.collider.gameObject);
-            if (tower != null)
-            {
-                RemoveTower(tower);
-            }
-        }
-    }
-}
-
-private void RemoveTower(PlacedTower tower)
-{
-    int refund = tower.Cost / 2;
-    money += refund;
-    UpdateMoneyUI();
-
-    placedTowers.Remove(tower);
-    Destroy(tower.TowerObject);
-}
-#endregion
-
-#region Money & UI
-public void AddMoney(int amount)
-{
-    money += amount;
-    UpdateMoneyUI();
-}
-
-private void UpdateMoneyUI()
-{
-
-    moneyText.text = $"$ {money}";
-    currenttowersspawnedtext.text = $"Towers: {placedTowers.Count}/{maxTowers}";
-}
-
-private void ShowError(string message)
-{
-    errorLogsPanel.SetActive(true);
-    towerErrorLog.text = message;
-    StartCoroutine(HideErrorAfterDelay(2.5f));
-}
-
-private IEnumerator HideErrorAfterDelay(float delay)
-{
-    yield return new WaitForSeconds(delay);
-    errorLogsPanel.SetActive(false);
-}
-#endregion
-
-#region Helper Class
-private class PlacedTower
-{
-    public GameObject TowerObject { get; }
-    public int Cost { get; }
-
-    public PlacedTower(GameObject obj, int cost)
-    {
-        TowerObject = obj;
-        Cost = cost;
-    }
-}
-#endregion
-}
-
-// © 2025 ykad_x. All rights reserved.
-</code></pre>
-                    </div>
-
-                    <div class="contribution-item">
-                        <img src="Images/TGB3.png" alt="Programming" />
-                        <h4>Programming</h4>
-                        <p style="color:var(--muted)">All scripts and mechanics coded in C#.</p>
-                    </div>
-
-                    <div class="contribution-item">
-                        <img src="Images/TDSEnemyswalking.gif" alt="Design" />
-                        <h4>Game Design</h4>
-                        <p style="color:var(--muted)">Progression, balancing, and core loop design.</p>
+                <section id="tds" class="page project-detail project-theme theme-tds">
+            <div class="card project-page-card">
+                <div class="project-hero">
+                    <img src="Images/TDS.png" alt="Tower Defence Simulator" />
+                    <div class="project-hero-copy">
+                        <span class="project-eyebrow">10-week solo project</span>
+                        <h2>Tower Defence Simulator</h2>
+                        <p>A solo Unity school project built in 10 weeks. All scripts and systems coded by me.</p>
                     </div>
                 </div>
 
-                <div style="margin-top:1rem;display:flex;gap:.5rem">
-                    <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/TowerDefencegame';">Link to Github</button>
-                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                <div class="project-content">
+                    <div class="project-intro">
+                        <span class="project-eyebrow">Overview</span>
+                        <h3>Programming and game design, solo</h3>
+                        <p style="color:var(--muted)">A solo Unity school project built in 10 weeks. All scripts, mechanics and balancing were done by me.</p>
+                    </div>
+
+                    <div class="project-feature-grid">
+                        <figure class="project-feature">
+                            <img src="Images/TGB3.png" alt="Tower Defence Simulator programming" loading="lazy" />
+                            <figcaption><h4>Programming</h4><p>All scripts and mechanics coded in C#.</p></figcaption>
+                        </figure>
+                        <figure class="project-feature">
+                            <img src="Images/TDSEnemyswalking.gif" alt="Tower Defence Simulator enemies walking" loading="lazy" />
+                            <figcaption><h4>Game Design</h4><p>Progression, balancing, and core loop design.</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="project-gallery" aria-label="More screenshots">
+                        <img src="Images/TGB2.png" alt="TDS screenshot" loading="lazy" />
+                        <img src="Images/TGB4.png" alt="TDS screenshot" loading="lazy" />
+                        <img src="Images/TGB5.png" alt="TDS screenshot" loading="lazy" />
+                    </div>
+                    <section class="project-scripts" aria-labelledby="tds-scripts-title">
+                        <h3 id="tds-scripts-title" style="color:var(--accent-1)">Code Snippet (C#)</h3>
+                        <p style="color:var(--muted)">The core tower placement system.</p>
+                        <div class="snippet-grid">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Tower placing" data-title="Tower placing" data-file="TowerSpawner.cs" data-desc="Handles hotkey tower selection, a raycast ghost preview that follows the mouse, placement cost checks, rotating or removing placed towers, and the money/UI updates that go with all of it.">
+                            <img src="Images/CodeSnippets/Tds-TowerPlacing.png" alt="Code snippet: Tower placing" loading="lazy" />
+                            <figcaption>Tower placing <span>TowerSpawner.cs</span></figcaption>
+                        </figure>
+                        </div>
+                    </section>
+
+                    <div class="project-pill-row" aria-label="Project details">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Solo project</span>
+                        <span>10 weeks</span>
+                    </div>
                 </div>
+
+                    <div class="project-actions">
+                        <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/TowerDefencegame';">Link to Github</button>
+                        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                    </div>
             </div>
         </section>
 
         <!-- PROJECT DETAILS: TORTEX -->
-        <section id="tortex" class="page project-detail project-theme theme-tortex">
-            <div class="card">
-                <h2 style="color:var(--accent-1)">TORTEX</h2>
-                <div class="project-images">
-                    <img src="Images/OPERATIONSTORM.png" alt="OPERATIONSTORM" />
-                    <img src="Images/OPERATIONSTORM2.png" alt="OPERATIONSTORM2" />
+                <section id="tortex" class="page project-detail project-theme theme-tortex">
+            <div class="card project-page-card">
+                <div class="project-hero">
+                    <img src="Images/OPERATIONSTORM.png" alt="TORTEX tornado gameplay" />
+                    <div class="project-hero-copy">
+                        <span class="project-eyebrow">Solo project</span>
+                        <h2>TORTEX</h2>
+                        <p>Personal Unity project inspired by stormchase games.</p>
+                    </div>
                 </div>
 
-                <section class="project-scripts" aria-labelledby="tortex-scripts-title">
-                    <h3 id="tortex-scripts-title" style="color:var(--accent-1)">Tornado Code (C#)</h3>
-                    <p>Snippets from the tornado systems.</p>
-                    <div class="snippet-grid">
-                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Tornado core" data-title="Tornado core" data-file="Tornado.cs" data-desc="The core tornado script: movement, size and lifetime of the storm. (Placeholder text: replace with your own description.)">
+                <div class="project-content">
+                    <div class="project-intro">
+                        <span class="project-eyebrow">Overview</span>
+                        <h3>Building a believable tornado</h3>
+                        <p style="color:var(--muted)">A personal Unity project inspired by stormchase games, focused on tornado physics: pulling in and flinging debris.</p>
+                    </div>
+
+                    <div class="project-feature-grid">
+                        <figure class="project-feature">
+                            <img src="Images/TORTEXTORNADO.png" alt="TORTEX tornado core" loading="lazy" />
+                            <figcaption><h4>Core Gameplay</h4><p>Creating tornado systems.</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="project-gallery" aria-label="More screenshots">
+                        <img src="Images/OPERATIONSTORM2.png" alt="TORTEX, extra screenshot" loading="lazy" />
+                    </div>
+                    <section class="project-scripts" aria-labelledby="tortex-scripts-title">
+                        <h3 id="tortex-scripts-title" style="color:var(--accent-1)">Tornado Code (C#)</h3>
+                        <p style="color:var(--muted)">Snippets from the tornado systems.</p>
+                        <div class="snippet-grid">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Tornado core" data-title="Tornado core" data-file="Tornado.cs" data-desc="The core tornado script: movement, size and lifetime of the storm. (Placeholder image: replace with your own screenshot.)">
                             <img src="Images/CodeSnippets/Tortex-Tornadocore.png" alt="Code snippet: Tornado core" loading="lazy" />
                             <figcaption>Tornado core <span>Tornado.cs</span></figcaption>
                         </figure>
-                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Tornado pull force" data-title="Tornado pull force" data-file="TornadoForces.cs" data-desc="Pulls nearby rigidbodies toward the core and lifts them, scaled by how close they are. (Placeholder text: replace with your own description.)">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Tornado pull force" data-title="Tornado pull force" data-file="TornadoForces.cs" data-desc="Pulls nearby rigidbodies toward the core and lifts them, scaled by how close they are. (Placeholder image: replace with your own screenshot.)">
                             <img src="Images/CodeSnippets/Tortex-Tornadopullforce.png" alt="Code snippet: Tornado pull force" loading="lazy" />
                             <figcaption>Tornado pull force <span>TornadoForces.cs</span></figcaption>
                         </figure>
-                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Tornado debris" data-title="Tornado debris" data-file="TornadoDebris.cs" data-desc="Controls the debris and objects that get picked up and thrown around by the tornado. (Placeholder text: replace with your own description.)">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Tornado debris" data-title="Tornado debris" data-file="TornadoDebris.cs" data-desc="Controls the debris and objects that get picked up and thrown around by the tornado. (Placeholder image: replace with your own screenshot.)">
                             <img src="Images/CodeSnippets/Tortex-Tornadodebris.png" alt="Code snippet: Tornado debris" loading="lazy" />
                             <figcaption>Tornado debris <span>TornadoDebris.cs</span></figcaption>
                         </figure>
-                    </div>
-                </section>
+                        </div>
+                    </section>
 
-                <div class="contribution-grid">
-                    <div class="contribution-item">
-                        <img src="Images/TORTEXTORNADO.png" alt="Tornado" />
-                        <h4>Core Gameplay</h4>
-                        <p style="color:var(--muted)">Creating tornado systems.</p>
+                    <div class="project-pill-row" aria-label="Project details">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Solo project</span>
+                        <span>Personal project</span>
                     </div>
                 </div>
 
-                <p style="color:var(--muted)">Personal Unity project inspired by stormchase games.</p>
-                <div style="margin-top:1rem;display:flex;gap:.5rem">
-                    <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/OPERATION-STORMCHASE';">Link to Github</button>
-                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
-                </div>
+                    <div class="project-actions">
+                        <button class="primary-btn" onclick="window.location.href='https://github.com/Ykada/OPERATION-STORMCHASE';">Link to Github</button>
+                        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                    </div>
             </div>
         </section>
 
         <!-- PROJECT DETAILS: THE HUNT -->
-        <section id="thehunt" class="page project-detail project-theme theme-thehunt">
-            <div class="card">
-                <h2 style="color:var(--accent-1)">The Hunt</h2>
-                <div class="project-images">
-                    <img src="Images/THEHUNT.png" alt="The Hunt" />
-                    <img src="Images/THEHUNT2.png" alt="The Hunt 2" />
-                    <img src="Images/THEHUNT3.png" alt="The Hunt 3" />
-                    <img src="Images/THEHUNTGIF.gif" alt="The Hunt gif" />
-                </div>
-
-                <div class="contribution-grid">
-                    <div class="contribution-item">
-                        <img src="Images/THEHUNT.png" alt="Created game" />
-                        <h4>Game Creation</h4>
-                        <p style="color:var(--muted)">Designed and built the full game from scratch at age 13.</p>
-                    </div>
-
-                    <div class="code-section">
-                        <h4 style="color:var(--accent-1)">automatic doors</h4>
-                        <pre><code>local larm = script.Parent:FindFirstChild("HumanoidRootPart")
-local rarm = script.Parent:FindFirstChild("HumanoidRootPart")
-local hum = script.Parent:FindFirstChild("Item")
-local anim = hum:LoadAnimation(script.Parent["058attack1"])
-local anim2 = hum:LoadAnimation(script.Parent["058attack2"])
-local attackdb = false
-
-local anims = {"whip", "sting"}
-local DETECTION_RADIUS = 125 -- Radius to detect and follow the player
-
-function attackAnim()
-local randomanim = anims[math.random(1, #anims)]
-if randomanim == "whip" then
-anim:Play()
-wait(0.6)
-else
-wait(0.6)
-anim2:Play()
-end
-end
-
-function findNearestPlayer(pos)
-local minDist = math.huge
-local nearestPlayer = nil
-for _, player in ipairs(game.Players:GetPlayers()) do
-if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-local dist = (player.Character.HumanoidRootPart.Position - pos).magnitude
-if dist < minDist then
-	minDist = dist
-	nearestPlayer = player.Character.HumanoidRootPart
-end
-end
-end
-return nearestPlayer
-end
-
-function wander()
-	while true do
-		local nearestPlayer = findNearestPlayer(script.Parent.HumanoidRootPart.Position)
-		if nearestPlayer and (nearestPlayer.Position - larm.Position).magnitude <= DETECTION_RADIUS then
-		while (nearestPlayer.Position - larm.Position).magnitude <= DETECTION_RADIUS do
-		script.Parent.Item:MoveTo(nearestPlayer.Position)
-		wait(0.4)
-		end
-		end
-
-		local newPosition = Vector3.new(
-		math.random(-750, 750),
-		0,
-		math.random(-750, 750)
-		)
-		script.Parent.Item:MoveTo(newPosition)
-		wait(5) -- Adjust the wait time to control how often the enemy changes its wandering destination
-		end
-		end
-
-		function isPlayerNearby(target)
-		return (target.Position - larm.Position).magnitude < 10
-end
-
--- Function to deal damage to the humanoid
-function dealDamageToPlayer(humanoid)
-	if humanoid then
-	humanoid:TakeDamage(35)
-	end
-end
-
-function onTouched(hit)
-	local humanoid = hit.Parent:FindFirstChildOfClass("Humanoid")
-	if humanoid then
-		dealDamageToPlayer(humanoid)
-	end
-end
-
-while true do
-	wait(0.4)
-	local target = findNearestPlayer(script.Parent.HumanoidRootPart.Position)
-	if target ~= nil then
-		script.Parent.Item:MoveTo(target.Position, target) 
-		if (target.Position - larm.Position).magnitude < 10 and attackdb == false then
-			attackdb = true
-			script.Parent.Head.Sprint:Play()  
-			attackAnim()
-			wait(0.1)
-			dealDamageToPlayer(target.Parent:FindFirstChild("Humanoid")) -- Deal damage to the player
-			wait(0.3)
-			attackdb = false
-		end
-	else
-		wander() -- If no target found, wander around the map
-	end
-end
-</code></pre>
-                    </div>
-
-                    <div class="contribution-item">
-                        <img src="Images/THEHUNT3.png" alt="Sequel" />
-                        <h4>Sequel Development</h4>
-                        <p style="color:var(--muted)">Improved on the original concept.</p>
+                <section id="thehunt" class="page project-detail project-theme theme-thehunt">
+            <div class="card project-page-card">
+                <div class="project-hero">
+                    <img src="Images/THEHUNT.png" alt="The Hunt gameplay" />
+                    <div class="project-hero-copy">
+                        <span class="project-eyebrow">Roblox · Made at age 13</span>
+                        <h2>The Hunt</h2>
+                        <p>Roblox project made at age 13 — proud of this work.</p>
                     </div>
                 </div>
 
-                <p style="color:var(--muted)">Roblox project made at age 13 — proud of this work.</p>
-                <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
-                    <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/8833099801/The-Hunt';">Roblox The Hunt 1</button>
-                    <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/9478545883/The-Hunt-V2';">Roblox The Hunt 2</button>
-                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                <div class="project-content">
+                    <div class="project-intro">
+                        <span class="project-eyebrow">Overview</span>
+                        <h3>Designed and built from scratch, at 13</h3>
+                        <p style="color:var(--muted)">Designed and built the full game from scratch at age 13, then came back later to make a sequel that improved on the original concept.</p>
+                    </div>
+
+                    <div class="project-feature-grid">
+                        <figure class="project-feature">
+                            <img src="Images/THEHUNT2.png" alt="The Hunt, screenshot 2" loading="lazy" />
+                            <figcaption><h4>Game Creation</h4><p>Designed and built the full game from scratch at age 13.</p></figcaption>
+                        </figure>
+                        <figure class="project-feature">
+                            <img src="Images/THEHUNT3.png" alt="The Hunt sequel" loading="lazy" />
+                            <figcaption><h4>Sequel Development</h4><p>Improved on the original concept.</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="project-gallery" aria-label="More screenshots">
+                        <img src="Images/THEHUNTGIF.gif" alt="The Hunt gameplay gif" loading="lazy" />
+                    </div>
+                    <section class="project-scripts" aria-labelledby="thehunt-scripts-title">
+                        <h3 id="thehunt-scripts-title" style="color:var(--accent-1)">Code Snippet (Lua)</h3>
+                        <p style="color:var(--muted)">The enemy AI that chases and attacks the player.</p>
+                        <div class="snippet-grid">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Enemy AI" data-title="Enemy AI" data-file="EnemyAI.lua" data-desc="Finds the nearest player, wanders when no one is close, chases and plays an attack animation once in range, and deals damage on touch.">
+                            <img src="Images/CodeSnippets/Thehunt-EnemyAI.png" alt="Code snippet: Enemy AI" loading="lazy" />
+                            <figcaption>Enemy AI <span>EnemyAI.lua</span></figcaption>
+                        </figure>
+                        </div>
+                    </section>
+
+                    <div class="project-pill-row" aria-label="Project details">
+                        <span>Roblox</span>
+                        <span>Lua</span>
+                        <span>Solo, age 13</span>
+                        <span>Has a sequel</span>
+                    </div>
                 </div>
+
+                    <div class="project-actions">
+                        <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/8833099801/The-Hunt';">Roblox The Hunt 1</button>
+                        <button class="primary-btn" onclick="window.location.href='https://www.roblox.com/games/9478545883/The-Hunt-V2';">Roblox The Hunt 2</button>
+                        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                    </div>
             </div>
         </section>
 
         <!-- PROJECT DETAILS: BELOWATER -->
-        <section id="belowater" class="page project-detail belowater-page">
-            <div class="card belowater-card">
-                <div class="belowater-hero">
+                <section id="belowater" class="page project-detail project-theme theme-belowater">
+            <div class="card project-page-card">
+                <div class="project-hero">
                     <img src="Images/BeloWaterBanner.jpg" alt="BeloWater submarine on a tropical ocean" />
-                    <div class="belowater-hero-copy">
-                        <span>10-week AI project</span>
+                    <div class="project-hero-copy">
+                        <span class="project-eyebrow">10-week AI project</span>
                         <h2>BeloWater</h2>
                         <p>An underwater survival project built around exploration, a raft, and a shark-filled ocean.</p>
                     </div>
                 </div>
 
-                <div class="belowater-content">
-                    <div class="belowater-intro">
-                        <span class="belowater-eyebrow">Project goal</span>
-                        <h3>Build an underwater world worth exploring.</h3>
-                        <p>The goal is to recreate as much of the Subnautica experience as possible within ten weeks, with a focus on a believable ocean, exploration, and survival gameplay.</p>
+                <div class="project-content">
+                    <div class="project-intro">
+                        <span class="project-eyebrow">Overview</span>
+                        <h3>Build an underwater world worth exploring</h3>
+                        <p style="color:var(--muted)">The goal is to recreate as much of the Subnautica experience as possible within ten weeks, with a focus on a believable ocean, exploration, and survival gameplay.</p>
                     </div>
 
-                    <figure class="belowater-feature">
-                        <img src="Images/Realistic BeloWater water.jpg" alt="BeloWater's realistic water, raft, and shark" />
-                        <figcaption>
-                            <h4>Realistic Water</h4>
-                            <p>Water visuals, a player raft, and an underwater shark bring the first playable ocean scene to life.</p>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="belowater-feature">
-                        <div class="belowater-map-images">
-                            <img src="Images/mapgenerationbelowater.jpg" alt="Randomly generated BeloWater terrain map" />
-                            <img src="Images/Mapping generation graph.png" alt="BeloWater map generation graph" />
-                        </div>
-                        <figcaption>
-                            <h4>Map Generation</h4>
-                            <p>A randomly generated map for each play session, with the graph showing the terrain-generation setup and optimisation work behind it.</p>
-                        </figcaption>
-                    </figure>
-
-                    <div class="belowater-pill-row" aria-label="BeloWater project details">
+                    <div class="project-feature-grid">
+                        <figure class="project-feature">
+                            <img src="Images/Realistic BeloWater water.jpg" alt="BeloWater’s realistic water, raft, and shark" loading="lazy" />
+                            <figcaption><h4>Realistic Water</h4><p>Water visuals, a player raft, and an underwater shark bring the first playable ocean scene to life.</p></figcaption>
+                        </figure>
+                        <figure class="project-feature">
+                            <img src="Images/mapgenerationbelowater.jpg" alt="Randomly generated BeloWater terrain map" loading="lazy" />
+                            <figcaption><h4>Map Generation</h4><p>A randomly generated map for each play session.</p></figcaption>
+                        </figure>
+                    </div>
+                    <div class="project-gallery" aria-label="More screenshots">
+                        <img src="Images/Mappinggeneration graph.png" alt="BeloWater map generation graph" loading="lazy" />
+                    </div>
+                    <div class="project-pill-row" aria-label="Project details">
                         <span>Unity</span>
+                        <span>C#</span>
                         <span>10 weeks</span>
                         <span>Underwater survival</span>
                     </div>
                 </div>
 
-                <div class="belowater-actions">
-                    <button class="belowater-back-btn" onclick="showPage('projects')">Back to Projects</button>
-                </div>
+                    <div class="project-actions">
+                        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                    </div>
             </div>
         </section>
 
         <!-- PROJECT DETAILS: THECREATUREWITHIN -->
-        <section id="TheCreatureWithin" class="page project-detail project-theme theme-creature">
-            <div class="card">
-                <h2 style="color:var(--accent-1)">The Creature Within</h2>
-                <p style="color:var(--muted)">Work in progress at NEON Orignes.</p>
-
-                <section class="creature-showcase" aria-labelledby="creature-showcase-title">
-                    <img class="creature-banner" src="Images/TheCreatureWithin Banner.jpg" alt="The Creature Within gameplay scene" />
-                    <div class="creature-showcase-heading">
-                        <span>Development showcase</span>
-                        <h3 id="creature-showcase-title">Systems built for the experience</h3>
-                        <p>Enemy behaviour and optimisation work developed for The Creature Within.</p>
+                <section id="TheCreatureWithin" class="page project-detail project-theme theme-creature">
+            <div class="card project-page-card">
+                <div class="project-hero">
+                    <img src="Images/TheCreatureWithin Banner.jpg" alt="The Creature Within gameplay scene" />
+                    <div class="project-hero-copy">
+                        <span class="project-eyebrow">In development · NEON Orignes</span>
+                        <h2>The Creature Within</h2>
+                        <p>Work in progress at NEON Orignes.</p>
                     </div>
-                    <div class="creature-feature-grid">
-                        <figure class="creature-feature">
-                            <img src="Images/EnemyAIeditedphoto.jpg" alt="Enemy AI behaviour in The Creature Within" />
-                            <figcaption>
-                                <h4>Enemy AI</h4>
-                                <p>Sound-aware enemy movement and player detection.</p>
-                            </figcaption>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-intro">
+                        <span class="project-eyebrow">Overview</span>
+                        <h3>Systems built for the experience</h3>
+                        <p style="color:var(--muted)">Enemy behaviour and optimisation work developed for The Creature Within, currently in development at NEON Orignes for a year.</p>
+                    </div>
+
+                    <div class="project-feature-grid">
+                        <figure class="project-feature">
+                            <img src="Images/EnemyAIeditedphoto.jpg" alt="Enemy AI behaviour in The Creature Within" loading="lazy" />
+                            <figcaption><h4>Enemy AI</h4><p>Sound-aware enemy movement and player detection.</p></figcaption>
                         </figure>
-                        <figure class="creature-feature">
-                            <img src="Images/CullingOptimization.jpg" alt="Culling optimisation setup in The Creature Within" />
-                            <figcaption>
-                                <h4>Culling Optimisation</h4>
-                                <p>Performance-focused scene visibility improvements.</p>
-                            </figcaption>
+                        <figure class="project-feature">
+                            <img src="Images/CullingOptimization.jpg" alt="Culling optimisation setup in The Creature Within" loading="lazy" />
+                            <figcaption><h4>Culling Optimisation</h4><p>Performance-focused scene visibility improvements.</p></figcaption>
                         </figure>
                     </div>
-                </section>
-
-                <section class="project-scripts" aria-labelledby="creature-scripts-title">
-                    <h3 id="creature-scripts-title" style="color:var(--accent-1)">Code Snippets</h3>
-                    <p>Selected scripts from my work on the project.</p>
-                    <div class="snippet-grid">
-                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Enemy movement, with microphone" data-title="Enemy movement, with microphone" data-file="EnemyMovingController.cs" data-desc="Enemy movement and hearing: it wanders, and reacts to the player's real microphone volume and to object sounds. (Placeholder text: replace with your own description.)">
+                    <section class="project-scripts" aria-labelledby="creature-scripts-title">
+                        <h3 id="creature-scripts-title" style="color:var(--accent-1)">Code Snippets</h3>
+                        <p style="color:var(--muted)">Selected scripts from my work on the project.</p>
+                        <div class="snippet-grid">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Enemy movement, with microphone" data-title="Enemy movement, with microphone" data-file="EnemyMovingController.cs" data-desc="Enemy movement and hearing: it wanders, and reacts to the player’s real microphone volume and to object sounds. (Placeholder image: replace with your own screenshot.)">
                             <img src="Images/CodeSnippets/CreatureWithin-Enemymovementwithmicrophone.png" alt="Code snippet: Enemy movement, with microphone" loading="lazy" />
                             <figcaption>Enemy movement, with microphone <span>EnemyMovingController.cs</span></figcaption>
                         </figure>
-                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Automatic doors" data-title="Automatic doors" data-file="AutomaticDoor.cs" data-desc="Doors that open and close automatically when the player gets close. (Placeholder text: replace with your own description.)">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Automatic doors" data-title="Automatic doors" data-file="AutomaticDoor.cs" data-desc="Doors that open and close automatically when the player gets close. (Placeholder image: replace with your own screenshot.)">
                             <img src="Images/CodeSnippets/CreatureWithin-Automaticdoors.png" alt="Code snippet: Automatic doors" loading="lazy" />
                             <figcaption>Automatic doors <span>AutomaticDoor.cs</span></figcaption>
                         </figure>
-                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Local lighting & breaking light" data-title="Local lighting & breaking light" data-file="LocalLighting.cs" data-desc="Local lighting with flicker, plus lights that can break. (Placeholder text: replace with your own description.)">
+                        <figure class="snippet-card" tabindex="0" role="button" aria-label="Enlarge code snippet: Local lighting & breaking light" data-title="Local lighting & breaking light" data-file="LocalLighting.cs" data-desc="Local lighting with flicker, plus lights that can break. (Placeholder image: replace with your own screenshot.)">
                             <img src="Images/CodeSnippets/CreatureWithin-Locallightingbreakinglight.png" alt="Code snippet: Local lighting & breaking light" loading="lazy" />
                             <figcaption>Local lighting & breaking light <span>LocalLighting.cs</span></figcaption>
                         </figure>
+                        </div>
+                    </section>
+
+                    <div class="project-pill-row" aria-label="Project details">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>NEON Orignes</span>
+                        <span>In development</span>
                     </div>
-                </section>
-                <p style="color:var(--muted)">Currently working on this project inside NEON Orignes for a year.</p>
-                <div style="margin-top:1rem;display:flex;gap:.5rem">
-                    <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
                 </div>
+
+                    <div class="project-actions">
+                        <button class="primary-btn" onclick="showPage('projects')">Back to Projects</button>
+                    </div>
             </div>
         </section>
 
