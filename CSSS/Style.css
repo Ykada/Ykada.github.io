@@ -179,7 +179,20 @@ footer{opacity:.9;text-align:center;color:var(--muted);padding:1rem;font-size:.9
   .belowater-map-images{grid-template-columns:1fr}
   .code-section pre{font-size:12px;max-height:360px}
 }
+.snippet-card {
+    width: 100%;
+    height: 250px; /* Set this to the height of your other cards */
+    margin: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
+    .snippet-card video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 
 
