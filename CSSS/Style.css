@@ -20,6 +20,14 @@ body{
   line-height:1.5; padding:2rem; display:flex; flex-direction:column; gap:1.25rem;
 }
 
+.project-description {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 65ch;
+    margin: 0;
+}
+
 a{color:var(--accent-1); text-decoration:none}
 
 /* NAV */
