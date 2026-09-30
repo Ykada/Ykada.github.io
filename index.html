@@ -52,7 +52,7 @@
             display: flex;
             flex-direction: column;
             gap: .25rem;
-            background: linear-gradient(to bottom, transparent, rgba(0,0,0,.25));
+            background: rgba(0,0,0,.2);
         }
 
         .featured-project-card h3 {
@@ -66,15 +66,6 @@
             margin: 0;
             font-size: .82rem;
             color: var(--muted, #aaa);
-        }
-
-        /* Slightly different style for Creature Within to make it pop */
-        .featured-project-card.creature {
-            border-color: color-mix(in oklab, var(--accent-1, #6cf), #fff 10%);
-        }
-
-        .featured-project-card.belowater {
-            border-color: color-mix(in oklab, #4cf, #fff 10%);
         }
 
         /* Consistent spacing between sections on the home page */
@@ -120,7 +111,7 @@
 
         .slideshow-info {
             padding: 1.5rem;
-            background: linear-gradient(135deg, rgba(255,77,166,0.08), rgba(255,122,45,0.04));
+            background: rgba(255,77,166,0.06);
             border-top: 1px solid rgba(255,77,166,0.1);
         }
 
@@ -468,7 +459,7 @@
                         </div>
                     </div>
 
-                    <div class="project-card belowater-project-card proud-card" onclick="showPage('belowater')" role="button">
+                    <div class="project-card project-theme-card theme-belowater proud-card" onclick="showPage('belowater')" role="button">
                         <span class="proud-badge">Nieuwest Project</span>
                         <img src="Images/BeloWaterBanner.jpg" alt="BeloWater" />
                         <div class="meta">
@@ -503,7 +494,7 @@
 
                     <div class="project-feature-grid">
                         <figure class="project-feature">
-                            <img src="Images/RECLEAN2.png" alt="RE:CLEAN UI design" loading="lazy" />
+                            <img src="Images/RECLEAN2.png" alt="RE:CLEAN UI design" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: UI Design" data-caption="UI Design — Worked on interface concepts and layout design." loading="lazy" />
                             <figcaption><h4>UI Design</h4><p>Worked on interface concepts and layout design.</p></figcaption>
                         </figure>
                     </div>
@@ -553,12 +544,12 @@
 
                     <div class="project-feature-grid">
                         <figure class="project-feature">
-                            <img src="Images/ROBLXUI1.png" alt="ARC-82 UI work" loading="lazy" />
+                            <img src="Images/ROBLXUI1.png" alt="ARC-82 UI work" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: UI Systems" data-caption="UI Systems — Created advanced interactive UI systems controlling the facility." loading="lazy" />
                             <figcaption><h4>UI Systems</h4><p>Created advanced interactive UI systems controlling the facility.</p></figcaption>
                         </figure>
                     </div>
                     <div class="project-gallery" aria-label="More screenshots">
-                        <img src="Images/ARC-82UIV1.png" alt="ARC-82 UI, second version" loading="lazy" />
+                        <img src="Images/ARC-82UIV1.png" alt="ARC-82 UI, second version" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: ARC-82 UI, second version" data-caption="ARC-82 UI, second version" loading="lazy" />
                     </div>
                     <section class="project-scripts" aria-labelledby="arc82-scripts-title">
                         <h3 id="arc82-scripts-title" style="color:var(--accent-1)">Code Snippets (Lua)</h3>
@@ -614,16 +605,16 @@
 
                     <div class="project-feature-grid">
                         <figure class="project-feature">
-                            <img src="Images/HSL2.png" alt="Hel End Strife saving systems" loading="lazy" />
+                            <img src="Images/HSL2.png" alt="Hel End Strife saving systems" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Team Collaboration" data-caption="Team Collaboration — Worked on saving systems that save your current progress." loading="lazy" />
                             <figcaption><h4>Team Collaboration</h4><p>Worked on saving systems that save your current progress.</p></figcaption>
                         </figure>
                         <figure class="project-feature">
-                            <img src="Images/HSL3.png" alt="Hel End Strife gameplay" loading="lazy" />
+                            <img src="Images/HSL3.png" alt="Hel End Strife gameplay" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Gameplay Systems" data-caption="Gameplay Systems — Enemy spawning, XP and dropped-object data all built to survive a save/load cycle." loading="lazy" />
                             <figcaption><h4>Gameplay Systems</h4><p>Enemy spawning, XP and dropped-object data all built to survive a save/load cycle.</p></figcaption>
                         </figure>
                     </div>
                     <div class="project-gallery" aria-label="More screenshots">
-                        <img src="Images/HSL4.png" alt="Hel End Strife, extra screenshot" loading="lazy" />
+                        <img src="Images/HSL4.png" alt="Hel End Strife, extra screenshot" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Hel End Strife, extra screenshot" data-caption="Hel End Strife, extra screenshot" loading="lazy" />
                     </div>
                     <section class="project-scripts" aria-labelledby="helend-scripts-title">
                         <h3 id="helend-scripts-title" style="color:var(--accent-1)">Gameplay systems I made for this project</h3>
@@ -694,18 +685,18 @@
 
                     <div class="project-feature-grid">
                         <figure class="project-feature">
-                            <img src="Images/TGB3.png" alt="Tower Defence Simulator programming" loading="lazy" />
+                            <img src="Images/TGB3.png" alt="Tower Defence Simulator programming" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Programming" data-caption="Programming — All scripts and mechanics coded in C#." loading="lazy" />
                             <figcaption><h4>Programming</h4><p>All scripts and mechanics coded in C#.</p></figcaption>
                         </figure>
                         <figure class="project-feature">
-                            <img src="Images/TDSEnemyswalking.gif" alt="Tower Defence Simulator enemies walking" loading="lazy" />
+                            <img src="Images/TDSEnemyswalking.gif" alt="Tower Defence Simulator enemies walking" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Game Design" data-caption="Game Design — Progression, balancing, and core loop design." loading="lazy" />
                             <figcaption><h4>Game Design</h4><p>Progression, balancing, and core loop design.</p></figcaption>
                         </figure>
                     </div>
                     <div class="project-gallery" aria-label="More screenshots">
-                        <img src="Images/TGB2.png" alt="TDS screenshot" loading="lazy" />
-                        <img src="Images/TGB4.png" alt="TDS screenshot" loading="lazy" />
-                        <img src="Images/TGB5.png" alt="TDS screenshot" loading="lazy" />
+                        <img src="Images/TGB2.png" alt="TDS screenshot" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: TDS screenshot" data-caption="TDS screenshot" loading="lazy" />
+                        <img src="Images/TGB4.png" alt="TDS screenshot" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: TDS screenshot" data-caption="TDS screenshot" loading="lazy" />
+                        <img src="Images/TGB5.png" alt="TDS screenshot" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: TDS screenshot" data-caption="TDS screenshot" loading="lazy" />
                     </div>
                     <section class="project-scripts" aria-labelledby="tds-scripts-title">
                         <h3 id="tds-scripts-title" style="color:var(--accent-1)">Code Snippet (C#)</h3>
@@ -754,12 +745,12 @@
 
                     <div class="project-feature-grid">
                         <figure class="project-feature">
-                            <img src="Images/TORTEXTORNADO.png" alt="TORTEX tornado core" loading="lazy" />
+                            <img src="Images/TORTEXTORNADO.png" alt="TORTEX tornado core" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Core Gameplay" data-caption="Core Gameplay — Creating tornado systems." loading="lazy" />
                             <figcaption><h4>Core Gameplay</h4><p>Creating tornado systems.</p></figcaption>
                         </figure>
                     </div>
                     <div class="project-gallery" aria-label="More screenshots">
-                        <img src="Images/OPERATIONSTORM2.png" alt="TORTEX, extra screenshot" loading="lazy" />
+                        <img src="Images/OPERATIONSTORM2.png" alt="TORTEX, extra screenshot" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: TORTEX, extra screenshot" data-caption="TORTEX, extra screenshot" loading="lazy" />
                     </div>
                     <section class="project-scripts" aria-labelledby="tortex-scripts-title">
                         <h3 id="tortex-scripts-title" style="color:var(--accent-1)">Tornado Code (C#)</h3>
@@ -820,16 +811,16 @@
 
                     <div class="project-feature-grid">
                         <figure class="project-feature">
-                            <img src="Images/THEHUNT2.png" alt="The Hunt, screenshot 2" loading="lazy" />
+                            <img src="Images/THEHUNT2.png" alt="The Hunt, screenshot 2" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Game Creation" data-caption="Game Creation — Designed and built the full game from scratch at age 13." loading="lazy" />
                             <figcaption><h4>Game Creation</h4><p>Designed and built the full game from scratch at age 13.</p></figcaption>
                         </figure>
                         <figure class="project-feature">
-                            <img src="Images/THEHUNT3.png" alt="The Hunt sequel" loading="lazy" />
+                            <img src="Images/THEHUNT3.png" alt="The Hunt sequel" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Sequel Development" data-caption="Sequel Development — Improved on the original concept." loading="lazy" />
                             <figcaption><h4>Sequel Development</h4><p>Improved on the original concept.</p></figcaption>
                         </figure>
                     </div>
                     <div class="project-gallery" aria-label="More screenshots">
-                        <img src="Images/THEHUNTGIF.gif" alt="The Hunt gameplay gif" loading="lazy" />
+                        <img src="Images/THEHUNTGIF.gif" alt="The Hunt gameplay gif" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: The Hunt gameplay gif" data-caption="The Hunt gameplay gif" loading="lazy" />
                     </div>
                     <section class="project-scripts" aria-labelledby="thehunt-scripts-title">
                         <h3 id="thehunt-scripts-title" style="color:var(--accent-1)">Code Snippet (Lua)</h3>
@@ -879,16 +870,16 @@
 
                     <div class="project-feature-grid">
                         <figure class="project-feature">
-                            <img src="Images/Realistic BeloWater water.jpg" alt="BeloWater’s realistic water, raft, and shark" loading="lazy" />
+                            <img src="Images/Realistic BeloWater water.jpg" alt="BeloWater’s realistic water, raft, and shark" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Realistic Water" data-caption="Realistic Water — Water visuals, a player raft, and an underwater shark bring the first playable ocean scene to life." loading="lazy" />
                             <figcaption><h4>Realistic Water</h4><p>Water visuals, a player raft, and an underwater shark bring the first playable ocean scene to life.</p></figcaption>
                         </figure>
                         <figure class="project-feature">
-                            <img src="Images/mapgenerationbelowater.jpg" alt="Randomly generated BeloWater terrain map" loading="lazy" />
+                            <img src="Images/mapgenerationbelowater.jpg" alt="Randomly generated BeloWater terrain map" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Map Generation" data-caption="Map Generation — A randomly generated map for each play session and helps make bigger and more interesting maps without me having to manually create them from scratch." loading="lazy" />
                             <figcaption><h4>Map Generation</h4><p>A randomly generated map for each play session and helps make bigger and more interesting maps without me having to manually create them from scratch.</p></figcaption>
                         </figure>
                     </div>
                     <div class="project-gallery" aria-label="More screenshots">
-                        <img src="Images/Mappinggeneration graph.png" alt="BeloWater map generation graph" loading="lazy" />
+                        <img src="Images/Mappinggeneration graph.png" alt="BeloWater map generation graph" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: BeloWater map generation graph" data-caption="BeloWater map generation graph" loading="lazy" />
                     </div>
                     <div class="project-pill-row" aria-label="Project details">
                         <span>Unity</span>
@@ -910,9 +901,9 @@
                 <div class="project-hero">
                     <img src="Images/TheCreatureWithin Banner.jpg" alt="The Creature Within gameplay scene" />
                     <div class="project-hero-copy">
-                        <span class="project-eyebrow">In development · NEON Orignes</span>
+                        <span class="project-eyebrow">Unity · NEON Orignes</span>
                         <h2>The Creature Within</h2>
-                        <p>Work in progress at NEON Orignes.</p>
+                        <p>School project for Neon Orgines</p>
                     </div>
                 </div>
 
@@ -920,16 +911,16 @@
                     <div class="project-intro">
                         <span class="project-eyebrow">Overview</span>
                         <h3>Systems built for the experience</h3>
-                        <p style="color:var(--muted)">Enemy behaviour and optimisation work developed for The Creature Within, currently in development at NEON Orignes for a year.</p>
+                        <p style="color:var(--muted)">We tried to make a big game with a big group of develpers, we made alot of fun features and had alot of cool ideas, only we lacked the artists to actualy make these things to a propper game, so we stopped afther half a year, but we still learned valueble information from this, so i call it a win.</p>
                     </div>
 
                     <div class="project-feature-grid">
                         <figure class="project-feature">
-                            <img src="Images/EnemyAIeditedphoto.jpg" alt="Enemy AI behaviour in The Creature Within" loading="lazy" />
+                            <img src="Images/EnemyAIeditedphoto.jpg" alt="Enemy AI behaviour in The Creature Within" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Enemy AI" data-caption="Enemy AI — Sound-aware enemy movement and player detection." loading="lazy" />
                             <figcaption><h4>Enemy AI</h4><p>Sound-aware enemy movement and player detection.</p></figcaption>
                         </figure>
                         <figure class="project-feature">
-                            <img src="Images/CullingOptimization.jpg" alt="Culling optimisation setup in The Creature Within" loading="lazy" />
+                            <img src="Images/CullingOptimization.jpg" alt="Culling optimisation setup in The Creature Within" class="zoomable" tabindex="0" role="button" aria-label="Enlarge image: Culling Optimisation" data-caption="Culling Optimisation — Performance-focused scene visibility improvements." loading="lazy" />
                             <figcaption><h4>Culling Optimisation</h4><p>Performance-focused scene visibility improvements.</p></figcaption>
                         </figure>
                     </div>
@@ -964,6 +955,19 @@
 
 
     </main>
+
+    <!-- Image viewer (feature & gallery photos) -->
+    <div class="image-lightbox" id="imageLightbox" role="dialog" aria-modal="true" hidden>
+        <div class="image-lightbox-inner">
+            <button class="image-lightbox-close" type="button" aria-label="Close" onclick="closeImageLightbox()">✕</button>
+            <img id="imageLightboxImg" src="" alt="" />
+            <p class="image-lightbox-caption" id="imageLightboxCaption"></p>
+            <div class="image-lightbox-nav">
+                <button type="button" onclick="stepImageLightbox(-1)">❮ Prev</button>
+                <button type="button" onclick="stepImageLightbox(1)">Next ❯</button>
+            </div>
+        </div>
+    </div>
 
     <!-- Code snippet viewer -->
     <div class="snippet-modal" id="snippetModal" role="dialog" aria-modal="true" aria-labelledby="snippetModalTitle" hidden>
@@ -1106,7 +1110,50 @@
         initSlideshow();
         });
 
-                // ===== CODE SNIPPET VIEWER =====
+                // ===== IMAGE LIGHTBOX (feature & gallery photos, not banners) =====
+        let imgList = [], imgIdx = 0;
+        function openImageLightbox(el){
+            const group = el.closest('.project-feature-grid, .project-gallery') || document;
+            imgList = Array.from(group.querySelectorAll('.zoomable'));
+            imgIdx = imgList.indexOf(el);
+            renderImageLightbox();
+            document.getElementById('imageLightbox').hidden = false;
+            document.body.style.overflow = 'hidden';
+        }
+        function renderImageLightbox(){
+            const el = imgList[imgIdx];
+            document.getElementById('imageLightboxImg').src = el.src;
+            document.getElementById('imageLightboxImg').alt = el.alt;
+            document.getElementById('imageLightboxCaption').textContent = el.dataset.caption || el.alt || '';
+            document.querySelector('#imageLightbox .image-lightbox-nav').style.display = imgList.length > 1 ? 'flex' : 'none';
+        }
+        function stepImageLightbox(d){
+            imgIdx = (imgIdx + d + imgList.length) % imgList.length;
+            renderImageLightbox();
+        }
+        function closeImageLightbox(){
+            document.getElementById('imageLightbox').hidden = true;
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('click', function(e){
+            const z = e.target.closest('.zoomable');
+            if (z) { openImageLightbox(z); return; }
+            if (e.target.id === 'imageLightbox') closeImageLightbox();
+        });
+        document.addEventListener('keydown', function(e){
+            const lb = document.getElementById('imageLightbox');
+            if (lb && !lb.hidden) {
+                if (e.key === 'Escape') closeImageLightbox();
+                else if (e.key === 'ArrowRight') stepImageLightbox(1);
+                else if (e.key === 'ArrowLeft') stepImageLightbox(-1);
+                return;
+            }
+            if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('zoomable')) {
+                e.preventDefault(); openImageLightbox(e.target);
+            }
+        });
+
+        // ===== CODE SNIPPET VIEWER =====
         let snippetList = [], snippetIdx = 0;
         function openSnippet(fig){
             const grid = fig.closest('.snippet-grid');
