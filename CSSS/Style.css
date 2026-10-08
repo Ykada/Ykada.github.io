@@ -11,22 +11,24 @@
   --muted: rgba(234,234,234,0.62);  /* colour 2 at lower opacity, used for secondary text */
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family:Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg-900);
-  color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-  line-height:1.5; padding:2rem; display:flex; flex-direction:column; gap:1.25rem;
+body {
+    margin: 0;
+    padding: 2rem;
+    padding-top: 7rem; /* Space for the fixed header */
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    font-family: Roboto, system-ui, -apple-system, "Segoe UI",
+        "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg-900);
+    color: var(--text);
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.project-description {
-    color: var(--muted);
-    font-size: 1rem;
-    line-height: 1.6;
-    max-width: 65ch;
-    margin: 0;
-}
 
 a{color:var(--accent-1); text-decoration:none}
 
@@ -210,3 +212,29 @@ a.logo:focus-visible{outline:2px solid var(--accent-1);outline-offset:4px;border
 .image-lightbox-nav button{padding:.5rem 1rem;border-radius:8px;border:1px solid rgba(234,234,234,.14);background:rgba(234,234,234,.05);color:var(--muted);font-weight:700;cursor:pointer}
 .image-lightbox-nav button:hover{color:#fff;background:rgba(234,234,234,.1)}
 @media(max-width:520px){.image-lightbox-inner img{max-height:60vh}}
+
+.navbar {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    width: calc(100% - 4rem);
+    max-width: 1200px;
+
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+
+    background: rgba(234, 234, 234, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 77, 166, 0.08);
+}
