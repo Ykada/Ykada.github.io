@@ -10,7 +10,7 @@ const SITE_CONFIG = {
   facts: { Interests: 'Aviation & simulation', Currently: '—' },
   skills: ['Roblox Studio', 'Unity', 'Luau', 'C#', 'Gameplay systems', 'UI design'],
   interests: { 'most played game': 'Roblox', 'other interests': 'Aviation & simulators' },
-  links: { Roblox: 'https://www.roblox.com/users/850300549/profile', Discord: 'https://discord.com/users/519173172348583947', YouTube: 'https://www.youtube.com/@ykad_x', TikTok: '' },
+  links: { Roblox: 'https://www.roblox.com/users/850300549/profile', Discord: 'https://discord.com/users/519173172348583947' },
   // Deploy api/worker.js separately, then put its HTTPS URL here. Empty means use same-origin /api.
   apiBaseUrl: '', discordUserId: '519173172348583947'
 };
