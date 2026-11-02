@@ -1,6 +1,6 @@
 # ykad_x website
 
-The repository root is the public personal homepage. The portfolio uses a separate random folder URL and has no links from the homepage. The unused work page is not published. No redirect is provided from the previous addresses. A random URL is not access control: the public repository can still reveal it.
+The repository root is the public personal homepage. The portfolio is at /portfolio/, with no links from the homepage and a noindex rule for search engines. The unused work page is not published. The portfolio is publicly accessible by URL; noindex is not access protection.
 
 ## Edit the page
 
