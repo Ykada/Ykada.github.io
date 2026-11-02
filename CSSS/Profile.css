@@ -1,0 +1,57 @@
+/* Finishing touches: soft café accents and restrained interaction. */
+#profile>#contact{min-height:380px;padding:3rem 2rem 3rem 35%;margin-bottom:1rem;background:linear-gradient(115deg,var(--paper),var(--paper2));border:1px solid var(--line);border-radius:10px;overflow:hidden}
+#profile #contact>.contact-art{position:absolute;left:2rem;top:2rem;width:25%;height:calc(100% - 4rem);object-fit:contain;object-position:center;border-radius:4px;background:#fff;box-shadow:0 6px 20px #2028320c}
+#profile #contact::before{content:'Let’s stay in touch';font-size:.73rem;margin-bottom:.8rem}
+#profile #contact h3{font-size:clamp(2rem,4vw,3rem);margin-bottom:1.1rem}
+#profile #contact p{line-height:1.8;font-size:.88rem}
+#profile .featured-project-card img{border:1px solid var(--line)}
+.navbar{box-shadow:0 8px 30px rgba(20,30,40,.045)}
+.primary-btn{background:var(--red);box-shadow:0 4px 12px rgba(189,53,76,.12)}
+.primary-btn:focus-visible,.copy-email:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+@media(prefers-reduced-motion:no-preference){
+#profile .profile-image{animation:portraitEnter .85s cubic-bezier(.2,.8,.2,1) both}
+#profile .featured-project-card .meta::after{transition:translate .3s cubic-bezier(.2,.8,.2,1)}
+#profile #contact .contact-art{transition:transform .6s ease,box-shadow .6s ease}
+#profile #contact:hover .contact-art{transform:translateY(-3px);box-shadow:0 10px 25px #20283212}
+.primary-btn,.copy-email{transition:background .25s,box-shadow .25s,translate .25s}
+.primary-btn:hover{translate:0 -2px;box-shadow:0 7px 18px rgba(189,53,76,.16)}
+.copy-email:hover{translate:0 -2px}
+@keyframes portraitEnter{from{opacity:0;translate:0 15px}to{opacity:1;translate:0 0}}
+}
+@media(max-width:700px){#profile>#contact{padding:1.4rem;min-height:0;border-radius:8px}#profile #contact>.contact-art{position:relative;left:auto;top:auto;align-self:center;width:auto;max-width:100%;height:290px;object-fit:contain;margin:0 0 1.5rem;order:0}#profile #contact p{font-size:.83rem}#profile #contact::before{margin-bottom:1rem}}
+
+/* Profile composition. The illustration keeps its original proportions. */
+#profile.active{column-gap:clamp(1.5rem,4vw,4rem)}
+#profile>.hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center;gap:clamp(2rem,5vw,5rem);min-height:0;padding:2rem 0 3rem;margin-bottom:1rem;overflow:visible}
+#profile .hero>div:first-child{padding:0;display:flex;align-items:flex-start;min-width:0}
+#profile .hero-kicker{display:block;max-width:100%;color:var(--red);font-size:.68rem;line-height:1.8;letter-spacing:.025em;animation:none}
+#profile .hero h1{font-size:clamp(3.2rem,6.2vw,5.6rem);line-height:1.02;letter-spacing:-.065em;max-width:none;margin:1.2rem 0 1.7rem;text-wrap:balance}
+#profile .hero p{max-width:58ch;font-size:clamp(.88rem,1.1vw,.98rem);line-height:1.85;margin-bottom:1rem}
+#profile .hero p+p{font-size:.85rem;line-height:1.8;color:var(--muted)}
+#profile .hero-actions{width:100%;gap:.7rem!important;margin-top:1.1rem!important}
+#profile .hero-actions>p{font-size:.69rem!important;margin-top:.2rem!important}
+#profile .hero-actions .primary-btn{min-height:47px;padding-inline:1.35rem}
+#profile .hero-metrics{width:100%;max-width:440px;justify-content:space-between;gap:1rem;margin-top:1.6rem;padding-top:1rem;border-top:1px solid var(--line)}
+#profile .hero-metrics b{font-size:1.6rem;line-height:1.3;font-weight:500;font-variant-numeric:tabular-nums}
+#profile .hero-metrics span{font-size:.54rem;line-height:1.7;letter-spacing:.035em}
+#profile .profile-image{position:relative;width:100%;height:auto;max-height:none;min-height:0;align-self:center;clip-path:none;border:0;border-radius:5px;overflow:visible;background:transparent;box-shadow:none}
+#profile .profile-image::before{content:'';position:absolute;inset:12px -12px -12px 12px;z-index:0;border:1px solid var(--line);border-radius:5px;background:var(--paper2);animation:none;pointer-events:none}
+#profile .profile-image::after{display:none}
+#profile .official-lycoris-art{position:relative;z-index:1;display:block;width:100%;height:auto;min-height:0;max-height:none;aspect-ratio:1351/1910;object-fit:contain;object-position:center;border-radius:5px;transform:none!important;animation:none;transition:none;filter:none}
+#profile>.home-ticker{margin-bottom:4.5rem}
+#profile>.featured-section{margin-bottom:4.5rem}
+#profile .featured-section>p{max-width:55ch;font-size:.88rem}
+#profile .featured-projects{grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
+#profile .featured-project-card:nth-child(2){margin-top:2rem}
+#profile .featured-project-card img,#profile .featured-project-card:nth-child(2) img{height:auto;aspect-ratio:16/10;object-fit:cover}
+#profile .featured-project-card .meta{padding-top:1.15rem;padding-bottom:1.3rem}
+#profile .featured-project-card h3{font-size:clamp(1.25rem,2vw,1.65rem);line-height:1.2}
+#profile>.experience-section,#profile>.anime-interlude{margin-bottom:4.5rem}
+#profile>.anime-interlude{min-height:420px}
+#profile .experience-section ul{margin-left:0!important}
+#profile .experience-section li{line-height:1.8}
+#profile>.work-showcase{margin-bottom:4rem}
+#profile .work-showcase>p{font-size:.88rem}
+#profile>#contact{border-top:1px solid var(--line)}
+@media(min-width:701px) and (max-width:980px){#profile>.hero{grid-template-columns:1.15fr .85fr;gap:2rem;padding-top:1rem}#profile .hero h1{font-size:clamp(3rem,6vw,4rem)}#profile .hero p{font-size:.85rem}#profile .hero p+p{font-size:.79rem}#profile .hero-metrics{gap:.6rem}#profile .hero-metrics span{font-size:.47rem}#profile .profile-image{align-self:start;margin-top:3rem}#profile>.experience-section{grid-column:1/7}#profile>.anime-interlude{grid-column:7/-1;min-height:380px}}
+@media(max-width:700px){#profile>.hero{display:grid;grid-template-columns:1fr;gap:2rem;padding:1.4rem 0 2rem;margin-bottom:1.5rem}#profile .hero h1{font-size:clamp(3rem,12vw,4.2rem);margin:1rem 0 1.4rem}#profile .hero p{font-size:.9rem}#profile .hero p+p{font-size:.83rem}#profile .hero-metrics{max-width:none}#profile .hero-metrics span{font-size:.52rem}#profile .profile-image{width:min(100%,360px);margin:0 auto 1rem}#profile .profile-image::before{inset:9px -9px -9px 9px}#profile .official-lycoris-art{height:auto;max-height:none;min-height:0}#profile>.home-ticker,#profile>.featured-section,#profile>.experience-section,#profile>.anime-interlude,#profile>.work-showcase{margin-bottom:3rem}#profile .featured-projects{grid-template-columns:1fr;gap:2rem}#profile .featured-project-card:nth-child(2){margin-top:0}#profile .featured-project-card img,#profile .featured-project-card:nth-child(2) img{aspect-ratio:16/9}#profile>.anime-interlude{min-height:360px}}
