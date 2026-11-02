@@ -1,0 +1,36 @@
+/* Match the personal homepage palette without changing the portfolio layout. */
+:root,:root[data-theme="dark"]{
+  --bg:#070708;--bg2:#101012;--paper:#0d0c0e;--paper2:#101012;
+  --ink:#f5f1f3;--muted:#a49aa0;--red:#f29ac2;--red2:#ed79ad;
+  --blue:#e0bfce;--gold:#f29ac2;--navy:#070708;--line:#292328;
+  --glass:rgba(7,7,8,.95);--accent-1:#f29ac2;--accent-2:#e0bfce;
+  --shadow:0 18px 45px #0004;--shadow-sm:0 8px 24px #0003;color-scheme:dark;
+}
+html,body{background:var(--bg);color:var(--ink)}
+body::before,body::after{display:none}
+::selection{background:#69334d;color:var(--ink)}
+:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.navbar{background:var(--glass);border:1px solid var(--line);box-shadow:none}
+.nav-links a:hover,.nav-links a.active,.navbar .nav-links>a.active{color:var(--red);background:#21151c}
+.primary-btn,.proud-badge,.case-tabs .case-tabs-back{background:#21151c;color:var(--red);border:1px solid #432c38;box-shadow:none}
+.primary-btn:hover,.case-tabs .case-tabs-back:hover{background:#35202c;color:var(--ink)}
+.hero-work a,.hero-work a>span,.development-focus,.slideshow-slide,.slideshow-info,
+.project-card,.project-intro,.project-feature,.project-gallery,.project-scripts,
+.project-actions,.snippet-card,.snippet-modal-inner,.image-lightbox-inner,.case-tabs{
+  background:var(--paper);border-color:var(--line);color:var(--ink);
+}
+.hero-work a:hover,.project-card:hover,.snippet-card:hover{border-color:#694255}
+.project-theme{--project-accent:var(--red);--project-rgb:242,154,194}
+.project-filters button{background:var(--paper);color:var(--muted);border-color:var(--line)}
+.project-filters button[aria-pressed="true"]{background:#261721;border-color:#432c38;color:var(--red)}
+.case-tabs button:hover{background:#21151c;color:var(--red)}
+.copy-email,.image-lightbox-close,.snippet-modal-close{background:var(--paper2);color:var(--red);border-color:var(--line)}
+.snippet-modal-image{background:var(--bg)}.snippet-modal-text{color:var(--ink)}.snippet-modal-text p{color:var(--muted)}
+.image-lightbox-nav button,.snippet-modal-nav button{background:#21151c;color:var(--red);border-color:#432c38}
+.project-scripts pre,.project-scripts code{background:var(--bg);color:var(--ink);border-color:var(--line)}
+#profile>#contact{background:var(--paper)!important;border:1px solid var(--line)}
+.slideshow-btn{background:var(--paper);color:var(--red);border-color:var(--line)}
+.scroll-progress span{background:var(--red);box-shadow:none}
+footer{border-color:var(--line);color:var(--muted)}
+.archive-visual{background:var(--paper);border:1px solid var(--line)}
+.archive-visual::before{background:linear-gradient(90deg,var(--paper),transparent)}
