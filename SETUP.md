@@ -1,6 +1,6 @@
-# YK’S HAUNTED CORNER
+# ykad_x website
 
-The repository root is the single-page homepage. The former root portfolio is preserved at `/portfolio/`; `/work/` links into its existing project archive. GitHub Pages serves all three paths under the `ykada.com` CNAME.
+The repository root is the public personal homepage. The portfolio uses a separate random folder URL and has no links from the homepage. The unused work page is not published. No redirect is provided from the previous addresses. A random URL is not access control: the public repository can still reveal it.
 
 ## Edit the page
 
