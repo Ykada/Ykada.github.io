@@ -5,8 +5,7 @@ The repository root is the public personal homepage. The portfolio is at /portfo
 ## Edit the page
 
 - Change public bio, facts, interests, links, Roblox username, and integration URLs in `SITE_CONFIG` at the top of `main.js`.
-- Add updates in `DEVLOG.md` in the project root. Copy one entry, including its `<!-- POST -->` marker and metadata, then replace the title, date, tags, summary, and Markdown body. Newest dates appear first automatically. The older `posts/` files are retained as a fallback when `DEVLOG.md` is missing.
-- Serve locally with a static server, for example `python -m http.server 8000`, then visit `http://localhost:8000`. Opening the HTML file directly will not load posts.
+- Serve locally with a static server, for example `python -m http.server 8000`, then visit `http://localhost:8000`.
 
 ## Live services
 

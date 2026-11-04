@@ -34,47 +34,6 @@ function renderProfile() {
   for (const [name, url] of Object.entries(SITE_CONFIG.links)) { for (const id of ['about-socials', 'footer-socials']) { const href = safeUrl(url); const item = document.createElement(href ? 'a' : 'span'); if (href) { item.href = href; item.target = '_blank'; item.rel = 'noopener noreferrer'; } else { item.title = `${name} link coming soon`; item.className = 'social-unset'; } const label = name === 'Discord' && href ? 'message me on Discord' : name; item.textContent = `${label}${href ? ' ↗' : ''}`; $(id).append(item); } }
 }
 
-// Bundled creation entry keeps the devlog visible when local file fetching is blocked.
-const FALLBACK_DEVLOG = "# Your devlog updates\n\nCopy the entry below, including its POST marker, to add another update.\nChange the title, date, tags, summary, and message, then save and refresh.\nNewest dates appear first. Push changes to GitHub to update the live website.\n\n<!-- POST -->\ntitle: Making my personal page\ndate: 2026-11-02\ntags: devlog, update\nsummary: Putting together a personal page with a black and pink style, my avatar, and a little more about me.\n---\n# Making my personal page\n\nToday I started putting this page together. I wanted somewhere that feels more like me, with a black and pink style and a bit about who I am.\n\n## How it came together\n\nThe first version was a bit too gothic for what I wanted, so I went with a simpler egirl style: mostly black, softer pink details, a few hearts, and a clean, readable font.\n\nI added matching Roblox and Steam profile cards next to the about me, changed the bio to focus more on my interests, and set up this devlog so I can share updates here.\n\n## Still sorting out\n\nThe Spotify and game cards are set up, but the presence bot is down at the moment. They’ll show my activity when that’s available again.\n\nFor now, I’m happy with the direction this is going. More updates when there’s something to share.\n";
-let posts = [], activeTag = 'all', activePost = -1;
-const TAGS = ['all', 'devlog', 'roblox', 'game design', 'update', 'thoughts', 'art', 'music', 'life'];
-function renderTags() { for (const tag of TAGS) { const b = document.createElement('button'); b.type = 'button'; b.textContent = tag; b.setAttribute('aria-pressed', String(activeTag === tag)); b.addEventListener('click', () => { activeTag = tag; for (const button of $('tag-filters').children) button.setAttribute('aria-pressed', String(button.textContent === tag)); renderPosts(); }); $('tag-filters').append(b); } }
-function renderPosts() {
-  const query = $('post-search').value.trim().toLowerCase();
-  const filtered = posts.filter(p => (activeTag === 'all' || p.tags.includes(activeTag)) && [p.title, p.excerpt, ...p.tags].join(' ').toLowerCase().includes(query));
-  $('post-list').replaceChildren();
-  if (!filtered.length) { const p = document.createElement('p'); p.className = 'empty-state'; p.textContent = 'No entries yet.'; $('post-list').append(p); return; }
-  for (const post of filtered) { const card = document.createElement('article'); card.className = 'post-card'; const time = document.createElement('time'); time.dateTime = post.date; time.textContent = new Date(`${post.date}T12:00:00`).toLocaleDateString('en-GB', { day: '2-digit', month: 'long', year: 'numeric' }); const h = document.createElement('h3'); h.textContent = post.title; const p = document.createElement('p'); p.textContent = post.excerpt; const tags = document.createElement('div'); tags.className = 'tags'; for (const tag of post.tags) { const s = document.createElement('span'); s.textContent = tag; tags.append(s); } const button = document.createElement('button'); button.type = 'button'; button.textContent = 'read entry ↗'; button.addEventListener('click', () => openPost(posts.indexOf(post))); card.append(time, h, p, tags, button); $('post-list').append(card); }
-}
-function parseDevlog(source) {
-  return source.replace(/^\uFEFF/, '').split(/^<!-- POST -->\s*$/m).slice(1).flatMap((entry, index) => {
-    const divider = /^---\s*$/m.exec(entry);
-    if (!divider) return [];
-    const metadata = {};
-    for (const line of entry.slice(0, divider.index).split(/\r?\n/)) {
-      const match = /^([a-z]+):\s*(.*)$/i.exec(line.trim());
-      if (match) metadata[match[1].toLowerCase()] = match[2].trim();
-    }
-    const title = metadata.title;
-    const date = metadata.date;
-    const timestamp = new Date(date + 'T12:00:00Z');
-    if (!title || !/^\d{4}-\d{2}-\d{2}$/.test(date || '') || !Number.isFinite(timestamp.getTime()) || timestamp.toISOString().slice(0, 10) !== date) return [];
-    const markdown = entry.slice(divider.index + divider[0].length).trim();
-    return [{ slug: 'entry-' + index, title, date,
-      tags: (metadata.tags || 'devlog').split(',').map(tag => tag.trim().toLowerCase()).filter(Boolean),
-      excerpt: metadata.summary || markdown.replace(/[#*_>\x60]/g, '').replace(/\s+/g, ' ').slice(0, 150), markdown }];
-  }).sort((a, b) => b.date.localeCompare(a.date));
-}
-
-async function openPost(index) {
-  const post = posts[index]; if (!post) return; activePost = index;
-  setText('post-dialog-title', post.title); setText('post-dialog-meta', `${post.date} / ${post.tags.join(' · ')}`); setText('post-dialog-body', 'opening entry...');
-  $('previous-post').disabled = index === 0; $('next-post').disabled = index === posts.length - 1;
-  if (!$('post-dialog').open) $('post-dialog').showModal();
-  try { let markdown = post.markdown; if (markdown === undefined) { const response = await fetch(post.contentFile); if (!response.ok) throw Error('Entry unavailable'); markdown = (await response.text()).replace(/^---\s*\n[\s\S]*?\n---\s*\n/, ''); } const [{ marked }, { default: DOMPurify }] = await Promise.all([import('https://cdn.jsdelivr.net/npm/marked@15.0.12/lib/marked.esm.js'), import('https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.es.mjs')]); if (activePost !== index) return; $('post-dialog-body').innerHTML = DOMPurify.sanitize(marked.parse(markdown), { USE_PROFILES: { html: true } }); for (const a of $('post-dialog-body').querySelectorAll('a')) { const url = safeUrl(a.href); if (!url) a.removeAttribute('href'); else { a.href = url; a.rel = 'noopener noreferrer'; } } for (const img of $('post-dialog-body').querySelectorAll('img')) { img.alt ||= 'Devlog illustration'; img.loading = 'lazy'; const url = safeUrl(img.src); if (!url) img.remove(); } } catch { setText('post-dialog-body', 'This entry could not be loaded. Please try again.'); }
-}
-async function initPosts() { renderTags(); $('post-search').addEventListener('input', renderPosts); $('dialog-close').addEventListener('click', () => $('post-dialog').close()); $('post-dialog').addEventListener('click', e => { if (e.target === $('post-dialog')) $('post-dialog').close(); }); $('previous-post').addEventListener('click', () => openPost(activePost - 1)); $('next-post').addEventListener('click', () => openPost(activePost + 1)); try { const response = await fetch('DEVLOG.md', { cache: 'no-store' }); if (response.ok) { posts = parseDevlog(await response.text()); } else { const data = await getJson('posts/posts.json'); posts = data.filter(p => /^[a-z0-9-]+$/.test(p.slug) && /^\d{4}-\d{2}-\d{2}$/.test(p.date) && Array.isArray(p.tags) && /^posts\/[a-z0-9-]+\.md$/.test(p.contentFile)).sort((a,b) => b.date.localeCompare(a.date)); } } catch { posts = parseDevlog(FALLBACK_DEVLOG); } renderPosts(); }
-
 async function initActivity() {
   let updating = false;
   const hasDiscord = /^\d{15,22}$/.test(SITE_CONFIG.discordUserId);
@@ -153,4 +112,4 @@ async function buildViewer(manifest) {
   $('rotate-toggle').setAttribute('aria-pressed',String(controls.autoRotate)); $('rotate-toggle').onclick=()=>{ controls.autoRotate=!controls.autoRotate; $('rotate-toggle').setAttribute('aria-pressed',String(controls.autoRotate)); }; $('reset-camera').onclick=()=>{camera.position.set(0,2.1,7);controls.target.set(0,1.5,0);controls.update();}; $('particles-toggle').onclick=()=>{particles.visible=!particles.visible;$('particles-toggle').setAttribute('aria-pressed',String(particles.visible));}; $('mood-toggle').onclick=()=>{const moon=$('mood-toggle').getAttribute('aria-pressed')!=='true';pink.intensity=moon?15:55;red.intensity=moon?10:40;key.intensity=moon?1.2:2.6;$('mood-toggle').setAttribute('aria-pressed',String(moon));};
 }
 
-renderProfile(); initPosts(); initActivity(); initAvatar();
+renderProfile(); initActivity(); initAvatar();
